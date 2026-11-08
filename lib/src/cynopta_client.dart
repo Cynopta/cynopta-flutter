@@ -74,12 +74,6 @@ class TrustEvaluation {
     required this.actionName,
   });
 
-  /// Returns `true` when [score] is at or above `0.75`.
-  bool get isVerifiedHuman => score >= 0.75;
-
-  /// Returns `true` when [score] is strictly below `0.35`.
-  bool get isHighRisk => score < 0.35;
-
   /// Deserializes a [TrustEvaluation] from the native MethodChannel map.
   factory TrustEvaluation.fromMap(Map<Object?, Object?> map) {
     final rawReasons = map['reasons'] as List<Object?>? ?? const [];

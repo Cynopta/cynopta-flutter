@@ -69,8 +69,6 @@ void main() {
     expect(eval.timestamp, 1700000000123);
     expect(eval.evaluationLatencyMs, 1);
     expect(eval.actionName, 'WIRE_TRANSFER');
-    expect(eval.isVerifiedHuman, isTrue);
-    expect(eval.isHighRisk, isFalse);
   });
 
   test('lifecycle and metadata calls invoke expected MethodChannel methods',

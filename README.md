@@ -25,7 +25,7 @@ import 'package:cynopta_flutter/cynopta_flutter.dart';
 
 Future<void> verifyCheckout() async {
   final eval = await Cynopta.evaluateActionTrust('CHECKOUT_SUBMIT');
-  if (eval.isHighRisk) {
+  if (eval.score < 0.35) {
     // Trigger MFA or block request
   } else {
     // Forward eval.attestationPayload in the X-Cynopta-Attestation header
