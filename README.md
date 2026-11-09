@@ -1,30 +1,12 @@
 # cynopta_flutter
 
-Pure-Dart Flutter client for the **Cynopta Behavioral Biometrics & Bot Detection SDK**.
+Flutter plugin for the **Cynopta Behavioral Biometrics & Bot Detection SDK**.
 
-## Setup
+Automatically bundles the native Cynopta SDK (`com.github.Cynopta:android-sdk-dist`), registers the `com.cynopta.sdk/trust` `MethodChannel`, and packages your root `cynopta.json` license file — **zero native Kotlin/Java or Gradle edits required**.
 
-### 1. Android Gradle & License Configuration
-1. Place your signed `cynopta.json` license inside `android/app/src/main/assets/cynopta.json`.
-2. Add the JitPack Maven repository in `android/build.gradle.kts` (or `android/settings.gradle.kts`):
-   ```kotlin
-   allprojects {
-       repositories {
-           google()
-           mavenCentral()
-           maven { url = uri("https://jitpack.io") }
-       }
-   }
-   ```
-3. Add the Cynopta Android SDK dependency in `android/app/build.gradle.kts`:
-   ```kotlin
-   dependencies {
-       implementation("com.github.Cynopta:android-sdk-dist:1.0.18")
-   }
-   ```
-   *(Zero changes to `MainActivity.kt` are required — `CynoptaInitializer` and `CynoptaFlutterBridge` attach automatically).*
+## Setup (2 Steps)
 
-### 2. Add the Dart Package
+### 1. Add the Flutter Plugin
 ```bash
 flutter pub add cynopta_flutter --git-url=https://github.com/Cynopta/cynopta-flutter.git --git-ref=v1.0.18
 ```
@@ -37,7 +19,20 @@ dependencies:
       ref: v1.0.18
 ```
 
-### 3. Usage in Dart
+### 2. Place `cynopta.json` in Your Flutter Project Root
+Place the `cynopta.json` file provided by Cynopta in the **root of your Flutter project** (right next to `pubspec.yaml`):
+
+```text
+your_flutter_app/
+├── pubspec.yaml
+├── cynopta.json      <-- Place here (auto-bundled at build time)
+└── lib/
+    └── main.dart
+```
+
+---
+
+## Usage in Dart
 ```dart
 import 'package:cynopta_flutter/cynopta_flutter.dart';
 

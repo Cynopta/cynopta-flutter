@@ -1,0 +1,75 @@
+group = "com.cynopta.flutter"
+version = "1.0.18"
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.7.0")
+    }
+}
+
+// Ensure both this plugin and the host :app module can resolve com.github.Cynopta:android-sdk-dist
+// without requiring manual edits to android/build.gradle or android/settings.gradle.
+rootProject.allprojects {
+    repositories {
+        mavenLocal()
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+
+apply plugin: "com.android.library"
+
+def generatedCynoptaAssetsDir = file("${buildDir}/generated/cynopta_assets")
+
+android {
+    namespace = "com.cynopta.flutter"
+    compileSdk = 35
+
+    defaultConfig {
+        minSdk = 24
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs += [generatedCynoptaAssetsDir]
+        }
+    }
+}
+
+// Automatically pick up cynopta.json from the Flutter project root (next to pubspec.yaml)
+// and bundle it into native Android assets/cynopta.json at build time.
+tasks.register("syncRootCynoptaJson") {
+    doLast {
+        File flutterProjectRoot = rootProject.projectDir.parentFile
+        File rootConfig = new File(flutterProjectRoot, "cynopta.json")
+        File assetsSubdirConfig = new File(flutterProjectRoot, "assets/cynopta.json")
+        File sourceConfig = rootConfig.exists() ? rootConfig : (assetsSubdirConfig.exists() ? assetsSubdirConfig : null)
+
+        generatedCynoptaAssetsDir.mkdirs()
+        File targetFile = new File(generatedCynoptaAssetsDir, "cynopta.json")
+        if (sourceConfig != null && sourceConfig.exists()) {
+            targetFile.bytes = sourceConfig.bytes
+        } else if (targetFile.exists()) {
+            targetFile.delete()
+        }
+    }
+}
+
+preBuild.dependsOn("syncRootCynoptaJson")
+tasks.matching { it.name.contains("Assets") }.configureEach {
+    dependsOn("syncRootCynoptaJson")
+}
+
+dependencies {
+    api("com.github.Cynopta:android-sdk-dist:1.0.18")
+}
