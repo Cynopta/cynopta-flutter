@@ -8,7 +8,7 @@ Automatically bundles the native Cynopta SDK (`com.github.Cynopta:android-sdk-di
 
 ### 1. Add the Flutter Plugin
 ```bash
-flutter pub add cynopta_flutter --git-url=https://github.com/Cynopta/cynopta-flutter.git --git-ref=v1.0.18
+flutter pub add cynopta_flutter --git-url=https://github.com/Cynopta/cynopta-flutter.git --git-ref=v1.0.19
 ```
 Or in `pubspec.yaml`:
 ```yaml
@@ -16,7 +16,7 @@ dependencies:
   cynopta_flutter:
     git:
       url: https://github.com/Cynopta/cynopta-flutter.git
-      ref: v1.0.18
+      ref: v1.0.19
 ```
 
 ### 2. Place `cynopta.json` in Your Flutter Project Root
@@ -38,10 +38,15 @@ import 'package:cynopta_flutter/cynopta_flutter.dart';
 
 Future<void> verifyCheckout() async {
   final eval = await Cynopta.evaluateActionTrust('CHECKOUT_SUBMIT');
+  // Proceed with request and forward eval.attestationPayload in X-Cynopta-Attestation header
   if (eval.score < 0.35) {
     // Trigger MFA or block request
   } else {
     // Forward eval.attestationPayload in the X-Cynopta-Attestation header
   }
 }
+
+// Optional: toggle periodic microsegment telemetry reporting at runtime
+await Cynopta.setReportingEnabled(true);
+final isReporting = await Cynopta.isReportingEnabled();
 ```

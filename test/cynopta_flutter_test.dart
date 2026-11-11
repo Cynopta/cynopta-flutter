@@ -15,12 +15,16 @@ void main() {
       log.add(methodCall);
       switch (methodCall.method) {
         case 'getVersionName':
-          return '1.0.18';
+          return '1.0.19';
         case 'getVersionCode':
-          return 19;
+          return 20;
         case 'isStarted':
           return true;
         case 'isAuthorized':
+          return true;
+        case 'isReportingEnabled':
+          return true;
+        case 'setReportingEnabled':
           return true;
         case 'getLicenseResult':
           return {
@@ -73,8 +77,8 @@ void main() {
 
   test('lifecycle and metadata calls invoke expected MethodChannel methods',
       () async {
-    expect(await Cynopta.getVersionName(), '1.0.18');
-    expect(await Cynopta.getVersionCode(), 19);
+    expect(await Cynopta.getVersionName(), '1.0.19');
+    expect(await Cynopta.getVersionCode(), 20);
     expect(await Cynopta.isStarted(), isTrue);
     expect(await Cynopta.isAuthorized(), isTrue);
 
@@ -83,12 +87,20 @@ void main() {
     expect(lic!.isAuthorized, isTrue);
     expect(lic.status, 'Authorized');
 
+    await Cynopta.setReportingEnabled(false);
+    expect(await Cynopta.isReportingEnabled(), isTrue);
+
     await Cynopta.start();
     await Cynopta.stop(deleteAllData: true);
 
     expect(
       log.map((c) => c.method),
-      containsAll(['start', 'stop']),
+      containsAll([
+        'setReportingEnabled',
+        'isReportingEnabled',
+        'start',
+        'stop',
+      ]),
     );
   });
 }

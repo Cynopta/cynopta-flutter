@@ -163,7 +163,7 @@ class Cynopta {
     }
   }
 
-  /// Returns the native Cynopta SDK semantic version string (e.g. `"1.0.18"`).
+  /// Returns the native Cynopta SDK semantic version string (e.g. `"1.0.19"`).
   static Future<String> getVersionName() async {
     if (!_isSupportedMobile) return '';
     try {
@@ -180,6 +180,31 @@ class Cynopta {
       return await _channel.invokeMethod<int>('getVersionCode') ?? 0;
     } on MissingPluginException {
       return 0;
+    }
+  }
+
+  /// Programmatically enables or disables periodic microsegment telemetry reporting.
+  ///
+  /// Overrides the `enableReporting` flag in `cynopta.json`.
+  static Future<void> setReportingEnabled(bool enabled) async {
+    if (!_isSupportedMobile) return;
+    try {
+      await _channel.invokeMethod<void>(
+        'setReportingEnabled',
+        {'enabled': enabled},
+      );
+    } on MissingPluginException {
+      // Native SDK not linked on this platform yet.
+    }
+  }
+
+  /// Returns `true` if periodic microsegment telemetry reporting is currently enabled.
+  static Future<bool> isReportingEnabled() async {
+    if (!_isSupportedMobile) return false;
+    try {
+      return await _channel.invokeMethod<bool>('isReportingEnabled') ?? true;
+    } on MissingPluginException {
+      return false;
     }
   }
 

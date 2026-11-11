@@ -1,6 +1,6 @@
 name: cynopta_flutter
 description: Flutter plugin for the Cynopta Behavioral Biometrics & Bot Detection SDK (Android & iOS).
-version: 1.0.18
+version: 1.0.19
 homepage: https://cynopta.com
 repository: https://github.com/Cynopta/cynopta-flutter
 
