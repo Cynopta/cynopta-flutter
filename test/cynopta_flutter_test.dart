@@ -15,9 +15,9 @@ void main() {
       log.add(methodCall);
       switch (methodCall.method) {
         case 'getVersionName':
-          return '1.0.19';
+          return '1.0.20';
         case 'getVersionCode':
-          return 20;
+          return 21;
         case 'isStarted':
           return true;
         case 'isAuthorized':
@@ -77,8 +77,8 @@ void main() {
 
   test('lifecycle and metadata calls invoke expected MethodChannel methods',
       () async {
-    expect(await Cynopta.getVersionName(), '1.0.19');
-    expect(await Cynopta.getVersionCode(), 20);
+    expect(await Cynopta.getVersionName(), '1.0.20');
+    expect(await Cynopta.getVersionCode(), 21);
     expect(await Cynopta.isStarted(), isTrue);
     expect(await Cynopta.isAuthorized(), isTrue);
 
