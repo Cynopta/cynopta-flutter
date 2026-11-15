@@ -50,3 +50,7 @@ Future<void> verifyCheckout() async {
 await Cynopta.setReportingEnabled(true);
 final isReporting = await Cynopta.isReportingEnabled();
 ```
+
+## Third-party notices
+
+`NOTICE` lists the components this plugin depends on and their licenses. The native Cynopta Android SDK carries its own `NOTICE` at the root of its AAR. `NOTICE` is generated from `pubspec.yaml` and `android/build.gradle`: after changing the version or a dependency, run `dart run tool/generate_notice.dart`. `flutter test` fails while `NOTICE` is out of date.
