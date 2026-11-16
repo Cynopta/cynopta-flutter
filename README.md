@@ -8,7 +8,7 @@ Automatically bundles the native Cynopta SDK (`com.github.Cynopta:android-sdk-di
 
 ### 1. Add the Flutter Plugin
 ```bash
-flutter pub add cynopta_flutter --git-url=https://github.com/Cynopta/cynopta-flutter.git --git-ref=v1.0.22
+flutter pub add cynopta_flutter --git-url=https://github.com/Cynopta/cynopta-flutter.git --git-ref=v1.0.23
 ```
 Or in `pubspec.yaml`:
 ```yaml
@@ -16,7 +16,7 @@ dependencies:
   cynopta_flutter:
     git:
       url: https://github.com/Cynopta/cynopta-flutter.git
-      ref: v1.0.22
+      ref: v1.0.23
 ```
 
 ### 2. Place `cynopta.json` in Your Flutter Project Root
