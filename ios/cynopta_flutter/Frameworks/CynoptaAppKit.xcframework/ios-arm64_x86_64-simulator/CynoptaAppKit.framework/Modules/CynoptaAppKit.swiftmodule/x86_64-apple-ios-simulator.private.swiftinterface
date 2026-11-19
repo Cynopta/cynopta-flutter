@@ -1,0 +1,309 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CynoptaAppKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import AuthenticationServices
+@_exported import CynoptaAppKit
+import CynoptaConfigKit
+import CynoptaKit
+import CynoptaMetricsKit
+import CynoptaReportKit
+import DeveloperToolsSupport
+import Foundation
+import Swift
+import SwiftUI
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+extension CynoptaAppKit.CynoptaApp {
+  public struct Debug {
+    public func generateFeedback() throws -> Foundation.URL
+  }
+}
+@objc @_inheritsConvenienceInitializers public class CynoptaAppOnboarding : ObjectiveC.NSObject {
+  public func start()
+  public func complete()
+  public func markAsComplete()
+  public func reset()
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension CynoptaAppKit.CynoptaApp {
+  public struct Metric {
+    public func set(_ name: Swift.String, _ value: Swift.Double)
+    public func set(_ name: Swift.String, _ value: Swift.String)
+    public func set(_ name: Swift.String, _ value: Swift.Bool)
+    public func set(_ name: Swift.String, hour: Swift.Int, minute: Swift.Int)
+    public func set(_ name: Swift.String, year: Swift.Int, month: Swift.Int, day: Swift.Int)
+    public func clear(_ name: Swift.String)
+    public func getInt(_ name: Swift.String) -> Swift.Int?
+    public func getNumber(_ name: Swift.String) -> Swift.Double?
+    public func getString(_ name: Swift.String) -> Swift.String?
+    public func getBoolean(_ name: Swift.String) -> Swift.Bool?
+  }
+}
+@objc @_inheritsConvenienceInitializers public class MetricObjC : ObjectiveC.NSObject {
+  @objc public func set(_ name: Swift.String, intValue: Swift.Int)
+  @objc public func set(_ name: Swift.String, doubleValue: Swift.Double)
+  @objc public func set(_ name: Swift.String, stringValue: Swift.String)
+  @objc public func set(_ name: Swift.String, boolValue: Swift.Bool)
+  @objc public func set(_ name: Swift.String, hour: Swift.Int, minute: Swift.Int)
+  @objc public func set(_ name: Swift.String, year: Swift.Int, month: Swift.Int, day: Swift.Int)
+  @objc public func getNumber(_ name: Swift.String) -> Foundation.NSNumber?
+  @objc public func getString(_ name: Swift.String) -> Foundation.NSString?
+  @objc public func getBoolean(_ name: Swift.String) -> Foundation.NSNumber?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(CynoptaSDK) public class Cynopta : ObjectiveC.NSObject {
+  @objc public class func start()
+  @objc public class func autoStart()
+  @objc public class func stop()
+  @objc public class func stop(deleteAllData: Swift.Bool)
+  @objc public class func isStarted() -> Swift.Bool
+  @objc public class func isAuthorized() -> Swift.Bool
+  @objc public class func getLicenseResult() -> CynoptaAppKit.CynoptaLicenseResult?
+  @objc public class func getVersionName() -> Swift.String
+  @objc public class func getVersionCode() -> Swift.Int
+  @objc public class func setReportingEnabled(_ enabled: Swift.Bool)
+  @objc public class func isReportingEnabled() -> Swift.Bool
+  public class func evaluateActionTrust(_ actionName: Swift.String, callback: @escaping (Swift.Result<CynoptaAppKit.TrustEvaluation, any Swift.Error>) -> Swift.Void)
+  @available(swift, obsoleted: 1.0)
+  @objc(evaluateActionTrust:callback:) public class func objcEvaluateActionTrust(_ actionName: Swift.String, callback: @escaping (CynoptaAppKit.TrustEvaluation?, (any Swift.Error)?) -> Swift.Void)
+  @objc(evaluateActionTrustSync:) public class func evaluateActionTrustSync(_ actionName: Swift.String?) -> CynoptaAppKit.TrustEvaluation
+  public class func getLatestTrustEvaluation(callback: @escaping (Swift.Result<CynoptaAppKit.TrustEvaluation, any Swift.Error>) -> Swift.Void)
+  @available(swift, obsoleted: 1.0)
+  @objc(getLatestTrustEvaluationWithCallback:) public class func objcGetLatestTrustEvaluation(callback: @escaping (CynoptaAppKit.TrustEvaluation?, (any Swift.Error)?) -> Swift.Void)
+  @objc public class func getLatestTrustEvaluation() -> CynoptaAppKit.TrustEvaluation
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(CynoptaLicenseResult) public class CynoptaLicenseResult : ObjectiveC.NSObject {
+  @objc final public let isAuthorized: Swift.Bool
+  @objc final public let status: Swift.String
+  @objc final public let reason: Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc(CynoptaTrustEvaluation) public class TrustEvaluation : ObjectiveC.NSObject {
+  @objc final public let score: Swift.Double
+  @objc final public let classification: Swift.String
+  @objc final public let deviceRealnessScore: Swift.Double
+  @objc final public let sessionBotRisk: Swift.Double
+  @objc final public let reasons: [Swift.String]
+  @objc final public let attestationPayload: Swift.String
+  @objc final public let timestamp: Swift.Int64
+  @objc final public let evaluationLatencyMs: Swift.Int64
+  @objc final public let actionName: Swift.String
+  @objc public func toJson() -> [Swift.String : Any]
+  @objc deinit
+}
+public enum CynoptaBridge {
+  public static let channelName: Swift.String
+  public enum Reply {
+    case success(Any?)
+    case error(code: Swift.String, message: Swift.String)
+    case notImplemented
+  }
+  public static func handle(method: Swift.String, arguments: Any?, reply: @escaping (CynoptaAppKit.CynoptaBridge.Reply) -> Swift.Void)
+}
+@objc @_inheritsConvenienceInitializers public class CynoptaApp : ObjectiveC.NSObject {
+  @objc public func startup(launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]?)
+  @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+  @objc public func startupIfNeed(apiKey: Swift.String? = nil, optionsHandler: CynoptaAppKit.CynoptaAppOptionsHandler? = nil, developmentMode: Swift.Bool = true)
+  @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+  @objc public func startup()
+  @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+  @objc public func startup(clientIdentifier: Swift.String? = nil, apiKey: Swift.String? = nil, optionsHandler: CynoptaAppKit.CynoptaAppOptionsHandler? = nil, developmentMode: Swift.Bool = true)
+  @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+  @objc public func startup(optionsHandler: CynoptaAppKit.CynoptaAppOptionsHandler? = nil, developmentMode: Swift.Bool = true)
+  @available(swift, obsoleted: 1.0)
+  @objc(refresh) public func refreshLegacy()
+  @objc public func refresh(reason: CynoptaKit.CynoptaRefreshReason = .unknown)
+  @objc public func shutdown(fullstop: Swift.Bool = false, cleanup: Swift.Bool = false)
+  @objc public func updateDeviceToken(_ deviceToken: Foundation.Data)
+  @discardableResult
+  @objc public func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any], completionHandler: (() -> Swift.Void)? = nil) -> Swift.Bool
+  @objc public func didReceiveNotification(_ notification: UserNotifications.UNNotification)
+  @objc public func exportDataEnrichment(requestedMetrics: [Swift.String]? = nil, callback: @escaping ([Swift.String : Any]) -> Swift.Void)
+  @available(iOS 13.0, *)
+  @objc public func setAppleSignInRealUserStatus(_ status: AuthenticationServices.ASUserDetectionStatus)
+  @objc public func saveNotificationDataForBestMoment(userInfo: [Swift.AnyHashable : Any])
+  public var sdkOptions: CynoptaAppKit.CynoptaStartupOptions? {
+    get
+  }
+  @objc public var startupOptionsURL: Foundation.URL?
+  @objc public var delegate: (any CynoptaKit.CynoptaDelegate)? {
+    @objc get
+    @objc set
+  }
+  public static var clientIdentifier: Swift.String?
+  public static var apiKey: Swift.String?
+  @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+  @objc public static var optionsHandler: CynoptaAppKit.CynoptaAppOptionsHandler?
+  @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+  @objc public static var developmentMode: Swift.Bool
+  @objc public static let onboarding: CynoptaAppKit.CynoptaAppOnboarding
+  public static let metric: CynoptaAppKit.CynoptaApp.Metric
+  @objc(metric) public static let metricObj: CynoptaAppKit.MetricObjC
+  public static let pageTracker: CynoptaAppKit.CynoptaAppPageTracker
+  public static let debug: CynoptaAppKit.CynoptaApp.Debug
+  @objc public static let shared: CynoptaAppKit.CynoptaApp
+  public static func bootstrap()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+public struct CynoptaAppOptions : Swift.Codable {
+  @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+  public struct SignalsAccess : Swift.Codable {
+    public var location: Swift.Bool
+    public var wifi: Swift.Bool
+    public var bluetooth: Swift.Bool
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+  public struct BestMoment : Swift.Codable {
+    public var minIntervalBetweenNotificationsInMinutes: Swift.Int
+    public var maxTimeForUsingOnlyBestMomentInMinutes: Swift.Int
+    public var maxNotificationLifetimeInMinutes: Swift.Int
+    public var notificationHandler: CynoptaKit.BestMomentNotificationHandler?
+    public var eventHandler: CynoptaKit.BestMomentEventHandler?
+    public init(from decoder: any Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+  public var enableCrashReports: Swift.Bool
+  public var enableErrorReports: Swift.Bool
+  public var enableRemoteConfiguration: Swift.Bool
+  public var locationAware: Swift.Bool
+  public var signalsAccess: CynoptaAppKit.CynoptaAppOptions.SignalsAccess
+  public var enableGeofenceDetection: Swift.Bool
+  public var netProviderResolution: Swift.Bool
+  public var netProviderGeoAwareResolution: Swift.Bool
+  public var bestMoment: CynoptaAppKit.CynoptaAppOptions.BestMoment
+  public var enableReports: Swift.Bool
+  public var enableCampaigns: Swift.Bool
+  public var purgeOldData: Swift.Bool
+  public var dataLifetimeFullMonths: Swift.Int
+  public var enableRemoteNotifications: Swift.Bool
+  public var enableAudienceAnalytics: Swift.Bool
+  public var enableInteractionTelemetry: Swift.Bool
+  public var campaignTryExecuteNotificationAction: Swift.Bool
+  public var integrationMessagesHandler: ((os.OSLogType, Swift.String) -> Swift.Void)?
+  public var microsegmentsSnapshotReportHandler: CynoptaReportKit.MicrosegmentsSnapshotReportResposeHandler?
+  public var encodedEnrichmentReportHandler: CynoptaReportKit.EncodedEnrichmentReportResposeHandler?
+  public var edgeEnvironment: Swift.String?
+  public var zeroRatePrefix: Swift.String?
+  public var more: [Swift.String : Any]
+  public init()
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@objc @_inheritsConvenienceInitializers @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+open class CynoptaAppOptionsHandler : ObjectiveC.NSObject {
+  open func handle(_ defaultOptions: CynoptaAppKit.CynoptaAppOptions) -> CynoptaAppKit.CynoptaAppOptions
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class CynoptaAppPageTracker : ObjectiveC.NSObject {
+  public func enterPage(pageName: Swift.String)
+  public func exitPage()
+  @objc override dynamic public init()
+  @objc deinit
+}
+public struct CynoptaStartupOptions : Swift.Encodable {
+  public struct BestMoment : Swift.Encodable {
+    public var minIntervalBetweenNotificationsInMinutes: Swift.Int {
+      get
+    }
+    public var maxTimeForUsingOnlyBestMomentInMinutes: Swift.Int {
+      get
+    }
+    public var maxNotificationLifetimeInMinutes: Swift.Int {
+      get
+    }
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+  public struct SignalsAccess : Swift.Encodable {
+    public var location: Swift.Bool {
+      get
+    }
+    public var wifi: Swift.Bool {
+      get
+    }
+    public var bluetooth: Swift.Bool {
+      get
+    }
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+  public var developmentMode: Swift.Bool {
+    get
+  }
+  public var enableCrashReports: Swift.Bool {
+    get
+  }
+  public var enableErrorReports: Swift.Bool {
+    get
+  }
+  public var enableRemoteConfiguration: Swift.Bool {
+    get
+  }
+  public var locationAware: Swift.Bool {
+    get
+  }
+  public var signalsAccess: CynoptaAppKit.CynoptaStartupOptions.SignalsAccess {
+    get
+  }
+  public var enableGeofenceDetection: Swift.Bool {
+    get
+  }
+  public var netProviderResolution: Swift.Bool {
+    get
+  }
+  public var netProviderGeoAwareResolution: Swift.Bool {
+    get
+  }
+  public var bestMoment: CynoptaAppKit.CynoptaStartupOptions.BestMoment {
+    get
+  }
+  public var enableReports: Swift.Bool {
+    get
+  }
+  public var enableCampaigns: Swift.Bool {
+    get
+  }
+  public var purgeOldData: Swift.Bool {
+    get
+  }
+  public var dataLifetimeFullMonths: Swift.Int {
+    get
+  }
+  public var enableRemoteNotifications: Swift.Bool {
+    get
+  }
+  public var enableAudienceAnalytics: Swift.Bool {
+    get
+  }
+  public var enableInteractionTelemetry: Swift.Bool {
+    get
+  }
+  public var campaignTryExecuteNotificationAction: Swift.Bool {
+    get
+  }
+  public var edgeEnvironment: Swift.String {
+    get
+  }
+  public var zeroRatePrefix: Swift.String? {
+    get
+  }
+  public var internalOptions: [Swift.String : Any] {
+    get
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension CynoptaAppKit.CynoptaApp {
+  @objc public static func safe(_ block: @escaping () -> (), onFailure: (() -> ())? = nil, timeout: Foundation.TimeInterval = 10)
+}

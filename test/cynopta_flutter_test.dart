@@ -1,4 +1,5 @@
 import 'package:cynopta_flutter/cynopta_flutter.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -167,5 +168,62 @@ void main() {
         'stop',
       ]),
     );
+  });
+
+  group('on iOS', () {
+    setUp(() => debugDefaultTargetPlatformOverride = TargetPlatform.iOS);
+    tearDown(() => debugDefaultTargetPlatformOverride = null);
+
+    test('evaluateActionTrust sends a nonce and trusts no plain score',
+        () async {
+      final eval = await Cynopta.evaluateActionTrust('WIRE_TRANSFER');
+
+      expect(log.single.method, 'evaluateActionTrust');
+      expect(log.single.arguments['actionName'], 'WIRE_TRANSFER');
+      expect(log.single.arguments['nonce'], isA<int>());
+      expect(log.single.arguments['nonce'], isNot(0));
+      // The mock answers 0.99 in plain fields; only a sealed packet counts.
+      expect(eval.score, 0.0);
+      expect(eval.deviceRealnessScore, 0.0);
+      expect(eval.sessionBotRisk, 1.0);
+      expect(eval.classification, 'SESSION_HIJACK_RISK');
+      expect(eval.actionName, 'WIRE_TRANSFER');
+    });
+
+    test('a packet that cf0 cannot open fails closed', () async {
+      evalHandler = (_) => {
+            'd': Uint8List(40),
+            'c': 'VERIFIED_HUMAN',
+            'reasons': const ['CLEAN_SESSION'],
+            'actionName': 'GET_TRUST_EVALUATION',
+          };
+
+      final eval = await Cynopta.getLatestTrustEvaluation();
+      expect(log.single.method, 'getLatestTrustEvaluation');
+      expect(log.single.arguments['nonce'], isNot(0));
+      expect(eval.score, 0.0);
+      expect(eval.sessionBotRisk, 1.0);
+      expect(eval.classification, 'SESSION_HIJACK_RISK');
+      expect(eval.reasons, ['CLEAN_SESSION']);
+    });
+
+    test('MissingPluginException surfaces NATIVE_BRIDGE_UNAVAILABLE',
+        () async {
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(channel, null);
+
+      final eval = await Cynopta.evaluateActionTrust('APP_OPEN');
+      expect(eval.classification, 'PROVISIONAL_NEW_DEVICE');
+      expect(eval.reasons, ['NATIVE_BRIDGE_UNAVAILABLE']);
+    });
+
+    test('management calls go through the same channel', () async {
+      expect(await Cynopta.getVersionName(), '1.0.23');
+      expect(await Cynopta.isAuthorized(), isTrue);
+      final lic = await Cynopta.getLicenseResult();
+      expect(lic?.status, 'Authorized');
+      await Cynopta.stop(deleteAllData: true);
+      expect(log.last.arguments['deleteAllData'], isTrue);
+    });
   });
 }

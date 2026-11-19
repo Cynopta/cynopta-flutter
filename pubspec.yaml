@@ -23,3 +23,5 @@ flutter:
       android:
         package: com.cynopta.flutter
         pluginClass: CynoptaFlutterPlugin
+      ios:
+        pluginClass: CynoptaFlutterPlugin

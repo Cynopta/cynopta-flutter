@@ -1,0 +1,32 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CynoptaConfigKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import CynoptaKit
+import Foundation
+import MetricKit
+import Security
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+public typealias CynoptaConfigModel = CynoptaConfigKit.Model
+public struct Model {
+  public struct Config : Swift.Codable {
+    public var remoteConfigFetchInterval: Swift.Int
+    public static func get() -> CynoptaConfigKit.Model.Config
+    public static func getDefault() -> CynoptaConfigKit.Model.Config
+    public func update()
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+@objc @_inheritsConvenienceInitializers public class CynoptaConfig : ObjectiveC.NSObject {
+  public static let shared: CynoptaConfigKit.CynoptaConfig
+  public func startup(url: Foundation.URL? = nil)
+  public func shutdown()
+  @objc override dynamic public init()
+  @objc deinit
+}

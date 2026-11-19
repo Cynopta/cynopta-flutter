@@ -1,4 +1,4 @@
-/// Pure-Dart Flutter client for the Cynopta Android SDK.
+/// Pure-Dart Flutter client for the Cynopta SDK (Android and iOS).
 library;
 
 export 'src/cynopta_client.dart'

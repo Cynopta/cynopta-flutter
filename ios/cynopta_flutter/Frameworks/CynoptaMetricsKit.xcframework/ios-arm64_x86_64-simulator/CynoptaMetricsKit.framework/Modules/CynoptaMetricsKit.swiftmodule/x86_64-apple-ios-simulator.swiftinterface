@@ -1,0 +1,691 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CynoptaMetricsKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import AVFoundation
+import AuthenticationServices
+import CommonCrypto
+import CoreLocation
+import CoreMotion
+import CynoptaKit
+import Foundation
+import JavaScriptCore
+import LocalAuthentication
+import MachO
+import MetricKit
+import PassKit
+import Security
+import Swift
+import UIKit
+import WatchConnectivity
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+import zlib
+public protocol PMSJavascriptModelsServiceProtocol {
+  func runModels(completion: @escaping ([Swift.String], [any Swift.Error]?) -> Swift.Void)
+}
+public enum TimeRangeGroup : Swift.String {
+  case last7DaysEveryDay
+  case last6WeeksEveryWeek
+  case last6MonthsEveryMonth
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TimeRangeType : Swift.String {
+  case day
+  case week
+  case month
+  case year
+  case overall
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension CynoptaMetricsKit.TimeRangeType {
+  public func seconds(containing date: Foundation.Date, calendar: Foundation.Calendar = .current, overallInterval: Foundation.DateInterval? = nil) -> Foundation.TimeInterval?
+}
+public enum TimeRange : Swift.String, Swift.CaseIterable {
+  case today
+  case yesterday
+  case day1DayAgo
+  case day2DaysAgo
+  case day3DaysAgo
+  case day4DaysAgo
+  case day5DaysAgo
+  case day6DaysAgo
+  case day7DaysAgo
+  case last3Days
+  case last7Days
+  case last30Days
+  case thisWeek
+  case lastWeek
+  case week1WeekAgo
+  case week2WeeksAgo
+  case week3WeeksAgo
+  case week4WeeksAgo
+  case week5WeeksAgo
+  case week6WeeksAgo
+  case last2Weeks
+  case last3Weeks
+  case last4Weeks
+  case last14Weeks
+  case thisMonth
+  case lastMonth
+  case month1MonthAgo
+  case month2MonthsAgo
+  case month3MonthsAgo
+  case month4MonthsAgo
+  case month5MonthsAgo
+  case month6MonthsAgo
+  case last3Months
+  case last6Months
+  case lastJanuary
+  case lastFebruary
+  case lastMarch
+  case lastApril
+  case lastMay
+  case lastJune
+  case lastJuly
+  case lastAugust
+  case lastSeptember
+  case lastOctober
+  case lastNovember
+  case lastDecember
+  case thisYear
+  case lastYear
+  case overall
+  public func dateRange(_ uptoDate: Foundation.Date) -> (from: Foundation.Date, to: Foundation.Date)?
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [CynoptaMetricsKit.TimeRange]
+  public typealias RawValue = Swift.String
+  nonisolated public static var allCases: [CynoptaMetricsKit.TimeRange] {
+    get
+  }
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol PMSInstalledAppsServiceProtocol {
+  func start(completion: @escaping (Swift.Result<Swift.Void, any Swift.Error>) -> Swift.Void)
+}
+public protocol InstalledAppFinderProtocol {
+  func search(appsScheme: [Foundation.URL], completion: @escaping ([CynoptaMetricsKit.InstalledAppFinder.SearchResult]) -> Swift.Void)
+  func searchSync(appsScheme: [Foundation.URL]) -> [CynoptaMetricsKit.InstalledAppFinder.SearchResult]
+}
+public class InstalledAppFinder : CynoptaMetricsKit.InstalledAppFinderProtocol {
+  public struct SearchResult {
+    public let scheme: Foundation.URL
+    public let available: Swift.Bool
+  }
+  public init()
+  public static func urlSchemesFromPlist() -> [Swift.String]
+  public func searchSync(appsScheme: [Foundation.URL]) -> [CynoptaMetricsKit.InstalledAppFinder.SearchResult]
+  public func search(appsScheme: [Foundation.URL], completion: @escaping ([CynoptaMetricsKit.InstalledAppFinder.SearchResult]) -> Swift.Void)
+  @objc deinit
+}
+public struct CynoptaDataCollectionModel {
+  public struct DocumentMetadata {
+    public var identifier: Swift.String
+    public var year: Swift.Int
+    public var month: Swift.Int
+    public var day: Swift.Int
+    public var hour: Swift.Int
+    public var weekDay: Swift.Int
+    public var week: Swift.Int
+  }
+}
+extension CynoptaMetricsKit.Model {
+  public struct Config : Swift.Codable {
+    public struct PMSInstalledAppCategory : Swift.Codable {
+      public struct App : Swift.Codable {
+        public let name: Swift.String
+        public let scheme: Swift.String
+        public let weight: Swift.Double
+        public func encode(to encoder: any Swift.Encoder) throws
+        public init(from decoder: any Swift.Decoder) throws
+      }
+      public let categoryName: Swift.String
+      public let listName: Swift.String?
+      public let microSegmentName: Swift.String
+      public let apps: [CynoptaMetricsKit.Model.Config.PMSInstalledAppCategory.App]
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public var activeMetrics: [Swift.String]
+    public var activeMetricsGroup1: [Swift.String]
+    public var activeMetricsGroup2: [Swift.String]
+    public var activeMetricsGroup3: [Swift.String]
+    public var activeMetricsGroup4: [Swift.String]
+    public var microsegmentsReportExcludeList: [Swift.String]?
+    public var microsegmentSnapshotReportExcludeList: [Swift.String]?
+    public var reportTimeFrames: [Swift.String : [Swift.String]]
+    public var encryptDataCollectionData: Swift.Bool
+    public var predictiveMicroSegmentsInstalledApps: [CynoptaMetricsKit.Model.Config.PMSInstalledAppCategory]?
+    public var predictiveMicroSegmentsOnDeviceModels: [CynoptaMetricsKit.PMSJavascriptModel]?
+    public var carMacAddressOUI: [Swift.String]?
+    public var carBrands: [Swift.String : Swift.String]?
+    public var integrityInteractionEnabledByHost: Swift.Bool
+    public var integrityInteractionActive: Swift.Bool
+    public var integrityIdentityTeamIds: [Swift.String]
+    public var integrityIdentityBundleIds: [Swift.String]
+    public var integrityMicrosegmentsActive: Swift.Bool
+    public var interactionTelemetryEnabled: Swift.Bool {
+      get
+    }
+    public static func get() -> CynoptaMetricsKit.Model.Config
+    public static func getDefault() -> CynoptaMetricsKit.Model.Config
+    public func update()
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension CynoptaMetricsKit.Model {
+  public enum CynoptaReportingMode : Swift.String {
+    case full
+    case botOnly
+    case disabled
+    public init?(value: Any?)
+    public static let botOnlyMicrosegments: Swift.Set<Swift.String>
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public struct CynoptaLicenseResult : Swift.Equatable {
+    public let isAuthorized: Swift.Bool
+    public let status: Swift.String
+    public let reason: Swift.String
+    public init(isAuthorized: Swift.Bool, status: Swift.String, reason: Swift.String)
+    public static func == (a: CynoptaMetricsKit.Model.CynoptaLicenseResult, b: CynoptaMetricsKit.Model.CynoptaLicenseResult) -> Swift.Bool
+  }
+}
+public struct PMSJavascriptModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension CynoptaMetricsKit.Model {
+  @available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+  public typealias Stats = CynoptaMetricsKit.Model.Metric
+  public struct Variant {
+    public var numericValue: Swift.Double?
+    public var stringValue: Swift.String?
+    public var hasValue: Swift.Bool {
+      get
+    }
+    public var anyValue: Any? {
+      get
+    }
+  }
+  public enum MetricStatus : Swift.Int {
+    case none
+    case complete
+    case partial
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public enum MetricsGroup : Swift.String, Swift.CaseIterable {
+    case NoneGroup
+    case Lifestyle
+    case GBrands
+    case POIGVisits
+    case HasKids
+    case UserNightlyRestingTime
+    case LastReturnTimeToHome
+    case JeMA
+    case UserDefined
+    case Application
+    case Deep
+    case Sleep
+    case BatterySignals
+    case PhoneUnlockEvents
+    case PNSEvents
+    case CellularConnectionQualityEvents
+    case NetProvider
+    case Countries
+    public var metrics: [CynoptaMetricsKit.Model.Metric] {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CynoptaMetricsKit.Model.MetricsGroup]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [CynoptaMetricsKit.Model.MetricsGroup] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Metric : Swift.String, Swift.CaseIterable {
+    case BrandFirstGVisitDate
+    case BrandLastGVisitDate
+    case BrandLastGVisitDateTime
+    case BrandGVisitDuration
+    case BrandGVisitTypicalFrequency
+    case BrandGVisitTypicalDuration
+    case BrandGVisits
+    case POIGVisits
+    case POIGVisitDuration
+    case POIGVisitTypicalFrequency
+    case POIGVisitTypicalDuration
+    case POILastGVisitDate
+    case POILastGVisitDateTime
+    case POIFirstGVisitDate
+    case JeMAEvents
+    case UserDefinedInteger
+    case UserDefinedDecimal
+    case UserDefinedString
+    case UserDefinedVariant
+    case AppSessions
+    case AppSessionDuration
+    case AppSessionDays
+    case AppSessionTypicalDuration
+    case AppSessionDaysTypicalFrequency
+    case AppSessionTypicalFrequency
+    case AppSessionLastDate
+    case AppSessionLastDateTime
+    case LastAppOpenHour
+    case LastAppOpenDayOfWeek
+    case ProcessCpuTimeLastDay
+    case WatchModelName
+    case MainKeyboardLanguage
+    case SecondKeyboardLanguage
+    case LanguagesNumber
+    case Multilingual
+    case FontSize
+    case SimCountry
+    case HomeCountry
+    case CurrentCountry
+    case CurrentTimeZone
+    case CurrentlyAbroad
+    case PhoneModelName
+    case PhoneBrandName
+    case PhoneModelRaw
+    case HomeTimeZone
+    case CurrentlyTimeZoneAbroad
+    case RecentTimeZones
+    case IsCarOwner
+    case CarBrandName
+    case SecondaryCarBrandName
+    case DrivingPresencePerWeekDay
+    case DrivingPresencePerHour
+    case FullLocationPermissionGranted
+    case WhileInUseLocationPermissionGranted
+    case NotificationsPermissionGranted
+    case NotificationScheduledDeliverySetting
+    case NotificationTimeSensitiveSetting
+    case NotificationCriticalAlertSetting
+    case NotificationCenterSetting
+    case NotificationLockScreenSetting
+    case HostAppVersionName
+    case HostAppVersionCode
+    case OSVersionName
+    case OSVersionCode
+    case SDKStorageDBSizeMiB
+    case SDKStorageOverallSizeMiB
+    case NightStart
+    case NightEnd
+    case NightDuration
+    case EarlySleep
+    case LateSleep
+    case EarlyWake
+    case LateWake
+    case BatteryChargingEventsHeatMapPerHour
+    case BatteryMedianLevelHeatMapPerHour
+    case BatteryLevelRangesHeatMapBy10s
+    case BatteryLevelRangesHeatMapBy0_25_75_100
+    case BatteryLevelRangesHeatMapBy0_20_50_100
+    case PhoneInteractionHeatMap
+    case PhoneInteractionLeastActiveHour
+    case PhoneInteractionMostActiveHour
+    case PNSEvents
+    case PNSEventsDaily
+    case PNSEventsHeatMap
+    case CellularConnectionQuality
+    case CellularConnectionQualityVariance
+    case CellularConnectionQualityHistogram
+    case CellularNetworkGenerationMostFrequent
+    case CellularNetworkGenerationHistogram
+    case CellularNetworkGenerationMostFrequentPercentage
+    case NetTrafficMobileUsagePerDay
+    case NetTrafficWifiUsagePerDay
+    case NetTrafficMobileTotalUsage
+    case NetTrafficWifiTotalUsage
+    case NetTrafficMobileTypicalUsagePerWeekday
+    case NetTrafficWifiTypicalUsagePerWeekday
+    case NetTrafficMobileTypicalUsagePer6HourBlocks
+    case NetTrafficWifiTypicalUsagePer6HourBlocks
+    case HoursSinceLastMobileDataUsage
+    case NetTrafficUploadTotalUsage
+    case NetTrafficDownloadTotalUsage
+    case NetTrafficUploadDownloadRatio
+    case NetTrafficMobileUploadTotalUsage
+    case NetTrafficMobileDownloadTotalUsage
+    case NetTrafficMobileUploadDownloadRatio
+    case NetTrafficWifiUploadTotalUsage
+    case NetTrafficWifiDownloadTotalUsage
+    case NetTrafficWifiUploadDownloadRatio
+    case ActiveSimCardsCount
+    case CellularProvidersNames
+    case DataSimSwapCount
+    case DataUsedPerSimProvider
+    case NetProviderCellularISP
+    case NetProviderHomeISP
+    case NetProviderWorkISP
+    case NetProviderCellularASNNumber
+    case NetProviderHomeASNNumber
+    case NetProviderWorkASNNumber
+    case NetProviderCellularASNName
+    case NetProviderHomeASNName
+    case NetProviderWorkASNName
+    case NetProviderCellularASNOrganization
+    case NetProviderHomeASNOrganization
+    case NetProviderWorkASNOrganization
+    case NetProviderCellularConnectionType
+    case NetProviderHomeConnectionType
+    case NetProviderWorkConnectionType
+    case NetProviderCellularUserType
+    case NetProviderHomeUserType
+    case NetProviderWorkUserType
+    case NetProviderCellularCityName
+    case NetProviderHomeCityName
+    case NetProviderWorkCityName
+    case NetProviderCellularCountryName
+    case NetProviderHomeCountryName
+    case NetProviderWorkCountryName
+    case NetProviderCellularCountryIsoCode
+    case NetProviderHomeCountryIsoCode
+    case NetProviderWorkCountryIsoCode
+    case NetProviderCellularContinentName
+    case NetProviderHomeContinentName
+    case NetProviderWorkContinentName
+    case NetProviderCellularContinentCode
+    case NetProviderHomeContinentCode
+    case NetProviderWorkContinentCode
+    case NetProviderCellularSubdivisionName
+    case NetProviderHomeSubdivisionName
+    case NetProviderWorkSubdivisionName
+    case NetProviderCellularSubdivisionIsoCode
+    case NetProviderHomeSubdivisionIsoCode
+    case NetProviderWorkSubdivisionIsoCode
+    case NetProviderCellularIsInEuropeanUnion
+    case NetProviderHomeIsInEuropeanUnion
+    case NetProviderWorkIsInEuropeanUnion
+    case NetProviderCellularLocationTimeZone
+    case NetProviderHomeLocationTimeZone
+    case NetProviderWorkLocationTimeZone
+    case NetProviderWifiISPASNNumberUniqueList
+    case NetProviderWifiISPObservationCount
+    case NetProviderWifiISPUniqueCount
+    case NetProviderWifiISPDailyMedianUniqueCount
+    case HomeLeaveTimeMorning
+    case HomeArrivalTimeEvening
+    case WorkArrivalTimeMorning
+    case WorkLeaveTimeEvening
+    case HomeWorkCommuteTime
+    case WorkHomeCommuteTime
+    case IsHomeDetected
+    case IsWorkDetected
+    case HomeStayDays
+    case HomeDuration
+    case HomeDurationEvenings
+    case HomeDurationWeekDays
+    case HomeDurationWeekEnds
+    case WorkDuration
+    case WorkDurationWeekEnds
+    case NumDaysAbroad
+    case InternationalTravels
+    case NumCountriesVisited
+    case InFlightConnectivityDetected
+    case StarLinkConnectivityDetected
+    case SchemeNamesLsh
+    case IsDebuggerAttached
+    case IsNativeDebuggerAttached
+    case DebuggerReason
+    case SimulatedInteractionsPercentage
+    case CurrentSessionSimulatedInteractionsPercentage
+    case SimulatedInteractionsFeatures
+    public var metricGroup: CynoptaMetricsKit.Model.MetricsGroup {
+      get
+    }
+    public var type: CynoptaMetricsKit.Model.Metric.MetricType {
+      get
+    }
+    public typealias CalculationBlock = (_ timeRange: CynoptaMetricsKit.TimeRange, _ uptoDate: Foundation.Date, _ db: CynoptaKit.DatabaseConnection) -> ()
+    public var userDefined: Swift.Bool {
+      get
+    }
+    public var requiredCapabilities: [[CynoptaKit.CynoptaCapability]] {
+      get
+    }
+    public func isNotEmpty(value: Any?) -> Swift.Bool
+    public init?(rawValue: Swift.String)
+    public typealias AllCases = [CynoptaMetricsKit.Model.Metric]
+    public typealias RawValue = Swift.String
+    nonisolated public static var allCases: [CynoptaMetricsKit.Model.Metric] {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+}
+extension CynoptaMetricsKit.Model {
+  public struct MicrosegmentReportItem : Swift.Codable {
+    public var name: Swift.String
+    public var when: Swift.String?
+    public var timeFrame: Swift.String?
+    public var value: Swift.String
+    public var hostMS: Swift.Bool
+    public var aux: [Swift.String : Swift.String]?
+    public enum CodingKeys : Swift.String, Swift.CodingKey {
+      case name
+      case when
+      case timeFrame
+      case value
+      case hostMS
+      case aux
+      public init?(rawValue: Swift.String)
+      public init?(stringValue: Swift.String)
+      public init?(intValue: Swift.Int)
+      public typealias RawValue = Swift.String
+      public var intValue: Swift.Int? {
+        get
+      }
+      public var rawValue: Swift.String {
+        get
+      }
+      public var stringValue: Swift.String {
+        get
+      }
+    }
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+public typealias CynoptaMetricsModel = CynoptaMetricsKit.Model
+public struct Model {
+}
+extension CynoptaMetricsKit.Model {
+  public struct TrustEvaluation : Swift.Equatable {
+    public static let defaultActionName: Swift.String
+    public static let latestActionName: Swift.String
+    public let score: Swift.Double
+    public let classification: Swift.String
+    public let deviceRealnessScore: Swift.Double
+    public let sessionBotRisk: Swift.Double
+    public let reasons: [Swift.String]
+    public let attestationPayload: Swift.String
+    public let timestamp: Swift.Int64
+    public let evaluationLatencyMs: Swift.Int64
+    public let actionName: Swift.String
+    public func toJson() -> [Swift.String : Any]
+    public var attestationJSON: Foundation.Data? {
+      get
+    }
+    public static func resolvedActionName(_ actionName: Swift.String?) -> Swift.String
+    public static func == (a: CynoptaMetricsKit.Model.TrustEvaluation, b: CynoptaMetricsKit.Model.TrustEvaluation) -> Swift.Bool
+  }
+}
+extension CynoptaMetricsKit.Model.Metric {
+  public struct Result {
+    public var intValue: Swift.Int {
+      get
+    }
+    public var decimalValue: Swift.Double {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+    public var booleanValue: Swift.Bool {
+      get
+    }
+    public var hasValue: Swift.Bool {
+      get
+    }
+    public var sealed: Swift.Bool {
+      get
+    }
+    public var variantValue: CynoptaMetricsKit.CynoptaMetricsModel.Variant {
+      get
+    }
+  }
+  public func getAsVariant(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> CynoptaMetricsKit.CynoptaMetricsModel.Variant
+  public func getAsDistance(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> Foundation.Measurement<Foundation.UnitLength>
+  @available(*, deprecated)
+  public func getAllAsDistance(customName: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> [Swift.String : Foundation.Measurement<Foundation.UnitLength>]
+  public func getAsDuration(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> Foundation.Measurement<Foundation.UnitDuration>
+  @available(*, deprecated)
+  public func getAllAsDuration(customName: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> [Swift.String : Foundation.Measurement<Foundation.UnitDuration>]
+  public func getAsSpeed(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> Foundation.Measurement<Foundation.UnitSpeed>
+  @available(*, deprecated)
+  public func getAllAsSpeed(customName: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> [Swift.String : Foundation.Measurement<Foundation.UnitSpeed>]
+  public func get(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> Swift.String
+  @available(*, deprecated)
+  public func getAll(customName: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> [Swift.String : Swift.String]
+  public func get(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> Swift.Double
+  @available(*, deprecated)
+  public func getAll(customName: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> [Swift.String : Swift.Double]
+  public func get(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> Swift.Int
+  public func getValue(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, defaultValue: CynoptaMetricsKit.CynoptaMetricsModel.Variant? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> CynoptaMetricsKit.Model.Metric.Result
+  @available(*, deprecated)
+  public func getAll(customName: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> [Swift.String : Swift.Int]
+  public func get(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> Swift.Bool
+  @available(*, deprecated)
+  public func getAll(customName: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, uptoDate: Foundation.Date? = nil, expirationTimeout: Foundation.TimeInterval? = nil) -> [Swift.String : Swift.Bool]
+  public func set(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, date: Foundation.Date? = nil, value: Swift.String)
+  public func set(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, date: Foundation.Date? = nil, value: Swift.Double)
+  public func set(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, date: Foundation.Date? = nil, value: Swift.Int)
+  public func set(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil, date: Foundation.Date? = nil, value: Swift.Bool)
+  public func clear(customName: Swift.String? = nil, index1: Swift.String? = nil, index2: Swift.String? = nil, timeRange: CynoptaMetricsKit.TimeRange? = nil)
+  public enum MetricType {
+    case string
+    case decimal
+    case integer
+    case variant
+    public static func == (a: CynoptaMetricsKit.Model.Metric.MetricType, b: CynoptaMetricsKit.Model.Metric.MetricType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+}
+@_hasMissingDesignatedInitializers public class PMSJavascriptModelsServiceFactory {
+  public static func buildService(databaseService: any CynoptaKit.DatabaseServiceProtocol) throws -> (any CynoptaMetricsKit.PMSJavascriptModelsServiceProtocol)?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PMSInstalledAppsServiceFactory {
+  public static func buildService(categoriesInConfig: [CynoptaMetricsKit.Model.Config.PMSInstalledAppCategory]) throws -> any CynoptaMetricsKit.PMSInstalledAppsServiceProtocol
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CynoptaDataCollections : ObjectiveC.NSObject {
+  @discardableResult
+  public func upsert<T>(collection: Swift.String, identifier: Swift.String = UUID().uuidString, payload: T, uptoDate: Foundation.Date = Date.universalNow) throws -> Swift.String where T : Swift.Encodable
+  @discardableResult
+  public func upsert(collection: Swift.String, identifier: Swift.String = UUID().uuidString, payload: [Swift.String : Any], uptoDate: Foundation.Date = Date.universalNow) throws -> Swift.String
+  public func find(collection: Swift.String, by identifier: Swift.String) throws -> [Swift.String : Any]?
+  public func find<T>(collection: Swift.String, by identifier: Swift.String) throws -> (data: T, metadata: CynoptaMetricsKit.CynoptaDataCollectionModel.DocumentMetadata)? where T : Swift.Decodable
+  public func find(collection: Swift.String, timeRange: CynoptaMetricsKit.TimeRange, uptoDate: Foundation.Date = Date.universalNow) throws -> [[Swift.String : Any]]
+  public func find<T>(collection: Swift.String, timeRange: CynoptaMetricsKit.TimeRange, uptoDate: Foundation.Date = Date.universalNow) throws -> [(identifier: Swift.String, data: T, metadata: CynoptaMetricsKit.CynoptaDataCollectionModel.DocumentMetadata)] where T : Swift.Decodable
+  public func findAll(collection: Swift.String) throws -> [[Swift.String : Any]]
+  public func findAll<T>(collection: Swift.String) throws -> [(identifier: Swift.String, data: T, metadata: CynoptaMetricsKit.CynoptaDataCollectionModel.DocumentMetadata)] where T : Swift.Decodable
+  @objc deinit
+  public static let shared: CynoptaMetricsKit.CynoptaDataCollections
+}
+infix operator ?= : AssignmentPrecedence
+@objc @_inheritsConvenienceInitializers public class CynoptaMetrics : ObjectiveC.NSObject {
+  public func startup(autoUpdate: Swift.Bool = true)
+  public func evaluateTrust(actionName: Swift.String?, sweep: Swift.Bool, countsAsAssessment: Swift.Bool = false) -> CynoptaMetricsKit.Model.TrustEvaluation
+  public func latestTrustAttestationJSON() -> Foundation.Data?
+  public func cynoptaAPIKey() -> Swift.String?
+  public func cynoptaLicenseReport(isFirstReport: Swift.Bool) -> Foundation.Data?
+  @discardableResult
+  public func acknowledgeCynoptaLicenseReport(_ body: Foundation.Data, answer: Foundation.Data?) -> Swift.Bool
+  public func cynoptaLeaseRenewalDue() -> Swift.Bool?
+  public func cynoptaStorageReadable() -> Swift.Bool
+  public func cynoptaDebuggableBuild() -> Swift.Bool
+  public func cynoptaAppSalt() -> Foundation.Data
+  public func cynoptaFileFingerprint() -> Swift.String?
+  public func cynoptaReportingMode() -> CynoptaMetricsKit.Model.CynoptaReportingMode
+  public func setCynoptaReportingEnabled(_ enabled: Swift.Bool)
+  public func cynoptaShouldAutoStart() -> Swift.Bool
+  public func setCynoptaAutoStart(_ start: Swift.Bool)
+  @discardableResult
+  public func checkCynoptaLicense() -> Swift.Bool
+  public func cynoptaLicenseResult() -> CynoptaMetricsKit.Model.CynoptaLicenseResult?
+  public func deleteCynoptaData()
+  @available(iOS 13.0, *)
+  public func setAppleSignInRealUserStatus(_ status: AuthenticationServices.ASUserDetectionStatus)
+  public func startupExtended()
+  public func register(metricName: Swift.String, calculationBlock: CynoptaMetricsKit.CynoptaMetricsModel.Metric.CalculationBlock?, expirationTimeout: Foundation.TimeInterval?)
+  public func shutdown()
+  public func aggregate(cleanup: Swift.Bool = false)
+  public func reactivateAggregation()
+  public func resetMetrics()
+  public func exportMicrosegmentsSnapshot(requestedMetrics: [Swift.String]?) -> [Swift.String : CynoptaKit.CynoptaModel.VariantValue]
+  public func exportEncodedEnrichment(_ queries: [Swift.String]? = nil) -> [Swift.String : [Swift.Double]]
+  public func exportMicrosegments() -> [CynoptaMetricsKit.Model.MicrosegmentReportItem]
+  public static let shared: CynoptaMetricsKit.CynoptaMetrics
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension CynoptaMetricsKit.CynoptaMetrics : CynoptaKit.BackgroundTaskDataSourceProtocol {
+  public func taskForBackground() -> any CynoptaKit.TaskProtocol
+}
+extension CynoptaMetricsKit.TimeRangeGroup : Swift.Equatable {}
+extension CynoptaMetricsKit.TimeRangeGroup : Swift.Hashable {}
+extension CynoptaMetricsKit.TimeRangeGroup : Swift.RawRepresentable {}
+extension CynoptaMetricsKit.TimeRangeType : Swift.Equatable {}
+extension CynoptaMetricsKit.TimeRangeType : Swift.Hashable {}
+extension CynoptaMetricsKit.TimeRangeType : Swift.RawRepresentable {}
+extension CynoptaMetricsKit.TimeRange : Swift.Equatable {}
+extension CynoptaMetricsKit.TimeRange : Swift.Hashable {}
+extension CynoptaMetricsKit.TimeRange : Swift.RawRepresentable {}
+extension CynoptaMetricsKit.Model.Metric : Swift.Equatable {}
+extension CynoptaMetricsKit.Model.Metric : Swift.Hashable {}
+extension CynoptaMetricsKit.Model.Metric : Swift.RawRepresentable {}
+extension CynoptaMetricsKit.Model.CynoptaReportingMode : Swift.Equatable {}
+extension CynoptaMetricsKit.Model.CynoptaReportingMode : Swift.Hashable {}
+extension CynoptaMetricsKit.Model.CynoptaReportingMode : Swift.RawRepresentable {}
+extension CynoptaMetricsKit.Model.MetricStatus : Swift.Equatable {}
+extension CynoptaMetricsKit.Model.MetricStatus : Swift.Hashable {}
+extension CynoptaMetricsKit.Model.MetricStatus : Swift.RawRepresentable {}
+extension CynoptaMetricsKit.Model.MetricsGroup : Swift.Equatable {}
+extension CynoptaMetricsKit.Model.MetricsGroup : Swift.Hashable {}
+extension CynoptaMetricsKit.Model.MetricsGroup : Swift.RawRepresentable {}
+extension CynoptaMetricsKit.Model.MicrosegmentReportItem.CodingKeys : Swift.Equatable {}
+extension CynoptaMetricsKit.Model.MicrosegmentReportItem.CodingKeys : Swift.Hashable {}
+extension CynoptaMetricsKit.Model.MicrosegmentReportItem.CodingKeys : Swift.RawRepresentable {}
+extension CynoptaMetricsKit.Model.Metric.MetricType : Swift.Equatable {}
+extension CynoptaMetricsKit.Model.Metric.MetricType : Swift.Hashable {}

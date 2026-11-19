@@ -1,0 +1,2297 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 effective-5.10 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name CynoptaKit
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import AVFoundation
+import BackgroundTasks
+import SystemConfiguration.CaptiveNetwork
+import CommonCrypto
+import CoreData
+import CoreLocation
+import CoreMotion
+import CoreTelephony
+@_exported import CynoptaKit
+import Darwin
+import Foundation
+import MapKit
+import MetricKit
+import NetworkExtension
+import OSLog
+import SQLite3
+import Security
+import Swift
+import SystemConfiguration
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+import os.signpost
+public struct Platform {
+  public enum ReleaseStage : Swift.String {
+    case development
+    case testflight
+    case production
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public static let releaseStage: CynoptaKit.Platform.ReleaseStage
+  public static let isSimulator: Swift.Bool
+  public static var deviceModelName: Swift.String {
+    get
+  }
+  public static var deviceModelIdentifier: Swift.String {
+    get
+  }
+  public static var identifierForVendor: Swift.String? {
+    get
+  }
+}
+extension CynoptaKit.Model.Data {
+  public struct IspResolution {
+    public enum Fields : Swift.String, Swift.CaseIterable {
+      case Timestamp
+      case IpAddress
+      case ResolutionData
+      public init?(rawValue: Swift.String)
+      public typealias AllCases = [CynoptaKit.Model.Data.IspResolution.Fields]
+      public typealias RawValue = Swift.String
+      nonisolated public static var allCases: [CynoptaKit.Model.Data.IspResolution.Fields] {
+        get
+      }
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public let timestamp: Swift.Int
+    public let ipAddress: Swift.String
+    public let resolutionData: Foundation.Data
+    public init(timestamp: Swift.Int, ipAddress: Swift.String, resolutionData: Foundation.Data)
+    @discardableResult
+    public func insert(db: CynoptaKit.DatabaseConnection) throws -> Swift.Int
+    public static func fetchData(db: CynoptaKit.DatabaseConnection) throws -> [CynoptaKit.Model.Data.IspResolution]
+    public static func fetchData(db: CynoptaKit.DatabaseConnection, from fromDate: Foundation.Date, to toDate: Foundation.Date) throws -> [CynoptaKit.Model.Data.IspResolution]
+  }
+}
+public class ISPResolver {
+  public struct Config : Swift.Codable {
+    public var netProviderResolutionActive: Swift.Bool
+    public var netProviderResolutionActive2: Swift.Bool
+    public var netProviderResolutionPercentage: Swift.Int
+    public var netProviderGeoAwareResolution: Swift.Bool
+    public var netProviderGeoAwareResolution2: Swift.Bool
+    public var netProviderResolutionEndpoint: Swift.String
+    public static func get() -> CynoptaKit.ISPResolver.Config
+    public func update()
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public enum Error : Swift.Error, Swift.CustomStringConvertible, Foundation.LocalizedError {
+    case disabled
+    case invalidURL
+    case timeout
+    case networkError(error: any Swift.Error)
+    case networkErrorStatusCode(statusCode: Swift.Int)
+    public var isTimeout: Swift.Bool {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public static func isIspActive() -> Swift.Bool
+  public static func getNetProviderResolutionPercentage() -> Swift.Int
+  public init()
+  public func fetch(completion: @escaping (Swift.Result<Foundation.Data, CynoptaKit.ISPResolver.Error>) -> Swift.Void)
+  @objc deinit
+}
+extension CynoptaKit.ISPResolver {
+  public struct NetAddressInfoResponse : Swift.Decodable, Swift.Hashable, Swift.Equatable {
+    public var isp: Swift.String?
+    public var normalizedISP: Swift.String?
+    public var asnNumber: Swift.Int?
+    public var asnName: Swift.String?
+    public var connectionType: Swift.String?
+    public var userType: Swift.String?
+    public var organization: Swift.String?
+    public var city: Swift.String?
+    public var country: Swift.String?
+    public var countryISO: Swift.String?
+    public var continent: Swift.String?
+    public var continentCode: Swift.String?
+    public var subdivision: Swift.String?
+    public var subdivisionISO: Swift.String?
+    public var isInEU: Swift.Bool?
+    public var timezone: Swift.String?
+    public var ip: Swift.String?
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (lhs: CynoptaKit.ISPResolver.NetAddressInfoResponse, rhs: CynoptaKit.ISPResolver.NetAddressInfoResponse) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+final public class CynoptaMessageBus<T> {
+  public typealias Handler = (T) -> Swift.Void
+  public init(bufferLimit: Swift.Int = 100)
+  final public func post(_ message: T)
+  final public func addListener(replayPast: Swift.Bool = true, with handler: @escaping CynoptaKit.CynoptaMessageBus<T>.Handler) -> Foundation.UUID
+  final public func removeListener(with id: Foundation.UUID)
+  @objc deinit
+}
+extension Swift.Double {
+  public static let immediately: Foundation.TimeInterval
+  public static let thirtyMinutes: Foundation.TimeInterval
+  public static let oneHour: Foundation.TimeInterval
+  public static let twentyFourHours: Foundation.TimeInterval
+}
+extension Swift.Double {
+  public var millis: Swift.Int {
+    get
+  }
+  public var micros: Swift.Int {
+    get
+  }
+  public var millisAsDouble: Swift.Double {
+    get
+  }
+  public var minutes: Swift.Int {
+    get
+  }
+}
+extension Swift.Int {
+  public var seconds: Foundation.TimeInterval {
+    get
+  }
+  public var minToSeconds: Foundation.TimeInterval {
+    get
+  }
+}
+@objc public protocol CynoptaDelegate {
+  @objc optional func anagogIntegrationMessageLog(logType: os.OSLogType, message: Swift.String)
+  @objc optional func anagogDidReceiveBestMomentNotification(userInfo: [Swift.AnyHashable : Any])
+  @objc optional func anagogDidReceiveBestMomentEvent()
+}
+@_hasMissingDesignatedInitializers public class CynoptaCore {
+  public func startup(clientIdentifier: Swift.String? = Bundle.main.bundleIdentifier, apiKey: Swift.String?, _ completion: (() -> Swift.Void)? = nil, _ postCompletion: (() -> Swift.Void)? = nil)
+  public func shutdown(fullstop: Swift.Bool = false, cleanup: Swift.Bool = false, _ completion: (() -> Swift.Void)? = nil)
+  public func deleteStoredData()
+  public func refresh(reason: CynoptaKit.CynoptaRefreshReason = .unknown)
+  public func registerLaunchBlockingModule(_ moduleName: Swift.String)
+  public func markModuleConfigReady(_ moduleName: Swift.String)
+  public func ensureStartedSafe() -> Swift.Bool
+  public func enableDevelopmentMode(key: Swift.Int64 = 0)
+  public func exportFeedback(filename: Swift.String = "feedback.zip", customSources: [Swift.String : Foundation.URL]? = nil, password: Swift.String?)
+  public func dropFeedback(filename: Swift.String = "feedback.zip")
+  public func excludeOperationalCountries(_ codes: [Swift.String])
+  public func includeOperationalCountries(_ codes: [Swift.String])
+  public var applicationState: UIKit.UIApplication.State {
+    get
+  }
+  public func updateDeviceToken(_ deviceToken: Foundation.Data)
+  public class func isMyRemoteNotification(_ userInfo: [Swift.AnyHashable : Any]) -> Swift.Bool
+  @discardableResult
+  public func didReceiveRemoteNotification(_ userInfo: [Swift.AnyHashable : Any], completionHandler: (() -> Swift.Void)? = nil) -> Swift.Bool
+  public func didReceiveNotification(_ notification: UserNotifications.UNNotification)
+  public func saveNotificationDataForBestMoment(userInfo: [Swift.AnyHashable : Any])
+  public var apiKey: Swift.String {
+    get
+  }
+  public var clientIdentifier: Swift.String {
+    get
+  }
+  public var delegate: (any CynoptaKit.CynoptaDelegate)?
+  public var api: CynoptaKit.PublicApi
+  public var resource: CynoptaKit.ResourceApi
+  public var configuration: CynoptaKit.ConfigurationApi
+  public var user: CynoptaKit.UserApi
+  public var share: CynoptaKit.ShareApi
+  public var `internal`: CynoptaKit.InternalApi
+  public var state: CynoptaKit.CynoptaState {
+    get
+  }
+  public var capabilities: Swift.Set<CynoptaKit.CynoptaCapability> {
+    get
+  }
+  public static let RefreshTaskIdentifier: Swift.String
+  public static let shared: CynoptaKit.CynoptaCore
+  public static var baseCalendar: Foundation.Calendar {
+    get
+  }
+  public var enabled: Swift.Bool
+  @objc deinit
+}
+public enum CynoptaState {
+  case passive
+  case activating
+  case active
+  case passivating
+  public static func == (a: CynoptaKit.CynoptaState, b: CynoptaKit.CynoptaState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum CynoptaCapability : Swift.String {
+  case fullLocations
+  case reducedAccuracyLocations
+  case whileInUseLocations
+  case notifications
+  case notificationScheduledDelivery
+  case notificationTimeSensitive
+  case notificationCriticalAlert
+  case notificationLockScreen
+  case notificationCenter
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc public enum CynoptaRefreshReason : Swift.Int {
+  case unknown
+  case backgroundTask
+  case remoteNotification
+  case protectedData
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+infix operator ?= : AssignmentPrecedence
+extension CynoptaKit.Model {
+  public struct Config : Swift.Codable {
+    public enum LocationsUpdateStrategy : Swift.String, Swift.Codable {
+      case never
+      case whileInPower
+      case always
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public struct WakeupStrategyOptions : Swift.OptionSet, Swift.Codable {
+      public let rawValue: Swift.Int
+      public init(rawValue: Swift.Int)
+      public static let locations: CynoptaKit.Model.Config.WakeupStrategyOptions
+      public static let remoteNotifications: CynoptaKit.Model.Config.WakeupStrategyOptions
+      public static let backgroundFetch: CynoptaKit.Model.Config.WakeupStrategyOptions
+      public typealias ArrayLiteralElement = CynoptaKit.Model.Config.WakeupStrategyOptions
+      public typealias Element = CynoptaKit.Model.Config.WakeupStrategyOptions
+      public typealias RawValue = Swift.Int
+    }
+    public enum GeofenceStrategy : Swift.String, Swift.Codable {
+      case basic
+      case adaptive
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public enum VisitsDetectionStrategy : Swift.String, Swift.Codable {
+      case byVisits
+      case byLocations
+      case byVisitsAndLocations
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public enum UsageReportMode : Swift.String, Swift.Codable {
+      case stealth
+      case core
+      case full
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public enum ReleaseStage : Swift.String, Swift.Codable {
+      case production
+      case rc
+      case stage
+      case development
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public var silent: Swift.Bool
+    public var enabledPercentage: Swift.Int
+    public var crashReports: Swift.Bool
+    public var errorReports: Swift.Bool
+    public var errorReportsPercentage: Swift.Int
+    public var reportsMicrosegmentsActive: Swift.Bool
+    public var reportsMicrosegmentsSnapshotActive: Swift.Bool
+    public var reportsEncodedEnrichmentActive: Swift.Bool
+    public var remoteNotifications: Swift.Bool
+    public var remoteNotificationsServiceEndpoint: Swift.String
+    public var remoteNotificationsServiceXAPIKEY: Swift.String
+    public var crashReportUrl: Swift.String?
+    public var sessionReportUrl: Swift.String?
+    public var geofenceStrategy: CynoptaKit.Model.Config.GeofenceStrategy
+    public var geofenceIBeaconsIdentities: [Swift.String]
+    public var visitsDetectionStrategy: CynoptaKit.Model.Config.VisitsDetectionStrategy
+    public var locationsUpdateStrategy: CynoptaKit.Model.Config.LocationsUpdateStrategy
+    public var wakeupStrategy: CynoptaKit.Model.Config.WakeupStrategyOptions
+    public var privacyModeGlobal: Swift.String
+    public var privacyModeGDPR: Swift.String
+    public var usageReportEndpoint: Swift.String
+    public var usageReportMode: CynoptaKit.Model.Config.UsageReportMode
+    public var dataLifetimeFullMonths: Swift.Int
+    public var purgeOldData: Swift.Bool
+    public var defaultSIMCountry: Swift.String
+    public var releaseStage: CynoptaKit.Model.Config.ReleaseStage
+    public var locationAware: Swift.Bool
+    public var enableWifiResolution: Swift.Bool
+    public var bestMomentMinIntervalBetweenNotificationsInMinutes: Swift.Int
+    public var bestMomentMaxTimeForUsingOnlyBestMomentInMinutes: Swift.Int
+    public var bestMomentMaxNotificationLifetimeInMinutes: Swift.Int
+    public var sqlPargmaEnableWALJournaling: Swift.Bool
+    public var sqlPargmaBusyTimeout: Swift.Int?
+    public var carMacAddressOUI: [Swift.String]?
+    public init()
+    public init(from decoder: any Swift.Decoder) throws
+    public static func get() -> CynoptaKit.Model.Config
+    public static func getDefault() -> CynoptaKit.Model.Config
+    public func update()
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+}
+extension Swift.Double {
+  public var kmh: _LocationEssentials.CLLocationSpeed {
+    get
+  }
+  public var kmh2ms: _LocationEssentials.CLLocationSpeed {
+    get
+  }
+}
+public protocol UserDefaultsKey : Swift.CaseIterable, Swift.RawRepresentable {
+  var userDefaults: Foundation.UserDefaults { get }
+  var keyPrefix: Swift.String { get }
+  func get() -> Swift.Bool
+  func get() -> Any?
+  func get() -> Swift.String?
+  func get() -> Swift.Double
+  func get() -> Swift.Int
+  func get() -> Foundation.Date?
+  func get() -> [Any]?
+  func get() -> [Swift.String : Any]?
+  func set(_ newValue: Swift.Bool)
+  func set(_ newValue: Any)
+  func set(_ newValue: Swift.Double)
+  func set(_ newValue: Swift.Int)
+  func set(_ newValue: Foundation.Date)
+  func set(_ newValue: [Any])
+  func set(_ newValue: [Swift.String : Any])
+  func clear()
+  func exists() -> Swift.Bool
+  static func cleanAll()
+}
+extension CynoptaKit.UserDefaultsKey where Self.RawValue == Swift.String {
+  public var userDefaults: Foundation.UserDefaults {
+    get
+  }
+  public var keyPrefix: Swift.String {
+    get
+  }
+  public func get() -> Swift.Bool
+  public func get() -> Any?
+  public func get() -> Swift.String?
+  public func get() -> Swift.Double
+  public func get() -> Swift.Int
+  public func get() -> Foundation.Date?
+  public func get() -> [Any]?
+  public func get() -> [Swift.String : Any]?
+  public func set(_ newValue: Swift.Bool)
+  public func set(_ newValue: Any)
+  public func set(_ newValue: Swift.Double)
+  public func set(_ newValue: Swift.Int)
+  public func set(_ newValue: Foundation.Date)
+  public func set(_ newValue: [Any])
+  public func set(_ newValue: [Swift.String : Any])
+  public func clear()
+  public func exists() -> Swift.Bool
+  public static func cleanAll()
+}
+@available(iOS 16.0, *)
+public func jmxSignpost(_ type: os.OSSignpostType, name: Swift.StaticString)
+@objc @_hasMissingDesignatedInitializers @available(iOS 16.0, *)
+public class JMXSignpostIntervalData : MetricKit.MXSignpostIntervalData {
+  @objc override dynamic public var histogrammedSignpostDuration: MetricKit.MXHistogram<Foundation.UnitDuration> {
+    @objc get
+  }
+  final public let totalCount: Swift.Int
+  final public let totalTime: Swift.Int
+  @objc deinit
+}
+public enum FilePathSerialExecutor {
+  public static func perform<T>(filePath: Swift.String, _ work: () throws -> T) rethrows -> T
+}
+extension Foundation.HTTPURLResponse {
+  public var etag: Swift.String? {
+    get
+  }
+}
+public enum GeoJSONFeatureIdentifier : Swift.Hashable {
+  case string(value: Swift.String)
+  case int(value: Swift.Int)
+  public static func == (a: CynoptaKit.GeoJSONFeatureIdentifier, b: CynoptaKit.GeoJSONFeatureIdentifier) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension CynoptaKit.GeoJSONFeatureIdentifier : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension CynoptaKit.GeoJSONFeatureIdentifier : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.Int)
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension CynoptaKit.GeoJSONFeatureIdentifier : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+public struct GeofenceModelPB {
+  public struct RetroactiveJobStatePB : Swift.Equatable, CynoptaKit.ProtobufSerializable {
+    public var detectorIdentifier: Swift.String
+    public var providersIdentifiers: [Swift.String]
+    public var locations: [CynoptaKit.CoreModelPB.LocationsListPB]
+    public init()
+    public init(detectorIdentifier: Swift.String, providersIdentifiers: [Swift.String], locations: [CynoptaKit.CoreModelPB.LocationsListPB])
+    public init(serializedData data: Foundation.Data) throws
+    public func serializedData() -> Foundation.Data
+    public static func == (a: CynoptaKit.GeofenceModelPB.RetroactiveJobStatePB, b: CynoptaKit.GeofenceModelPB.RetroactiveJobStatePB) -> Swift.Bool
+  }
+}
+public struct CoreModelPB {
+  public struct LocationPB : Swift.Equatable, CynoptaKit.ProtobufSerializable {
+    public var timestamp: Swift.Int64
+    public var latitude: Swift.Float
+    public var longitude: Swift.Float
+    public var speed: Swift.Float
+    public var bearing: Swift.Float
+    public var altitude: Swift.Float
+    public var timeZoneOffset: Swift.Int32
+    public var country: Swift.String
+    public var geohash: Swift.String
+    public init()
+    public init(timestamp: Swift.Int64, latitude: Swift.Float, longitude: Swift.Float, speed: Swift.Float, bearing: Swift.Float, altitude: Swift.Float, timeZoneOffset: Swift.Int32, country: Swift.String, geohash: Swift.String)
+    public init(serializedData data: Foundation.Data) throws
+    public func serializedData() -> Foundation.Data
+    public static func == (a: CynoptaKit.CoreModelPB.LocationPB, b: CynoptaKit.CoreModelPB.LocationPB) -> Swift.Bool
+  }
+  public struct LocationsListPB : Swift.Equatable, CynoptaKit.ProtobufSerializable {
+    public var list: [CynoptaKit.CoreModelPB.LocationPB]
+    public init()
+    public init(list: [CynoptaKit.CoreModelPB.LocationPB])
+    public init(serializedData data: Foundation.Data) throws
+    public func serializedData() -> Foundation.Data
+    public static func == (a: CynoptaKit.CoreModelPB.LocationsListPB, b: CynoptaKit.CoreModelPB.LocationsListPB) -> Swift.Bool
+  }
+}
+final public class ProtobufBinaryDecoder {
+  public enum WireType : Swift.UInt8 {
+    case varint
+    case fixed64
+    case lengthDelimited
+    case startGroup
+    case endGroup
+    case fixed32
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public struct Field {
+    public let number: Swift.Int
+    public let wireType: CynoptaKit.ProtobufBinaryDecoder.WireType
+  }
+  public enum Value : Swift.Equatable {
+    case varint(Swift.UInt64)
+    case fixed64(Swift.UInt64)
+    case fixed32(Swift.UInt32)
+    case bytes(Foundation.Data)
+    public var uint64: Swift.UInt64? {
+      get
+    }
+    public var int64: Swift.Int64? {
+      get
+    }
+    public var uint32: Swift.UInt32? {
+      get
+    }
+    public var int32: Swift.Int32? {
+      get
+    }
+    public var bool: Swift.Bool? {
+      get
+    }
+    public var data: Foundation.Data? {
+      get
+    }
+    public var stringUTF8: Swift.String? {
+      get
+    }
+    public static func == (a: CynoptaKit.ProtobufBinaryDecoder.Value, b: CynoptaKit.ProtobufBinaryDecoder.Value) -> Swift.Bool
+  }
+  public enum DecodingError : Swift.Error, Foundation.LocalizedError, Swift.Equatable {
+    case truncated
+    case malformedVarint
+    case invalidWireType(Swift.UInt8)
+    case invalidFieldNumber(Swift.Int)
+    case lengthOverflow
+    case negativeLength
+    case invalidUTF8
+    case groupMismatch(expectedFieldNumber: Swift.Int, gotFieldNumber: Swift.Int)
+    public var errorDescription: Swift.String? {
+      get
+    }
+    public static func == (a: CynoptaKit.ProtobufBinaryDecoder.DecodingError, b: CynoptaKit.ProtobufBinaryDecoder.DecodingError) -> Swift.Bool
+  }
+  public init(data: Foundation.Data)
+  final public var isAtEnd: Swift.Bool {
+    get
+  }
+  final public var position: Swift.Int {
+    get
+  }
+  final public var remainingCount: Swift.Int {
+    get
+  }
+  final public func nextField() throws -> CynoptaKit.ProtobufBinaryDecoder.Field?
+  final public func readVarint() throws -> Swift.UInt64
+  final public func readSVarint() throws -> Swift.Int64
+  final public func readFixed32() throws -> Swift.UInt32
+  final public func readFixed64() throws -> Swift.UInt64
+  final public func readLengthDelimited() throws -> Foundation.Data
+  final public func readStringUTF8() throws -> Swift.String
+  final public func readSubmessageDecoder() throws -> CynoptaKit.ProtobufBinaryDecoder
+  final public func skipField(fieldNumber: Swift.Int, wireType: CynoptaKit.ProtobufBinaryDecoder.WireType) throws
+  final public func decodeMessage() throws -> [Swift.Int : [CynoptaKit.ProtobufBinaryDecoder.Value]]
+  public static func decodePackedFixed32AsFloat(_ data: Foundation.Data) throws -> [Swift.Float]
+  public static func decodePackedVarintsAsInt32(_ data: Foundation.Data) throws -> [Swift.Int32]
+  public static func decodePackedVarintsAsBool(_ data: Foundation.Data) throws -> [Swift.Bool]
+  @objc deinit
+}
+final public class ProtobufBinaryEncoder {
+  public enum WireType : Swift.UInt8 {
+    case varint
+    case fixed64
+    case lengthDelimited
+    case startGroup
+    case endGroup
+    case fixed32
+    public init?(rawValue: Swift.UInt8)
+    public typealias RawValue = Swift.UInt8
+    public var rawValue: Swift.UInt8 {
+      get
+    }
+  }
+  public init()
+  final public var data: Foundation.Data {
+    get
+  }
+  final public var count: Swift.Int {
+    get
+  }
+  final public func append(_ byte: Swift.UInt8)
+  final public func append(contentsOf bytes: [Swift.UInt8])
+  final public func append(data: Foundation.Data)
+  final public func writeVarint(_ value: Swift.UInt64)
+  final public func writeSVarint(_ value: Swift.Int64)
+  final public func writeFixed32(_ value: Swift.UInt32)
+  final public func writeFixed64(_ value: Swift.UInt64)
+  final public func writeLengthDelimited(_ data: Foundation.Data)
+  final public func writeStringUTF8(_ string: Swift.String)
+  final public func writeTag(fieldNumber: Swift.Int, wireType: CynoptaKit.ProtobufBinaryEncoder.WireType)
+  final public func writeVarintField(_ value: Swift.UInt64, fieldNumber: Swift.Int)
+  final public func writeFixed32Field(_ value: Swift.UInt32, fieldNumber: Swift.Int)
+  final public func writeFixed64Field(_ value: Swift.UInt64, fieldNumber: Swift.Int)
+  final public func writeBytesField(_ data: Foundation.Data, fieldNumber: Swift.Int)
+  final public func writeStringField(_ string: Swift.String, fieldNumber: Swift.Int)
+  public static func encodePackedFixed32(_ values: [Swift.UInt32]) -> Foundation.Data
+  public static func encodePackedVarints(_ values: [Swift.UInt64]) -> Foundation.Data
+  @objc deinit
+}
+public struct HourlySignalPB : CynoptaKit.ProtobufSerializable {
+  public enum BatteryState : Swift.Int32, Swift.Equatable {
+    case unknown
+    case unplugged
+    case charging
+    case full
+    case UNRECOGNIZED
+    public init(rawProto: Swift.Int32)
+    public init?(rawValue: Swift.Int32)
+    public typealias RawValue = Swift.Int32
+    public var rawValue: Swift.Int32 {
+      get
+    }
+  }
+  public enum CellularRadioTech : Swift.Int32, Swift.Equatable {
+    case unknown
+    case none
+    case twoG
+    case threeG
+    case fourG
+    case fiveG
+    case UNRECOGNIZED
+    public init(rawProto: Swift.Int32)
+    public init?(rawValue: Swift.Int32)
+    public typealias RawValue = Swift.Int32
+    public var rawValue: Swift.Int32 {
+      get
+    }
+  }
+  public struct CellularConditionPB : Swift.Equatable {
+    public var bars: Swift.Int32
+    public var distribution: Swift.Float
+    public init()
+    public init(bars: Swift.Int32, distribution: Swift.Float)
+    public init(data: Foundation.Data) throws
+    public func serializedData() -> Foundation.Data
+    public static func == (a: CynoptaKit.HourlySignalPB.CellularConditionPB, b: CynoptaKit.HourlySignalPB.CellularConditionPB) -> Swift.Bool
+  }
+  public var version: Swift.Int32 {
+    get
+  }
+  public var hourSlot: Swift.Int32 {
+    get
+  }
+  public var batteryLevel: [Swift.Float] {
+    get
+  }
+  public var batteryState: [CynoptaKit.HourlySignalPB.BatteryState] {
+    get
+  }
+  public var phoneUnlock: [Swift.Bool] {
+    get
+  }
+  public var carPlayConnect: [Swift.Bool] {
+    get
+  }
+  public var pushNotificationReceived: [Swift.Bool] {
+    get
+  }
+  public var cellularCondition: [CynoptaKit.HourlySignalPB.CellularConditionPB] {
+    get
+  }
+  public var cellularRadioTech: [CynoptaKit.HourlySignalPB.CellularRadioTech] {
+    get
+  }
+  public var cpuDaily: Swift.Float {
+    get
+  }
+  public init()
+  public init(version: Swift.Int32, hourSlot: Swift.Int32, batteryLevel: [Swift.Float] = [], batteryState: [CynoptaKit.HourlySignalPB.BatteryState] = [], phoneUnlock: [Swift.Bool] = [], carPlayConnect: [Swift.Bool] = [], pushNotificationReceived: [Swift.Bool] = [], cellularCondition: [CynoptaKit.HourlySignalPB.CellularConditionPB] = [], cellularRadioTech: [CynoptaKit.HourlySignalPB.CellularRadioTech] = [], cpuDaily: Swift.Float = 0)
+  public init(serializedData data: Foundation.Data) throws
+  public func serializedData() -> Foundation.Data
+}
+final public class DirectoryCoordinator {
+  public init(fileManager: Foundation.FileManager = .default, deleteFileIfExist: Swift.Bool = true)
+  final public func removeDirectoryTree(at dirURL: Foundation.URL) throws
+  final public func ensureDirExistsAndSetProtectionToNone(at dirURL: Foundation.URL) throws
+  @objc deinit
+}
+public struct ResourceApi {
+  public func save(resource: CynoptaKit.CynoptaModel.Resource) throws
+  public func findResources(type: Swift.String, clazz: Swift.String? = nil, source: Swift.String? = nil) throws -> [CynoptaKit.Model.Resource]
+}
+public struct InternalApi {
+  public var cynoptaApplicationSupportDirectoryURL: Foundation.URL {
+    get
+  }
+  public var libraryURL: Foundation.URL {
+    get
+  }
+  public var cynoptaCacheDirectoryURL: Foundation.URL {
+    get
+  }
+  public func sdkStorageSize() -> Swift.Int
+  public func sdkDatabaseSize() -> Swift.Int
+  public func startupDate() -> Foundation.Date?
+  public func latestDate() -> Foundation.Date?
+  public var homeUrl: Foundation.URL {
+    get
+    set
+  }
+  public var mainEventsQueue: Dispatch.DispatchQueue {
+    get
+  }
+}
+extension Swift.String {
+  public func md5(using: Swift.String.Encoding = .utf8) -> Swift.String?
+  public func md5Data() -> Foundation.Data?
+}
+extension Foundation.Data {
+  public func hexString() -> Swift.String
+  public func md5() -> Swift.String
+  public func gzipped() -> Foundation.Data?
+  public func gunzipped() -> Foundation.Data?
+  public var string: Swift.String? {
+    get
+  }
+  public func base64URLEncodedStringWithoutPadding() -> Swift.String
+}
+public protocol GeoJSONGeometry : Swift.Decodable, Swift.Encodable, Swift.Hashable {
+}
+public struct PointGeometry : CynoptaKit.GeoJSONGeometry {
+  public typealias Coordinates = CynoptaKit.GeoJSONPosition
+  public let coordinates: CynoptaKit.PointGeometry.Coordinates
+  public static func == (a: CynoptaKit.PointGeometry, b: CynoptaKit.PointGeometry) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MultiPointGeometry : CynoptaKit.GeoJSONGeometry {
+  public typealias Coordinates = [CynoptaKit.PointGeometry.Coordinates]
+  public let coordinates: CynoptaKit.MultiPointGeometry.Coordinates
+  public static func == (a: CynoptaKit.MultiPointGeometry, b: CynoptaKit.MultiPointGeometry) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct LineStringGeometry : CynoptaKit.GeoJSONGeometry {
+  public typealias Coordinates = [CynoptaKit.GeoJSONPosition]
+  public let coordinates: CynoptaKit.LineStringGeometry.Coordinates
+  public static func == (a: CynoptaKit.LineStringGeometry, b: CynoptaKit.LineStringGeometry) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MultiLineStringGeometry : CynoptaKit.GeoJSONGeometry {
+  public typealias Coordinates = [CynoptaKit.LineStringGeometry.Coordinates]
+  public let coordinates: CynoptaKit.MultiLineStringGeometry.Coordinates
+  public static func == (a: CynoptaKit.MultiLineStringGeometry, b: CynoptaKit.MultiLineStringGeometry) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct PolygonGeometry : CynoptaKit.GeoJSONGeometry {
+  public typealias LinearRing = [CynoptaKit.GeoJSONPosition]
+  public typealias Coordinates = [CynoptaKit.PolygonGeometry.LinearRing]
+  public let coordinates: CynoptaKit.PolygonGeometry.Coordinates
+  public var exteriorRing: CynoptaKit.PolygonGeometry.Coordinates.Element? {
+    get
+  }
+  public var internalRings: CynoptaKit.PolygonGeometry.Coordinates.SubSequence {
+    get
+  }
+  public static func == (a: CynoptaKit.PolygonGeometry, b: CynoptaKit.PolygonGeometry) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MultiPolygonGeometry : CynoptaKit.GeoJSONGeometry {
+  public typealias Coordinates = [CynoptaKit.PolygonGeometry.Coordinates]
+  public let coordinates: CynoptaKit.MultiPolygonGeometry.Coordinates
+  public static func == (a: CynoptaKit.MultiPolygonGeometry, b: CynoptaKit.MultiPolygonGeometry) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GeometryCollection : CynoptaKit.GeoJSONGeometry {
+  public typealias Geometries = [CynoptaKit.GeoJSON.Geometry]
+  public let geometries: CynoptaKit.GeometryCollection.Geometries
+  public static func == (a: CynoptaKit.GeometryCollection, b: CynoptaKit.GeometryCollection) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension CynoptaKit.Model {
+  @_hasMissingDesignatedInitializers public class FileStream {
+    convenience public init(forReadingFrom url: Foundation.URL) throws
+    convenience public init(forWritingTo url: Foundation.URL, createIfNotExists: Swift.Bool = false) throws
+    @discardableResult
+    public func seekToEnd() throws -> Swift.UInt64
+    public func offset() throws -> Swift.UInt64
+    public func write<T>(contentsOf data: T) throws where T : Foundation.DataProtocol
+    @discardableResult
+    public func write(string: Swift.String, encoding: Swift.String.Encoding = .utf8) throws -> Swift.Bool
+    public func read(upToCount count: Swift.Int) throws -> Foundation.Data?
+    public func read(stringUpToLength length: Swift.Int, encoding: Swift.String.Encoding = .utf8) throws -> Swift.String?
+    public func readToEnd() throws -> Foundation.Data?
+    public func seek(toOffset offset: Swift.UInt64) throws
+    public func truncate(atOffset offset: Swift.UInt64) throws
+    public func close() throws
+    @discardableResult
+    public static func appendToFile<T>(_ data: T, at url: Foundation.URL, createIfNotExists: Swift.Bool = false) throws -> Swift.UInt64 where T : Foundation.DataProtocol
+    @objc deinit
+  }
+}
+extension CynoptaKit.Model.Data {
+  public struct TimeZonePresence {
+  }
+}
+extension CynoptaKit.Model.Data.TimeZonePresence {
+  public static func isUserCurrentlyAbroad(atInstantMillis at: Swift.Int, db: CynoptaKit.DatabaseConnection) throws -> Swift.Bool
+  public static func findDistinctTimeZoneIds(db: CynoptaKit.DatabaseConnection, from: Foundation.Date, to: Foundation.Date) throws -> [Swift.String]
+  public static func findHomeTimeZoneId(db: CynoptaKit.DatabaseConnection) throws -> Swift.String?
+}
+@_hasMissingDesignatedInitializers public class MurmurHash {
+  public static func murmurhash3_x86_32(_ input: Swift.String, seed: Swift.UInt32) -> Swift.UInt32?
+  @objc deinit
+}
+@available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+public typealias BestMomentNotificationHandler = (_ userInfo: [Swift.AnyHashable : Any]) -> Swift.Void
+@available(*, deprecated, message: "Deprecated. Will be removed in a future release. See the migration guide, or reach out to our support team — we’re here to help.")
+public typealias BestMomentEventHandler = () -> Swift.Void
+public class CachedValue<T> {
+  public init(expirationTimeout: Foundation.TimeInterval, reevalBlock: @escaping () -> T)
+  public func invalidate()
+  public func get() -> T
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc open class AsyncOperation : Foundation.Operation, @unchecked Swift.Sendable {
+  @objc override dynamic open var isAsynchronous: Swift.Bool {
+    @objc get
+  }
+  @objc override dynamic open var isExecuting: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open var isFinished: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic open func start()
+  @objc override dynamic open func main()
+  open func finish()
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol ErrorWithLocalizedDescription {
+  var localizedDescription: Swift.String { get }
+}
+public enum RuntimeError : Swift.Error, CynoptaKit.ErrorWithLocalizedDescription {
+  case unexpected
+  case invalidInput
+  case notImplemented
+  case failed(reason: Swift.String)
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
+public enum BackendError : Swift.Error, CynoptaKit.ErrorWithLocalizedDescription {
+  case unknown
+  case invalidResponse
+  case failed(reason: Swift.String)
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
+extension CynoptaKit.CynoptaCore {
+  @objc public static func safe(_ block: @escaping () -> (), onFailure: (() -> ())? = nil, timeout: Foundation.TimeInterval = 10)
+}
+public func runSafeAsync(name: Swift.String? = nil, queue: Dispatch.DispatchQueue? = nil, ensureStarted: Swift.Bool = false, waitForReadiness: Swift.Bool = false, _ block: @escaping () -> Swift.Void)
+public func runSafeT<T>(name: Swift.String? = nil, queue: Dispatch.DispatchQueue? = nil, ensureStartedElse: (() -> T)? = nil, _ block: @escaping () throws -> T) throws -> T
+public func runSafe<T>(name: Swift.String? = nil, queue: Dispatch.DispatchQueue? = nil, ensureStartedElse: (() -> T)? = nil, _ block: @escaping () -> T) -> T
+@propertyWrapper public class MultiThreadProtection<T> {
+  public var wrappedValue: T {
+    get
+    set
+  }
+  public init(wrappedValue: T, qos: Dispatch.DispatchQoS = .background)
+  @objc deinit
+}
+public typealias TomeRDate = Swift.Int
+public typealias TomeRMonth = Swift.Int
+public func tomeRDate(_ date: Foundation.Date, calendar: Foundation.Calendar? = nil, timeZone: Foundation.TimeZone? = nil) -> CynoptaKit.TomeRDate
+public func unTomeRDate(_ tomeRDate: CynoptaKit.TomeRDate, hour: Swift.Int = 0, minute: Swift.Int = 0, second: Swift.Int = 0, calendar: Foundation.Calendar? = nil, timeZone: Foundation.TimeZone? = nil) -> Foundation.Date?
+extension Foundation.TimeZone {
+  public static var now: Foundation.TimeZone {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class CryptoService : CynoptaKit.AbstractService {
+  public func encrypt(data: Foundation.Data, hint: Swift.Int, iv: Foundation.Data) -> Foundation.Data?
+  public func decrypt(data: Foundation.Data, hint: Swift.Int) -> Foundation.Data?
+  public static let shared: CynoptaKit.CryptoService
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol ProtobufSerializable {
+  func serializedData() -> Foundation.Data
+  init(serializedData: Foundation.Data) throws
+}
+extension CynoptaKit.DatabaseConnection {
+  public func executeQuery(_ query: Swift.String, _ args: [Any?]? = nil, verbose: Swift.Bool = true) throws -> CynoptaKit.SQLResultSet
+  public func executeUpdate(_ query: Swift.String, _ args: [Any?]? = nil) throws
+  public func executeStatements(_ sql: Swift.String) throws
+}
+extension CynoptaKit.Model {
+  public struct Sensors {
+    public typealias Confidence = Swift.Int
+    public enum Status : Swift.UInt8 {
+      case valid
+      case invalid
+      case notAvailable
+      public init?(rawValue: Swift.UInt8)
+      public typealias RawValue = Swift.UInt8
+      public var rawValue: Swift.UInt8 {
+        get
+      }
+    }
+    public struct Location : Swift.Codable {
+      public var timestamp: Foundation.Date
+      public var locationTimestamp: Foundation.Date
+      public var latitude: _LocationEssentials.CLLocationDegrees
+      public var longitude: _LocationEssentials.CLLocationDegrees
+      public var horizontalAccuracy: _LocationEssentials.CLLocationAccuracy
+      public var verticalAccuracy: _LocationEssentials.CLLocationAccuracy
+      public var speed: _LocationEssentials.CLLocationSpeed
+      public var bearing: _LocationEssentials.CLLocationDirection
+      public var altitude: _LocationEssentials.CLLocationDistance
+      public var floor: Swift.Int
+      public var confidence: CynoptaKit.Model.Sensors.Confidence
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct Visit : Swift.Codable, Swift.Equatable {
+      public var timestamp: Foundation.Date
+      public var arrivalDate: Foundation.Date
+      public var departureDate: Foundation.Date
+      public var latitude: _LocationEssentials.CLLocationDegrees
+      public var longitude: _LocationEssentials.CLLocationDegrees
+      public var horizontalAccuracy: _LocationEssentials.CLLocationAccuracy
+      public var confidence: CynoptaKit.Model.Sensors.Confidence
+      public static func == (a: CynoptaKit.Model.Sensors.Visit, b: CynoptaKit.Model.Sensors.Visit) -> Swift.Bool
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct Magnetometer : Swift.Codable, Swift.CustomStringConvertible {
+      public var timestamp: Foundation.Date
+      public var x: Swift.Double
+      public var y: Swift.Double
+      public var z: Swift.Double
+      public var description: Swift.String {
+        get
+      }
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct AudioPresence : Swift.Codable {
+      public var timestamp: Foundation.Date
+      public var portUID: Swift.String
+      public var portType: Swift.String
+      public var portName: Swift.String
+      public var routeMode: Swift.String
+      public var routeCategory: Swift.String
+      public var isAudioPlaying: Swift.Bool
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct CellularStats {
+      public var timestamp: Foundation.Date
+      public var radioTech: CynoptaKit.HourlySignalPB.CellularRadioTech
+    }
+    public struct Network : Swift.Codable {
+      public var timestamp: Foundation.Date
+      public var wifiNetAddress: Swift.String
+      public var cellularNetAddress: Swift.String
+      public var wifiSubnetMask: Swift.String
+      public var cellularSubnetMask: Swift.String
+      public var cellularCarrier: Swift.String
+      public var cellularMCC: Swift.String
+      public var cellularMNC: Swift.String
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct AppState : Swift.Codable {
+      public var timestamp: Foundation.Date
+      public var active: Swift.Bool
+      public var foreground: Swift.Bool
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct Battery : Swift.Codable {
+      public var timestamp: Foundation.Date
+      public var level: Swift.Double
+      public var state: CynoptaKit.Model.Sensors.Battery.State
+      public enum State : Swift.String, Swift.Codable {
+        case unknown
+        case unplugged
+        case charging
+        case full
+        public init?(rawValue: Swift.String)
+        public typealias RawValue = Swift.String
+        public var rawValue: Swift.String {
+          get
+        }
+      }
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct PhoneUnlock : Swift.Codable {
+      public var timestamp: Foundation.Date
+      public var state: Swift.Bool
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+  }
+}
+extension CynoptaKit.Model.Data {
+  public struct SimCount {
+    public enum Fields : Swift.String {
+      case Id
+      case Date
+      case Count
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public let id: Swift.Int
+    public let date: CynoptaKit.TomeRDate
+    public let count: Swift.Int
+    public init(date: CynoptaKit.TomeRDate, count: Swift.Int)
+    public static func fetchData(db: CynoptaKit.DatabaseConnection, of date: CynoptaKit.TomeRDate) throws -> [CynoptaKit.Model.Data.SimCount]
+  }
+}
+public enum JSON : Swift.Hashable {
+  case null
+  case bool(_: Swift.Bool)
+  case int(_: Swift.Int)
+  case double(_: Swift.Double)
+  case string(_: Swift.String)
+  case array(_: [CynoptaKit.JSON])
+  case object(_: [Swift.String : CynoptaKit.JSON])
+  public static func == (a: CynoptaKit.JSON, b: CynoptaKit.JSON) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension CynoptaKit.JSON {
+  public init(_ value: Swift.Bool)
+  public init(_ value: Swift.Int)
+  public init<T>(_ value: T) where T : Swift.BinaryInteger
+  public init(_ value: Swift.Double)
+  public init<T>(_ value: T) where T : Swift.BinaryFloatingPoint
+  public init(_ value: Swift.String)
+  public init<T>(_ value: T) where T : Swift.StringProtocol
+  public init(_ value: [CynoptaKit.JSON])
+  public init<S>(_ value: S) where S : Swift.Sequence, S.Element == CynoptaKit.JSON
+  public init(_ value: [Swift.String : CynoptaKit.JSON])
+}
+extension CynoptaKit.JSON {
+  public var isNull: Swift.Bool {
+    get
+  }
+  public var boolValue: Swift.Bool? {
+    get
+  }
+  public var intValue: Swift.Int? {
+    get
+  }
+  public var doubleValue: Swift.Double? {
+    get
+  }
+  public var stringValue: Swift.String? {
+    get
+  }
+  public var arrayValue: [CynoptaKit.JSON]? {
+    get
+  }
+  public var objectValue: [Swift.String : CynoptaKit.JSON]? {
+    get
+  }
+  public var count: Swift.Int? {
+    get
+  }
+  public subscript(index: Swift.Int) -> CynoptaKit.JSON? {
+    get
+    set
+  }
+  public subscript(key: Swift.String) -> CynoptaKit.JSON? {
+    get
+    set
+  }
+}
+extension CynoptaKit.JSON : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension CynoptaKit.JSON {
+  public init<T>(encodableValue value: T, encoder: Foundation.JSONEncoder = JSONEncoder()) throws where T : Swift.Encodable
+  public func decode<T>(_ type: T.Type = T.self, decoder: Foundation.JSONDecoder = JSONDecoder()) throws -> T where T : Swift.Decodable
+}
+extension CynoptaKit.JSON {
+  public var rawValue: Any? {
+    get
+  }
+  public init?(rawValue: Any?)
+}
+extension CynoptaKit.JSON : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension CynoptaKit.JSON : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension CynoptaKit.JSON : Swift.ExpressibleByNilLiteral {
+  public init(nilLiteral: ())
+}
+extension CynoptaKit.JSON : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.Bool)
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension CynoptaKit.JSON : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.Int)
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension CynoptaKit.JSON : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.Double)
+  public typealias FloatLiteralType = Swift.Double
+}
+extension CynoptaKit.JSON : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension CynoptaKit.JSON : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: CynoptaKit.JSON...)
+  public typealias ArrayLiteralElement = CynoptaKit.JSON
+}
+extension CynoptaKit.JSON : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, CynoptaKit.JSON)...)
+  public typealias Key = Swift.String
+  public typealias Value = CynoptaKit.JSON
+}
+public struct PublicApi {
+  public func getLastKnownLocation() -> CynoptaKit.CynoptaModel.Location?
+  public func findMostRecentLocation(before: Foundation.Date) -> CynoptaKit.CynoptaModel.Location?
+  public func findLocations(from: Foundation.Date = Date.distantPast, to: Foundation.Date = Date.distantFuture, orderedAsc: Swift.Bool = false) -> [CynoptaKit.CynoptaModel.Location]
+  public var firstWorkingDay: Swift.Int {
+    get
+  }
+  public var lastWorkingDay: Swift.Int {
+    get
+  }
+  public var firstWeekendDay: Swift.Int {
+    get
+  }
+  public var lastWeekendDay: Swift.Int {
+    get
+  }
+  public var weekDays: [Swift.Bool] {
+    get
+    set
+  }
+  public var version: Swift.String {
+    get
+  }
+  public var versionName: Swift.String {
+    get
+  }
+  public var versionCode: Swift.Int {
+    get
+  }
+  public var osVersion: Swift.String {
+    get
+  }
+  public var osVersionCode: Swift.Int {
+    get
+  }
+  public var appVersion: Swift.String {
+    get
+  }
+  public var appVersionCode: Swift.Int {
+    get
+  }
+  public var homeCountry: Swift.String {
+    get
+  }
+  public var netCountry: Swift.String {
+    get
+  }
+  public var currentNetwork: CynoptaKit.CynoptaModel.Network? {
+    get
+  }
+  public var deviceUnlocked: Swift.Bool {
+    get
+  }
+  public func getDatabaseConnection() -> CynoptaKit.DatabaseConnection?
+  public func getDatabaseConnectionOrThrow() throws -> CynoptaKit.DatabaseConnection
+}
+public struct UserApi {
+  public var userUUID: Swift.String {
+    get
+  }
+  public var externalUserID: Swift.String? {
+    get
+    set
+  }
+  public func reportUserID(suffix: Swift.String) -> Swift.String
+}
+extension Foundation.JSONSerialization {
+  public static func safeData(withJSONObject obj: Any, options opt: Foundation.JSONSerialization.WritingOptions = []) throws -> Foundation.Data
+}
+extension Foundation.Date {
+  public func timeIntervalSince1970Local(tz: Foundation.TimeZone = TimeZone.now) -> Foundation.TimeInterval
+  public func add24h() -> Foundation.Date
+  public func sub24h() -> Foundation.Date
+  public func subHours(_ hours: Swift.Int) -> Foundation.Date
+  public static var universalNow: Foundation.Date {
+    get
+  }
+  public static func - (left: Foundation.Date, right: Foundation.Date) -> Foundation.TimeInterval
+  public func daysBetween(_ otherDate: Foundation.Date) -> Swift.Int?
+  public func sensorFormated(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func iso8601Formated(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public func iso8601SSSFormated(timeZone: Foundation.TimeZone = TimeZone.current) -> Swift.String
+  public var startOfDay: Foundation.Date {
+    get
+  }
+  public var endOfDay: Foundation.Date {
+    get
+  }
+  public var isDistantFuture: Swift.Bool {
+    get
+  }
+  public var isDistantPast: Swift.Bool {
+    get
+  }
+  public var isDistant: Swift.Bool {
+    get
+  }
+  public var startOfMonth: Foundation.Date {
+    get
+  }
+  public var endOfMonth: Foundation.Date {
+    get
+  }
+  public var startOfWeek: Foundation.Date {
+    get
+  }
+  public var endOfWeek: Foundation.Date {
+    get
+  }
+  public var weekday: Swift.Int {
+    get
+  }
+  public var hour: Swift.Int {
+    get
+  }
+  public func tomeRDateTime() -> Swift.Int
+}
+extension Foundation.Date : CynoptaKit.CynoptaModel.DateProvider {
+}
+public enum SharedMotionManager {
+  public static let instance: CoreMotion.CMMotionManager
+}
+public enum GeoJSON : Swift.Hashable {
+  public struct Feature : Swift.Hashable {
+    public let geometry: CynoptaKit.GeoJSON.Geometry?
+    public let properties: CynoptaKit.JSON?
+    public let id: CynoptaKit.GeoJSONFeatureIdentifier?
+    public static func == (a: CynoptaKit.GeoJSON.Feature, b: CynoptaKit.GeoJSON.Feature) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct FeatureCollection : Swift.Hashable {
+    public let features: [CynoptaKit.GeoJSON.Feature]
+    public static func == (a: CynoptaKit.GeoJSON.FeatureCollection, b: CynoptaKit.GeoJSON.FeatureCollection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Geometry : Swift.Hashable {
+    case point(coordinates: CynoptaKit.PointGeometry.Coordinates)
+    case multiPoint(coordinates: CynoptaKit.MultiPointGeometry.Coordinates)
+    case lineString(coordinates: CynoptaKit.LineStringGeometry.Coordinates)
+    case multiLineString(coordinates: CynoptaKit.MultiLineStringGeometry.Coordinates)
+    case polygon(coordinates: CynoptaKit.PolygonGeometry.Coordinates)
+    case multiPolygon(coordinates: CynoptaKit.MultiPolygonGeometry.Coordinates)
+    case geometryCollection(geometries: CynoptaKit.GeometryCollection.Geometries)
+    public static func == (a: CynoptaKit.GeoJSON.Geometry, b: CynoptaKit.GeoJSON.Geometry) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  case feature(feature: CynoptaKit.GeoJSON.Feature, boundingBox: [Swift.Double]?)
+  case featureCollection(featureCollection: CynoptaKit.GeoJSON.FeatureCollection, boundingBox: [Swift.Double]?)
+  case geometry(geometry: CynoptaKit.GeoJSON.Geometry, boundingBox: [Swift.Double]?)
+  public static func == (a: CynoptaKit.GeoJSON, b: CynoptaKit.GeoJSON) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension CynoptaKit.GeoJSON : Swift.Codable {
+  public enum GeoJSONType : Swift.String, Swift.Codable {
+    case feature
+    case featureCollection
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension CynoptaKit.GeoJSON.Feature : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension CynoptaKit.GeoJSON.FeatureCollection : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension CynoptaKit.GeoJSON.Geometry : Swift.Codable {
+  public enum GeometryType : Swift.String, Swift.Codable {
+    case point
+    case multiPoint
+    case lineString
+    case multiLineString
+    case polygon
+    case multiPolygon
+    case geometryCollection
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public var type: Swift.String {
+    get
+  }
+}
+extension Foundation.URLRequest {
+  public mutating func updateCynoptaHeaders()
+}
+extension _LocationEssentials.CLLocationCoordinate2D {
+  public var coreLocation: _LocationEssentials.CLLocation {
+    get
+  }
+  public func distance(from: _LocationEssentials.CLLocationCoordinate2D) -> _LocationEssentials.CLLocationDistance
+}
+public protocol Module {
+  var started: Swift.Bool { get }
+  var name: Swift.String { get }
+  var dependencies: [any CynoptaKit.Module] { get }
+}
+@objc @_inheritsConvenienceInitializers open class AbstractModule : ObjectiveC.NSObject, CynoptaKit.Module {
+  public func checkDependencies()
+  open var name: Swift.String {
+    get
+  }
+  open var dependencies: [any CynoptaKit.Module] {
+    get
+  }
+  public var started: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol Service {
+  func start()
+  func stop()
+  func refresh()
+  var name: Swift.String { get }
+}
+public protocol Service2Gen {
+  func start(completion: (((any Swift.Error)?) -> Swift.Void)?)
+  func stop(completion: (((any Swift.Error)?) -> Swift.Void)?)
+}
+@objc @_inheritsConvenienceInitializers open class AbstractService : ObjectiveC.NSObject, CynoptaKit.Service {
+  public func start()
+  open func postInitialStart()
+  public func stop()
+  public func restart()
+  open func onStart() throws
+  open func onStop() throws
+  public func refresh()
+  public var name: Swift.String {
+    get
+  }
+  public var started: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum DatabaseError : Swift.Error {
+  case notAvailable
+  public static func == (a: CynoptaKit.DatabaseError, b: CynoptaKit.DatabaseError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class DatabaseConnection {
+  public var lastRowId: Swift.Int {
+    get
+  }
+  public var changedRowsCount: Swift.Int {
+    get
+  }
+  public var isInTransaction: Swift.Bool {
+    get
+  }
+  public func close()
+  @objc deinit
+}
+public protocol DatabaseServiceProtocol {
+  func getConnection() -> CynoptaKit.DatabaseConnection
+  func getConnection(databaseUrl: Foundation.URL, shared: Swift.Bool, didOpen: inout Swift.Bool) -> CynoptaKit.DatabaseConnection
+  func getDatabaseUrl() -> Foundation.URL
+  func resetDatabaseUrl()
+}
+@objc @_inheritsConvenienceInitializers public class DatabaseService : CynoptaKit.AbstractService, CynoptaKit.DatabaseServiceProtocol {
+  override public func onStart() throws
+  override public func onStop() throws
+  public func getConnection() -> CynoptaKit.DatabaseConnection
+  public func getConnection(databaseUrl: Foundation.URL, shared: Swift.Bool) -> CynoptaKit.DatabaseConnection
+  public func getConnection(databaseUrl: Foundation.URL, shared: Swift.Bool, didOpen: inout Swift.Bool) -> CynoptaKit.DatabaseConnection
+  public func getDatabaseUrl() -> Foundation.URL
+  public func resetDatabaseUrl()
+  public var externalDatabaseUrl: Foundation.URL? {
+    get
+    set
+  }
+  @objc override dynamic public init()
+  public var defaultDatabaseUrl: Foundation.URL
+  public var alternativeDatabaseUrl: Foundation.URL?
+  public var preferedDatabaseLocation: Foundation.URL?
+  public static let shared: CynoptaKit.DatabaseService
+  @objc deinit
+}
+extension CynoptaKit.Model.Location {
+  public func toProto() -> CynoptaKit.CoreModelPB.LocationPB
+}
+extension Swift.ArraySlice where Element == CynoptaKit.Model.Location {
+  public func toProto() -> CynoptaKit.CoreModelPB.LocationsListPB
+}
+extension CynoptaKit.CoreModelPB.LocationPB {
+  public func toPublic() -> CynoptaKit.CynoptaModel.Location
+}
+extension CynoptaKit.CoreModelPB.LocationsListPB {
+  public func toPublic() -> [CynoptaKit.CynoptaModel.Location]
+}
+public struct oslog {
+  public static let integration: os.OSLog
+  public static let reportable: os.OSLog
+}
+public func os_log_file(_ message: Swift.StaticString, log: os.OSLog = .default, type: os.OSLogType = .default, _ args: any Swift.CVarArg...)
+public func os_log_file(_ message: Swift.StaticString, logs: [os.OSLog], type: os.OSLogType = .default, _ args: any Swift.CVarArg...)
+public var os_log_file_enabled: Swift.Bool {
+  get
+}
+extension Foundation.DateInterval {
+  public static func makeSafe(start: Foundation.Date, end: Foundation.Date) -> Foundation.DateInterval
+}
+extension Swift.Double {
+  public func rounded(toPlaces places: Swift.Int) -> Swift.Double
+}
+public struct ShareApi {
+  public func share(to url: Foundation.URL, options: CynoptaKit.ShareOptions, customSources: [Swift.String : Foundation.URL]? = nil, password: Swift.String? = nil) throws
+}
+public struct ConfigEvent {
+  public typealias ConfigEventHandler = (CynoptaKit.ConfigEvent) -> Swift.Void
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping (CynoptaKit.ConfigEvent) -> Swift.Void)
+    public mutating func forget()
+  }
+  public var moduleName: Swift.String
+}
+public struct RemoteConfigEvent {
+  public typealias RemoteConfigEventHandler = (CynoptaKit.RemoteConfigEvent) -> Swift.Void
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping (CynoptaKit.RemoteConfigEvent) -> Swift.Void)
+    public mutating func forget()
+  }
+  public var payload: Foundation.Data
+}
+public class SQLDatabase {
+  public init(_ url: Foundation.URL)
+  public func open() throws
+  public func close() throws
+  public func tableExists(_ tableName: Swift.String) throws -> Swift.Bool
+  public func executeStatements(_ sql: Swift.String) throws
+  public func executeUpdate(_ sql: Swift.String, _ args: [Any?]? = nil) throws
+  public func executeQuery(_ sql: Swift.String, _ args: [Any?]? = nil) throws -> CynoptaKit.SQLResultSet
+  public var lastInsertRowId: Swift.Int {
+    get
+  }
+  public var changes: Swift.Int {
+    get
+  }
+  public var isInTransaction: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SQLStatement {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SQLResultSet {
+  public func long(forColumn column: Swift.String) -> Swift.Int
+  public func int(forColumn column: Swift.String) -> Swift.Int
+  public func int(forColumn column: Swift.Int32) -> Swift.Int
+  public func double(forColumn column: Swift.String) -> Swift.Double
+  public func double(forColumn column: Swift.Int32) -> Swift.Double
+  public func string(forColumn column: Swift.String) -> Swift.String?
+  public func string(forColumn pos: Swift.Int32) -> Swift.String?
+  public func data(forColumn column: Swift.String) -> Foundation.Data?
+  public func data(forColumn pos: Swift.Int32) -> Foundation.Data?
+  public func any(forColumn column: Swift.Int32) -> Any?
+  public var resultDictionary: [Swift.String : Any] {
+    get
+  }
+  public func columnIsNull(_ column: Swift.String) -> Swift.Bool
+  public func next() -> Swift.Bool
+  public func close()
+  @objc deinit
+}
+public enum SQLResult : Swift.Error, CynoptaKit.ErrorWithLocalizedDescription {
+  case error(message: Swift.String, code: Swift.Int32, statement: CynoptaKit.SQLStatement?)
+  public var localizedDescription: Swift.String {
+    get
+  }
+}
+extension CynoptaKit.SQLResult : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class BackgroundTask {
+  public func run(_ block: @escaping () -> Swift.Void)
+  public func runT<T>(_ block: @escaping () throws -> T) throws -> T
+  public static let shared: CynoptaKit.BackgroundTask
+  @objc deinit
+}
+extension Swift.Array {
+  public var jsonData: Foundation.Data {
+    get throws
+  }
+  public var jsonString: Swift.String? {
+    get throws
+  }
+}
+extension Swift.Array where Element : Swift.BinaryFloatingPoint {
+  public func average() -> Element
+  public func median() -> Element
+}
+extension Swift.Array where Element : Swift.BinaryInteger {
+  public func median() -> Element
+}
+extension Swift.Array where Element == Swift.Double {
+  public func cleanOutliersSAD(_ cuttingFactor: Swift.Double = 2.873) -> [Swift.Double]
+}
+extension Swift.Collection {
+  public var nilIfEmpty: Self? {
+    get
+  }
+}
+public struct ConfigurationApi {
+  public func updateRemoteConfiguration(payload: Foundation.Data)
+  public var hasRemoteConfiguration: Swift.Bool {
+    get
+  }
+  public func readRemoteConfiguration() throws -> Foundation.Data
+  public func writeRemoteConfiguration(payload: Foundation.Data) throws
+  public func get<T>(type: T.Type, moduleName: Swift.String, defaultData: Foundation.Data) -> T? where T : Swift.Decodable
+  public func getDefault<T>(type: T.Type, defaultData: Foundation.Data) -> T? where T : Swift.Decodable
+  public func set<T>(config: T, moduleName: Swift.String) where T : Swift.Encodable
+}
+extension Foundation.DateFormatter {
+  public static func sensorsDataFormatter(timeZone: Foundation.TimeZone = TimeZone.current) -> Foundation.DateFormatter
+}
+extension Swift.Error {
+  public var fullLocalizedDescription: Swift.String {
+    get
+  }
+}
+public struct Model {
+  public protocol DateProvider {
+    static var universalNow: Foundation.Date { get }
+  }
+  public struct Data {
+  }
+  public struct Push {
+    public struct Parcel : Swift.Codable {
+      public static func makeConfigurationSyncParcel() -> CynoptaKit.Model.Push.Parcel
+      public static func makeCampaignsSyncParcel() -> CynoptaKit.Model.Push.Parcel
+      public static func makeCampaignSimulateParcel(campaignIdentifier: Swift.String) -> CynoptaKit.Model.Push.Parcel
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+    public struct PushCommand : Swift.Codable {
+      public static func makeSilentPush(parcels: [CynoptaKit.Model.Push.Parcel]? = nil) -> CynoptaKit.Model.Push.PushCommand
+      public func encode(to encoder: any Swift.Encoder) throws
+      public init(from decoder: any Swift.Decoder) throws
+    }
+  }
+}
+public typealias CynoptaModel = CynoptaKit.Model
+public struct GeoJSONPosition : Swift.Hashable {
+  public let longitude: Swift.Double
+  public let latitude: Swift.Double
+  public let elevation: Swift.Double?
+  public init(longitude: Swift.Double, latitude: Swift.Double, elevation: Swift.Double? = nil)
+  public static func == (a: CynoptaKit.GeoJSONPosition, b: CynoptaKit.GeoJSONPosition) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension CynoptaKit.GeoJSONPosition : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct ShareOptions : Swift.OptionSet {
+  public var rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let logs: CynoptaKit.ShareOptions
+  public static let db: CynoptaKit.ShareOptions
+  public static let jema: CynoptaKit.ShareOptions
+  public typealias ArrayLiteralElement = CynoptaKit.ShareOptions
+  public typealias Element = CynoptaKit.ShareOptions
+  public typealias RawValue = Swift.Int
+}
+public struct CPUUsageMetricConstants {
+  public static let eventName: Swift.String
+  public static let eventKey: Swift.String
+  public static let eventDailyKey: Swift.String
+  public static let cpuKey: Swift.String
+  public static let dateKey: Swift.String
+}
+extension CynoptaKit.Model.Data {
+  public struct NetworkTraffic {
+    public enum Fields : Swift.String {
+      case Id
+      case Timestamp
+      case TimeZoneSeconds
+      case Date
+      case Hour
+      case InterfaceName
+      case TransmittedBytes
+      case ReceivedBytes
+      case ReceivedPackets
+      case TransmittedPackets
+      case Flags
+      case Address
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public let id: Swift.Int
+    public let timestamp: Swift.Int
+    public let timeZoneSeconds: Swift.Int
+    public let date: CynoptaKit.TomeRDate
+    public let hour: Swift.Int
+    public let interfaceName: Swift.String
+    public let transmittedBytes: Swift.Int
+    public let receivedBytes: Swift.Int
+    public let receivedPackets: Swift.Int
+    public let transmittedPackets: Swift.Int
+    public let flags: Swift.Int
+    public let address: Swift.String
+    public init(id: Swift.Int, timestamp: Swift.Int, timeZoneSeconds: Swift.Int, date: CynoptaKit.TomeRDate, hour: Swift.Int, interfaceName: Swift.String, transmittedBytes: Swift.Int, receivedBytes: Swift.Int, receivedPackets: Swift.Int, transmittedPackets: Swift.Int, flags: Swift.Int, address: Swift.String)
+  }
+}
+extension CynoptaKit.Model.Data.NetworkTraffic {
+  public static func fetchData(db: CynoptaKit.DatabaseConnection, from: Foundation.Date, to: Foundation.Date) throws -> [CynoptaKit.Model.Data.NetworkTraffic]
+  public static func fetchDataForContiguousRange(db: CynoptaKit.DatabaseConnection, from rangeFrom: CynoptaKit.TomeRDate, through rangeThrough: CynoptaKit.TomeRDate) throws -> [CynoptaKit.Model.Data.NetworkTraffic]
+  public static func fetchDataHasAddress(db: CynoptaKit.DatabaseConnection, of date: CynoptaKit.TomeRDate, interface: Swift.String) throws -> [CynoptaKit.Model.Data.NetworkTraffic]
+  public static func fetchDataHasAddressFirstRecord(db: CynoptaKit.DatabaseConnection, of date: CynoptaKit.TomeRDate, interface: Swift.String) throws -> [CynoptaKit.Model.Data.NetworkTraffic]
+  public static func fetchDataHasAddressLastRecord(db: CynoptaKit.DatabaseConnection, of date: CynoptaKit.TomeRDate, interface: Swift.String) throws -> [CynoptaKit.Model.Data.NetworkTraffic]
+  public static func fetchNoUsageDuration(db: CynoptaKit.DatabaseConnection) throws -> Swift.Int?
+  public static func fetchAllWiFiData(db: CynoptaKit.DatabaseConnection) throws -> [CynoptaKit.Model.Data.NetworkTraffic]
+}
+extension CoreLocation.CLAuthorizationStatus {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension Swift.String {
+  public func encSimple() -> Swift.String
+  public func decSimple() -> Swift.String
+  public func hashSimple() -> Swift.String
+}
+extension CynoptaKit.Model {
+  public struct VariantValue : Swift.Codable {
+    public var stringValue: Swift.String?
+    public var numericValue: Swift.Double?
+    public init(stringValue: Swift.String?, numericValue: Swift.Double?)
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct Location : Swift.Codable, Swift.CustomStringConvertible {
+    public var timestamp: Foundation.Date
+    public var latitude: _LocationEssentials.CLLocationDegrees
+    public var longitude: _LocationEssentials.CLLocationDegrees
+    public var speed: Swift.Double
+    public var bearing: Swift.Double
+    public var altitude: Swift.Double
+    public var timeZone: Foundation.TimeZone
+    public var country: Swift.String
+    public var geohash: Swift.String
+    public var coreLocation: _LocationEssentials.CLLocation {
+      get
+    }
+    public var coordinate2D: _LocationEssentials.CLLocationCoordinate2D {
+      get
+    }
+    public func distance(from otherLocation: CynoptaKit.Model.Location) -> _LocationEssentials.CLLocationDistance
+    public func geohash(_ precision: Swift.Int) -> Swift.String
+    public init(timestamp: Foundation.Date = Date.distantPast, latitude: _LocationEssentials.CLLocationDegrees, longitude: _LocationEssentials.CLLocationDegrees, speed: _LocationEssentials.CLLocationSpeed = -1, bearing: _LocationEssentials.CLLocationDirection = -1, altitude: _LocationEssentials.CLLocationDistance = -1, timezone: Foundation.TimeZone = TimeZone.current, country: Swift.String = "", geohash: Swift.String? = nil)
+    public init(timestamp: Foundation.Date = Date.distantPast, coordinate: _LocationEssentials.CLLocationCoordinate2D, speed: _LocationEssentials.CLLocationSpeed = -1, bearing: _LocationEssentials.CLLocationDirection = -1, altitude: _LocationEssentials.CLLocationDistance = -1, timezone: Foundation.TimeZone = TimeZone.current, country: Swift.String = "", geohash: Swift.String? = nil)
+    public var description: Swift.String {
+      get
+    }
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct Network : Swift.Codable {
+    public var timestamp: Foundation.Date
+    public var wifiNetAddress: Swift.String
+    public var cellularNetAddress: Swift.String
+    public var cellularCarrier: Swift.String
+    public var cellularMCC: Swift.String
+    public var cellularMNC: Swift.String
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+extension CynoptaKit.Model {
+  public struct Resource : Swift.Equatable {
+    public var name: Swift.String
+    public var type: Swift.String
+    public var clazz: Swift.String
+    public var source: Swift.String
+    public init(name: Swift.String, type: Swift.String, clazz: Swift.String, source: Swift.String)
+    public static func == (a: CynoptaKit.Model.Resource, b: CynoptaKit.Model.Resource) -> Swift.Bool
+  }
+}
+extension CynoptaKit.Model.Data {
+  public struct DailyTrafficCache {
+    public let calendarDate: Swift.Int
+    public let dayOfWeek: Swift.Int
+    public let sixHourBlock: Swift.Int
+    public let receivedWifiBytes: Swift.Int
+    public let sentWifiBytes: Swift.Int
+    public let receivedMobileBytes: Swift.Int
+    public let sentMobileBytes: Swift.Int
+    public var missingRecords: Swift.Bool {
+      get
+    }
+    public init(calendarDate: Swift.Int, dayOfWeek: Swift.Int, sixHourBlock: Swift.Int, receivedWifiBytes: Swift.Int, sentWifiBytes: Swift.Int, receivedMobileBytes: Swift.Int, sentMobileBytes: Swift.Int)
+    public static func insert(_ records: [CynoptaKit.Model.Data.DailyTrafficCache], db: CynoptaKit.DatabaseConnection) throws
+    public static func fetchData(db: CynoptaKit.DatabaseConnection, from: CynoptaKit.TomeRDate, to: CynoptaKit.TomeRDate) throws -> [CynoptaKit.Model.Data.DailyTrafficCache]
+    public static func fetchCachedCalendarDates(db: CynoptaKit.DatabaseConnection, from: CynoptaKit.TomeRDate, through to: CynoptaKit.TomeRDate) throws -> Swift.Set<CynoptaKit.TomeRDate>
+  }
+}
+extension CynoptaKit.CynoptaCore {
+  public func registerForRefresh(tasks: [any CynoptaKit.TaskProtocol])
+}
+public class CynoptaBackgroundTask : CynoptaKit.TaskProtocol {
+  public typealias CynoptaBackgroundTaskCompletion = () -> Swift.Void
+  public var delegate: (any CynoptaKit.TaskDelegate)?
+  public init(start: @escaping (CynoptaKit.CynoptaBackgroundTask.CynoptaBackgroundTaskCompletion?) -> Swift.Void, end: (() -> Swift.Void)? = nil)
+  public func start()
+  public func end()
+  @objc deinit
+}
+extension CynoptaKit.Model.Data {
+  public struct DualSimCache {
+    public enum Fields : Swift.String, Swift.CaseIterable {
+      case Date
+      case SimCount
+      case DataSimSwapCount
+      case OperatorNames
+      case DataUsedJson
+      public init?(rawValue: Swift.String)
+      public typealias AllCases = [CynoptaKit.Model.Data.DualSimCache.Fields]
+      public typealias RawValue = Swift.String
+      nonisolated public static var allCases: [CynoptaKit.Model.Data.DualSimCache.Fields] {
+        get
+      }
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public let date: Swift.Int
+    public let simCount: Swift.Int
+    public let dataSimSwapCount: Swift.Int
+    public let operatorNames: Foundation.Data?
+    public let dataUsedJson: Foundation.Data?
+    public init(date: Swift.Int, simCount: Swift.Int, dataSimSwapCount: Swift.Int, operatorNames: Foundation.Data, dataUsedJson: Foundation.Data)
+    public func insert(db: CynoptaKit.DatabaseConnection) throws
+    public static func fetchData(db: CynoptaKit.DatabaseConnection, from: CynoptaKit.TomeRDate, to: CynoptaKit.TomeRDate) throws -> [CynoptaKit.Model.Data.DualSimCache]
+    public static func hasRecord(db: CynoptaKit.DatabaseConnection, at date: CynoptaKit.TomeRDate) throws -> Swift.Bool
+  }
+}
+public struct OnLaunchEvent {
+  public let applicationState: UIKit.UIApplication.State
+  public struct Listener {
+    public init()
+    public mutating func listen(_ handler: @escaping (CynoptaKit.OnLaunchEvent) -> Swift.Void)
+    public mutating func forget()
+  }
+}
+public struct LocationEvent {
+  public var date: Foundation.Date
+  public var location: CynoptaKit.CynoptaModel.Location
+  public typealias LocationEventHandler = (CynoptaKit.LocationEvent) -> Swift.Void
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.LocationEvent.LocationEventHandler)
+    public mutating func forget()
+  }
+}
+public struct HeartbeatEvent {
+  public typealias HeartbeatEventHandler = (CynoptaKit.HeartbeatEvent) -> Swift.Void
+  public init()
+  public func every(_ every: Swift.Int, offset: Swift.Int = 0) -> Swift.Bool
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.HeartbeatEvent.HeartbeatEventHandler)
+    public mutating func forget()
+  }
+}
+public struct ReportRequestEvent {
+  public var reportIdentifier: Swift.String
+  public var userData: [Swift.String : any Swift.Decodable & Swift.Encodable]
+  public typealias ReportRequestEventHandler = (CynoptaKit.ReportRequestEvent) -> Swift.Void
+  public func post()
+  public init(reportIdentifier: Swift.String, userData: [Swift.String : any Swift.Decodable & Swift.Encodable] = [:])
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.ReportRequestEvent.ReportRequestEventHandler)
+    public mutating func forget()
+  }
+}
+public struct ReportResponseEvent {
+  public var reportIdentifier: Swift.String
+  public var reportPayload: Any
+  public var userData: [Swift.String : any Swift.Decodable & Swift.Encodable]
+  public typealias ReportResponseEventHandler = (CynoptaKit.ReportResponseEvent) -> Swift.Void
+  public init(reportIdentifier: Swift.String, reportPayload: Any, userData: [Swift.String : any Swift.Decodable & Swift.Encodable] = [:])
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.ReportResponseEvent.ReportResponseEventHandler)
+    public mutating func forget()
+  }
+}
+public struct ReportNotificationEvent {
+  public var reportIdentifier: Swift.String
+  public var reportPayload: Any
+  public typealias ReportNotificationEventHandler = (CynoptaKit.ReportNotificationEvent) -> Swift.Void
+  public init(reportIdentifier: Swift.String, reportPayload: Any)
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.ReportNotificationEvent.ReportNotificationEventHandler)
+    public mutating func forget()
+  }
+}
+public struct CynoptaStateEvent {
+  public var state: CynoptaKit.CynoptaState
+  public typealias CynoptaStateEventHandler = (CynoptaKit.CynoptaStateEvent) -> Swift.Void
+  public init(state: CynoptaKit.CynoptaState)
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.CynoptaStateEvent.CynoptaStateEventHandler)
+    public mutating func forget()
+  }
+}
+public struct CynoptaCommandEvent {
+  public var command: Swift.String
+  public var args: [Swift.String : Swift.String]?
+  public typealias CynoptaCommandEventHandler = (CynoptaKit.CynoptaCommandEvent) -> Swift.Void
+  public init(command: Swift.String, args: [Swift.String : Swift.String]? = nil)
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.CynoptaCommandEvent.CynoptaCommandEventHandler)
+    public mutating func forget()
+  }
+}
+public struct CynoptaIntentEvent {
+  public var intent: Swift.String
+  public var payload: [Swift.String : Any]
+  public typealias CynoptaIntentEventHandler = (CynoptaKit.CynoptaIntentEvent) -> Swift.Void
+  public init(_ intent: Swift.String, _ payload: [Swift.String : Any] = [:])
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.CynoptaIntentEvent.CynoptaIntentEventHandler)
+    public mutating func forget()
+  }
+}
+public struct AppSessionEvent {
+  public enum State : Swift.String {
+    case start
+    case end
+    case update
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(date: Foundation.Date, state: CynoptaKit.AppSessionEvent.State, duration: Foundation.TimeInterval = 0)
+  public var date: Foundation.Date
+  public var state: CynoptaKit.AppSessionEvent.State
+  public var duration: Foundation.TimeInterval
+  public typealias AppSessionEventHandler = (CynoptaKit.AppSessionEvent) -> Swift.Void
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.AppSessionEvent.AppSessionEventHandler)
+    public mutating func forget()
+  }
+}
+public struct ApplicationEvent {
+  public var identifier: Swift.String
+  public var textParameters: [Swift.String : Swift.String]
+  public var numericParameters: [Swift.String : Swift.Float]
+  public var booleanParameters: [Swift.String : Swift.Bool]
+  public var locationParameters: [Swift.String : _LocationEssentials.CLLocationCoordinate2D]
+  public init(_ identifier: Swift.String)
+  public func addParameter(name: Swift.String, text: Swift.String) -> CynoptaKit.ApplicationEvent
+  public func addParameter(name: Swift.String, number: Swift.Float) -> CynoptaKit.ApplicationEvent
+  public func addParameter(name: Swift.String, boolean: Swift.Bool) -> CynoptaKit.ApplicationEvent
+  public func addParameter(name: Swift.String, location: _LocationEssentials.CLLocationCoordinate2D) -> CynoptaKit.ApplicationEvent
+  public func addParameter(name: Swift.String, any: Any) -> CynoptaKit.ApplicationEvent
+  public func markAsInternal() -> CynoptaKit.ApplicationEvent
+  public func isInternal() -> Swift.Bool
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping (CynoptaKit.ApplicationEvent) -> Swift.Void)
+    public mutating func forget()
+  }
+}
+public struct LocalNetworkSessionEvent {
+  public enum State : Swift.String {
+    case start
+    case end
+    case update
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(date: Foundation.Date, state: CynoptaKit.LocalNetworkSessionEvent.State, alias: Swift.String, duration: Foundation.TimeInterval = 0)
+  public var date: Foundation.Date
+  public var state: CynoptaKit.LocalNetworkSessionEvent.State
+  public var alias: Swift.String
+  public var duration: Foundation.TimeInterval
+  public typealias LocalNetworkSessionEventHandler = (CynoptaKit.LocalNetworkSessionEvent) -> Swift.Void
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.LocalNetworkSessionEvent.LocalNetworkSessionEventHandler)
+    public mutating func forget()
+  }
+}
+public struct HomeSessionEvent {
+  public enum State : Swift.String {
+    case start
+    case end
+    case update
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(date: Foundation.Date, state: CynoptaKit.HomeSessionEvent.State, duration: Foundation.TimeInterval = 0)
+  public var date: Foundation.Date
+  public var state: CynoptaKit.HomeSessionEvent.State
+  public var duration: Foundation.TimeInterval
+  public typealias HomeSessionEventHandler = (CynoptaKit.HomeSessionEvent) -> Swift.Void
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.HomeSessionEvent.HomeSessionEventHandler)
+    public mutating func forget()
+  }
+}
+public struct WorkSessionEvent {
+  public enum State : Swift.String {
+    case start
+    case end
+    case update
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(date: Foundation.Date, state: CynoptaKit.WorkSessionEvent.State, duration: Foundation.TimeInterval = 0)
+  public var date: Foundation.Date
+  public var state: CynoptaKit.WorkSessionEvent.State
+  public var duration: Foundation.TimeInterval
+  public typealias WorkSessionEventHandler = (CynoptaKit.WorkSessionEvent) -> Swift.Void
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.WorkSessionEvent.WorkSessionEventHandler)
+    public mutating func forget()
+  }
+}
+public struct CountrySessionEvent {
+  public enum State : Swift.String {
+    case start
+    case end
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(date: Foundation.Date, state: CynoptaKit.CountrySessionEvent.State, duration: Foundation.TimeInterval = 0, country: Swift.String)
+  public var date: Foundation.Date
+  public var state: CynoptaKit.CountrySessionEvent.State
+  public var duration: Foundation.TimeInterval
+  public var country: Swift.String
+  public typealias CountrySessionEventHandler = (CynoptaKit.CountrySessionEvent) -> Swift.Void
+  public func post()
+  public struct Listener {
+    public init()
+    public mutating func listen(replayPast: Swift.Bool = true, _ handler: @escaping CynoptaKit.CountrySessionEvent.CountrySessionEventHandler)
+    public mutating func forget()
+  }
+}
+public struct AbroadSessionEvent {
+  public enum State : Swift.String {
+    case start
+    case end
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public init(date: Foundation.Date, state: CynoptaKit.AbroadSessionEvent.State, duration: Foundation.TimeInterval = 0, country: Swift.String)
+  public var date: Foundation.Date
+  public var state: CynoptaKit.AbroadSessionEvent.State
+  public var duration: Foundation.TimeInterval
+  public var country: Swift.String
+  public typealias AbroadSessionEventHandler = (CynoptaKit.AbroadSessionEvent) -> Swift.Void
+  public func post()
+}
+public class StreamReader : Swift.Hashable {
+  public static func == (lhs: CynoptaKit.StreamReader, rhs: CynoptaKit.StreamReader) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public init?(fileURL: Foundation.URL, delimiter: Swift.String = "\n", encoding: Swift.String.Encoding = .utf8, chunkSize: Swift.Int = 4096)
+  @objc deinit
+  public func nextLine() -> Swift.String?
+  public func close()
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol TaskDelegate : AnyObject {
+  func didFinishTask(_ task: any CynoptaKit.TaskProtocol)
+  func task(_ task: any CynoptaKit.TaskProtocol, didFailWithErrors errors: [any Swift.Error])
+}
+extension CynoptaKit.TaskDelegate {
+  public func task(_ task: any CynoptaKit.TaskProtocol, didFailWithErrors errors: [any Swift.Error])
+}
+public protocol TaskProtocol {
+  var delegate: (any CynoptaKit.TaskDelegate)? { get set }
+  func start()
+  func end()
+}
+extension CynoptaKit.TaskProtocol {
+  public func end()
+}
+public protocol BackgroundTaskDataSourceProtocol {
+  func taskForBackground() -> any CynoptaKit.TaskProtocol
+}
+public struct Geohash {
+  public static func encode(latitude: Swift.Double, longitude: Swift.Double, precision: Swift.Int) -> Swift.String
+  public static func decode(_ hash: Swift.String) -> (latitude: Swift.Double, longitude: Swift.Double)?
+  public static func neighbors(_ centerHash: Swift.String) -> [Swift.String]?
+}
+extension CynoptaKit.Model {
+  public struct Polygon : Swift.Codable {
+    public func distance(from location: CynoptaKit.CynoptaModel.Location) -> _LocationEssentials.CLLocationDistance
+    public func inside(location: CynoptaKit.CynoptaModel.Location) -> Swift.Bool
+    public init(points: [CynoptaKit.CynoptaModel.Location])
+    public var points: [CynoptaKit.CynoptaModel.Location]
+    public var boundingBox: CynoptaKit.Model.BoundingBox
+    public var boundingCircle: CynoptaKit.Model.BoundingCircle
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct BoundingBox : Swift.Codable {
+    public var nw: CynoptaKit.CynoptaModel.Location
+    public var ne: CynoptaKit.CynoptaModel.Location
+    public var se: CynoptaKit.CynoptaModel.Location
+    public var sw: CynoptaKit.CynoptaModel.Location
+    public var longitudeDelta: _LocationEssentials.CLLocationDistance
+    public var latitudeDelta: _LocationEssentials.CLLocationDistance
+    public var areaInDegrees: Swift.Double {
+      get
+    }
+    public var width: _LocationEssentials.CLLocationDistance {
+      get
+    }
+    public var height: _LocationEssentials.CLLocationDistance {
+      get
+    }
+    public var area: Swift.Double {
+      get
+    }
+    public var diagonal: Swift.Double {
+      get
+    }
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct BoundingCircle : Swift.Codable {
+    public var center: CynoptaKit.CynoptaModel.Location
+    public var radius: _LocationEssentials.CLLocationDistance
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+}
+public struct GeoJSONFeature<Geometry, Properties> : Swift.Codable where Geometry : CynoptaKit.GeoJSONGeometry, Properties : Swift.Decodable, Properties : Swift.Encodable {
+  public let id: CynoptaKit.GeoJSONFeatureIdentifier?
+  public let geometry: Geometry?
+  public let properties: Properties?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension CynoptaKit.Platform.ReleaseStage : Swift.Equatable {}
+extension CynoptaKit.Platform.ReleaseStage : Swift.Hashable {}
+extension CynoptaKit.Platform.ReleaseStage : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Data.IspResolution.Fields : Swift.Equatable {}
+extension CynoptaKit.Model.Data.IspResolution.Fields : Swift.Hashable {}
+extension CynoptaKit.Model.Data.IspResolution.Fields : Swift.RawRepresentable {}
+extension CynoptaKit.CynoptaState : Swift.Equatable {}
+extension CynoptaKit.CynoptaState : Swift.Hashable {}
+extension CynoptaKit.CynoptaCapability : Swift.Equatable {}
+extension CynoptaKit.CynoptaCapability : Swift.Hashable {}
+extension CynoptaKit.CynoptaCapability : Swift.RawRepresentable {}
+extension CynoptaKit.CynoptaRefreshReason : Swift.Equatable {}
+extension CynoptaKit.CynoptaRefreshReason : Swift.Hashable {}
+extension CynoptaKit.CynoptaRefreshReason : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Config.LocationsUpdateStrategy : Swift.Equatable {}
+extension CynoptaKit.Model.Config.LocationsUpdateStrategy : Swift.Hashable {}
+extension CynoptaKit.Model.Config.LocationsUpdateStrategy : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Config.GeofenceStrategy : Swift.Equatable {}
+extension CynoptaKit.Model.Config.GeofenceStrategy : Swift.Hashable {}
+extension CynoptaKit.Model.Config.GeofenceStrategy : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Config.VisitsDetectionStrategy : Swift.Equatable {}
+extension CynoptaKit.Model.Config.VisitsDetectionStrategy : Swift.Hashable {}
+extension CynoptaKit.Model.Config.VisitsDetectionStrategy : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Config.UsageReportMode : Swift.Equatable {}
+extension CynoptaKit.Model.Config.UsageReportMode : Swift.Hashable {}
+extension CynoptaKit.Model.Config.UsageReportMode : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Config.ReleaseStage : Swift.Equatable {}
+extension CynoptaKit.Model.Config.ReleaseStage : Swift.Hashable {}
+extension CynoptaKit.Model.Config.ReleaseStage : Swift.RawRepresentable {}
+extension CynoptaKit.ProtobufBinaryDecoder.WireType : Swift.Equatable {}
+extension CynoptaKit.ProtobufBinaryDecoder.WireType : Swift.Hashable {}
+extension CynoptaKit.ProtobufBinaryDecoder.WireType : Swift.RawRepresentable {}
+extension CynoptaKit.ProtobufBinaryEncoder.WireType : Swift.Equatable {}
+extension CynoptaKit.ProtobufBinaryEncoder.WireType : Swift.Hashable {}
+extension CynoptaKit.ProtobufBinaryEncoder.WireType : Swift.RawRepresentable {}
+extension CynoptaKit.HourlySignalPB.BatteryState : Swift.Hashable {}
+extension CynoptaKit.HourlySignalPB.BatteryState : Swift.RawRepresentable {}
+extension CynoptaKit.HourlySignalPB.CellularRadioTech : Swift.Hashable {}
+extension CynoptaKit.HourlySignalPB.CellularRadioTech : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Sensors.Status : Swift.Equatable {}
+extension CynoptaKit.Model.Sensors.Status : Swift.Hashable {}
+extension CynoptaKit.Model.Sensors.Status : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Sensors.Battery.State : Swift.Equatable {}
+extension CynoptaKit.Model.Sensors.Battery.State : Swift.Hashable {}
+extension CynoptaKit.Model.Sensors.Battery.State : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Data.SimCount.Fields : Swift.Equatable {}
+extension CynoptaKit.Model.Data.SimCount.Fields : Swift.Hashable {}
+extension CynoptaKit.Model.Data.SimCount.Fields : Swift.RawRepresentable {}
+extension CynoptaKit.GeoJSON.GeoJSONType : Swift.Equatable {}
+extension CynoptaKit.GeoJSON.GeoJSONType : Swift.Hashable {}
+extension CynoptaKit.GeoJSON.GeoJSONType : Swift.RawRepresentable {}
+extension CynoptaKit.GeoJSON.Geometry.GeometryType : Swift.Equatable {}
+extension CynoptaKit.GeoJSON.Geometry.GeometryType : Swift.Hashable {}
+extension CynoptaKit.GeoJSON.Geometry.GeometryType : Swift.RawRepresentable {}
+extension CynoptaKit.DatabaseError : Swift.Equatable {}
+extension CynoptaKit.DatabaseError : Swift.Hashable {}
+extension CynoptaKit.Model.Data.NetworkTraffic.Fields : Swift.Equatable {}
+extension CynoptaKit.Model.Data.NetworkTraffic.Fields : Swift.Hashable {}
+extension CynoptaKit.Model.Data.NetworkTraffic.Fields : Swift.RawRepresentable {}
+extension CynoptaKit.Model.Data.DualSimCache.Fields : Swift.Equatable {}
+extension CynoptaKit.Model.Data.DualSimCache.Fields : Swift.Hashable {}
+extension CynoptaKit.Model.Data.DualSimCache.Fields : Swift.RawRepresentable {}
+extension CynoptaKit.AppSessionEvent.State : Swift.Equatable {}
+extension CynoptaKit.AppSessionEvent.State : Swift.Hashable {}
+extension CynoptaKit.AppSessionEvent.State : Swift.RawRepresentable {}
+extension CynoptaKit.LocalNetworkSessionEvent.State : Swift.Equatable {}
+extension CynoptaKit.LocalNetworkSessionEvent.State : Swift.Hashable {}
+extension CynoptaKit.LocalNetworkSessionEvent.State : Swift.RawRepresentable {}
+extension CynoptaKit.HomeSessionEvent.State : Swift.Equatable {}
+extension CynoptaKit.HomeSessionEvent.State : Swift.Hashable {}
+extension CynoptaKit.HomeSessionEvent.State : Swift.RawRepresentable {}
+extension CynoptaKit.WorkSessionEvent.State : Swift.Equatable {}
+extension CynoptaKit.WorkSessionEvent.State : Swift.Hashable {}
+extension CynoptaKit.WorkSessionEvent.State : Swift.RawRepresentable {}
+extension CynoptaKit.CountrySessionEvent.State : Swift.Equatable {}
+extension CynoptaKit.CountrySessionEvent.State : Swift.Hashable {}
+extension CynoptaKit.CountrySessionEvent.State : Swift.RawRepresentable {}
+extension CynoptaKit.AbroadSessionEvent.State : Swift.Equatable {}
+extension CynoptaKit.AbroadSessionEvent.State : Swift.Hashable {}
+extension CynoptaKit.AbroadSessionEvent.State : Swift.RawRepresentable {}

@@ -122,10 +122,17 @@ class Cynopta {
     }
   }
 
+  /// The native `cf0` that opens a sealed packet: in the Android SDK's
+  /// `libcynopta-security.so`, and on iOS in the SDK's own `CynoptaKit`
+  /// framework, looked up in that image rather than the whole process, so a
+  /// library loaded ahead of it can't stand in for `cf0`.
   static _DartEvalFn? get _evalFn {
     if (_cachedFn != null) return _cachedFn;
     try {
-      final lib = DynamicLibrary.open('libcynopta-security.so');
+      final lib = defaultTargetPlatform == TargetPlatform.iOS
+          ? DynamicLibrary.open(
+              '@executable_path/Frameworks/CynoptaKit.framework/CynoptaKit')
+          : DynamicLibrary.open('libcynopta-security.so');
       _cachedFn = lib.lookupFunction<_NativeEvalFn, _DartEvalFn>(
         'cf0',
         isLeaf: true,
@@ -319,53 +326,16 @@ class Cynopta {
     final int evaluationLatencyMs =
         (safeMap['evaluationLatencyMs'] as num?)?.toInt() ?? 0;
 
-    if (defaultTargetPlatform == TargetPlatform.android) {
-      final Object? raw = safeMap['d'];
-      final _DartEvalFn? fn = _evalFn;
-      if (raw is! Uint8List || raw.length != 40 || fn == null) {
-        return TrustEvaluation(
-          score: 0.0,
-          classification: 'SESSION_HIJACK_RISK',
-          deviceRealnessScore: 0.0,
-          sessionBotRisk: 1.0,
-          reasons: reasons,
-          attestationPayload: attestationPayload,
-          timestamp: timestamp,
-          evaluationLatencyMs: evaluationLatencyMs,
-          actionName: actionName,
-        );
-      }
-
-      final ByteData view = ByteData.sublistView(raw);
-      final int r = fn(
-        nonce,
-        view.getUint64(0, Endian.little),
-        view.getUint64(8, Endian.little),
-        view.getUint64(16, Endian.little),
-        view.getUint64(24, Endian.little),
-        view.getUint64(32, Endian.little),
-      );
-      if (r == 0) {
-        return TrustEvaluation(
-          score: 0.0,
-          classification: 'SESSION_HIJACK_RISK',
-          deviceRealnessScore: 0.0,
-          sessionBotRisk: 1.0,
-          reasons: reasons,
-          attestationPayload: attestationPayload,
-          timestamp: timestamp,
-          evaluationLatencyMs: evaluationLatencyMs,
-          actionName: actionName,
-        );
-      }
-
-      final String fallback =
-          safeMap['c'] as String? ?? 'PROVISIONAL_NEW_DEVICE';
+    // Both SDKs seal the scores: no plain score crosses the channel, so a
+    // hooked channel can't fake one.
+    final Object? raw = safeMap['d'];
+    final _DartEvalFn? fn = _evalFn;
+    if (raw is! Uint8List || raw.length != 40 || fn == null) {
       return TrustEvaluation(
-        score: _decodeUnits(r & 0xFFFF),
-        classification: _decodeClassification((r >>> 48) & 0xFF, fallback),
-        deviceRealnessScore: _decodeUnits((r >>> 16) & 0xFFFF),
-        sessionBotRisk: _decodeUnits((r >>> 32) & 0xFFFF),
+        score: 0.0,
+        classification: 'SESSION_HIJACK_RISK',
+        deviceRealnessScore: 0.0,
+        sessionBotRisk: 1.0,
         reasons: reasons,
         attestationPayload: attestationPayload,
         timestamp: timestamp,
@@ -374,10 +344,42 @@ class Cynopta {
       );
     }
 
-    return TrustEvaluation.fromMap({
-      ...safeMap,
-      'actionName': actionName,
-    });
+    final ByteData view = ByteData.sublistView(raw);
+    final int r = fn(
+      nonce,
+      view.getUint64(0, Endian.little),
+      view.getUint64(8, Endian.little),
+      view.getUint64(16, Endian.little),
+      view.getUint64(24, Endian.little),
+      view.getUint64(32, Endian.little),
+    );
+    if (r == 0) {
+      return TrustEvaluation(
+        score: 0.0,
+        classification: 'SESSION_HIJACK_RISK',
+        deviceRealnessScore: 0.0,
+        sessionBotRisk: 1.0,
+        reasons: reasons,
+        attestationPayload: attestationPayload,
+        timestamp: timestamp,
+        evaluationLatencyMs: evaluationLatencyMs,
+        actionName: actionName,
+      );
+    }
+
+    final String fallback =
+        safeMap['c'] as String? ?? 'PROVISIONAL_NEW_DEVICE';
+    return TrustEvaluation(
+      score: _decodeUnits(r & 0xFFFF),
+      classification: _decodeClassification((r >>> 48) & 0xFF, fallback),
+      deviceRealnessScore: _decodeUnits((r >>> 16) & 0xFFFF),
+      sessionBotRisk: _decodeUnits((r >>> 32) & 0xFFFF),
+      reasons: reasons,
+      attestationPayload: attestationPayload,
+      timestamp: timestamp,
+      evaluationLatencyMs: evaluationLatencyMs,
+      actionName: actionName,
+    );
   }
 
   static double _decodeUnits(int raw) =>

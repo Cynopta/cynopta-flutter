@@ -1,0 +1,10 @@
+framework module CynoptaAppKit {
+  umbrella header "CynoptaAppKit.h"
+  export *
+
+  module * { export * }
+}
+
+module CynoptaAppKit.Swift {
+  header "CynoptaAppKit-Swift.h"
+}
