@@ -26,9 +26,9 @@ void main() {
       log.add(methodCall);
       switch (methodCall.method) {
         case 'getVersionName':
-          return '1.0.23';
+          return '1.0.24';
         case 'getVersionCode':
-          return 24;
+          return 25;
         case 'isStarted':
           return true;
         case 'isAuthorized':
@@ -137,8 +137,8 @@ void main() {
 
   test('lifecycle, reporting, license, and version methods forward as expected',
       () async {
-    expect(await Cynopta.getVersionName(), '1.0.23');
-    expect(await Cynopta.getVersionCode(), 24);
+    expect(await Cynopta.getVersionName(), '1.0.24');
+    expect(await Cynopta.getVersionCode(), 25);
     expect(await Cynopta.isStarted(), isTrue);
     expect(await Cynopta.isAuthorized(), isTrue);
 

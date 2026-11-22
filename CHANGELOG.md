@@ -1,3 +1,7 @@
+## 1.0.24
+
+* Updated Cynopta Android SDK dependency to `1.0.24`.
+
 ## 1.0.23
 
 * Updated Cynopta Android SDK dependency to `1.0.23`.
