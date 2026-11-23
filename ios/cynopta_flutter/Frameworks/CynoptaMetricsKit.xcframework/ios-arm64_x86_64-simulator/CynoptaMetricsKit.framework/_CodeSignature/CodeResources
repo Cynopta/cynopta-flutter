@@ -18,43 +18,43 @@
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		xFAN/7bQOCnGLGBr8iBRO7KMlN4=
+		KuuCfdX8TYC5SuW/lJ2wx/eEQpI=
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		jvbp8GydNhQPLQQBmm1B0lYLRJQ=
+		HFYA/Xx4tTssw93R1K6WPI5fNJ8=
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		wXKjhN0IDH3P0jbSOiUctHiViRY=
+		teIB58Q3jpoMb+O0iDsLLcRHfmg=
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		jvbp8GydNhQPLQQBmm1B0lYLRJQ=
+		HFYA/Xx4tTssw93R1K6WPI5fNJ8=
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HsVKOST2c2AFumBrXyD+6Zk+PuM=
+		8OX1nI4Ji6wqMrwcpL5TLRl0f8E=
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		xFAN/7bQOCnGLGBr8iBRO7KMlN4=
+		KuuCfdX8TYC5SuW/lJ2wx/eEQpI=
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		48U/y9vONcGLLk/WO0s1uHKfOMg=
+		QNbbPGJblee3wYq2xdnpyjWGfI8=
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		ejaWzUmx2WQZLeFeP3ofXUvYiP0=
+		r7x4GrzvRX2kLBWvx1o/ErStghU=
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		48U/y9vONcGLLk/WO0s1uHKfOMg=
+		QNbbPGJblee3wYq2xdnpyjWGfI8=
 		</data>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		fgqS/x/hLb6GdxvG2UHs3a2tXmg=
+		2uFPMZk5qiCOJHDlrgi3GDM2vo8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -85,70 +85,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ft7rQbsESX3yI067RlflTLFSjtQhRGsIgW/PL2ACXRc=
+			x1qoJXV0uPnY4a6UwMebfHj5Y0eAhjgi9hmyqz/PxS4=
 			</data>
 		</dict>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xx7K8rWTsU3jPsEPaszPN7KDZaH5Z+Qc0Vbv/W2Ks6o=
+			5fgg7l9aMOsX2DwE2G2phTZghuTAG7oomVA0HzALtuo=
 			</data>
 		</dict>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YaqulyT6yRHBk5Y5jyoxnzp4ZF6ecNkgYUtGTv6nHHU=
+			Pc37RiWoDXYxP4rrxlmw4VufBxi3tOcSJEq1KsH3pJU=
 			</data>
 		</dict>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xx7K8rWTsU3jPsEPaszPN7KDZaH5Z+Qc0Vbv/W2Ks6o=
+			5fgg7l9aMOsX2DwE2G2phTZghuTAG7oomVA0HzALtuo=
 			</data>
 		</dict>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rXAGTTgn2/QIRXMo0ylGtD+4+G59xrWaigi4HgLVQmI=
+			7FjIbD+bi3S5iZ5L75BR/DnCMDW21yaW3xqQdOHngiM=
 			</data>
 		</dict>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Ft7rQbsESX3yI067RlflTLFSjtQhRGsIgW/PL2ACXRc=
+			x1qoJXV0uPnY4a6UwMebfHj5Y0eAhjgi9hmyqz/PxS4=
 			</data>
 		</dict>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yp2r4SdUtf1cZdjMQrWcDIBQsmF9knfRap16pl1Oebk=
+			iHtfYs3III8enwwID2f+88tzP3CZQer1BgbDMMgQsnY=
 			</data>
 		</dict>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tbnA3n8iesnel13BtmuOS/PL3CFPAzNitprnfwMIZGw=
+			oe4saJr2MyY3APwmXQX0XvtNCV9Ul9tmVKeZsekEN4o=
 			</data>
 		</dict>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yp2r4SdUtf1cZdjMQrWcDIBQsmF9knfRap16pl1Oebk=
+			iHtfYs3III8enwwID2f+88tzP3CZQer1BgbDMMgQsnY=
 			</data>
 		</dict>
 		<key>Modules/CynoptaMetricsKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1nfizRtqeMh14asb1OGEVE+3inlXEYJiReT1RmN+MEM=
+			cHKru74HYxhoxslsrmcNNe56xpMzRf69VVlVFJTcEtI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

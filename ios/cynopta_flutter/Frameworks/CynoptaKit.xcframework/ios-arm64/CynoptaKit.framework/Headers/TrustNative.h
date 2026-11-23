@@ -65,4 +65,18 @@ bool CynoptaTrustIsInlineHook(const uint32_t * _Nullable words, int count);
 /// Whether the seal or cf0 starts with an inline hook (the hooking checks' rule). Always false off arm64.
 bool CynoptaTrustSealHooked(void);
 
+// MARK: Touch hook (TrustLive)
+
+/// What `CynoptaSendEventHook` calls with each event before UIKit's own sendEvent:, the UIWindow and the UIEvent as
+/// unretained pointers.
+typedef void (*CynoptaSendEventHandler)(const void * _Nonnull window, const void * _Nonnull event);
+
+/// Replaces UIWindow's sendEvent: with `CynoptaSendEventHook`, which calls `handler` and then the original. Once per
+/// process; false when UIWindow has no sendEvent:. Its one frame sits under every touch, so the crash reporter leaves
+/// it out when it decides whose crash it is (`CynoptaSendEventHookAddress`).
+bool CynoptaInstallSendEventHook(CynoptaSendEventHandler _Nonnull handler);
+
+/// Where the hook's code starts, pointer authentication stripped.
+uintptr_t CynoptaSendEventHookAddress(void);
+
 #endif

@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/TrustNative.h</key>
 		<data>
-		rX4cqJij6ekLdEGzZt78U7tlc6g=
+		oTTvwX3DlYdNYQ+L4hOxDDyC5TI=
 		</data>
 		<key>Headers/Zip.h</key>
 		<data>
@@ -42,43 +42,43 @@
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		gH3KHfnPp8yryMhYmQ5h3TExV1I=
+		lUiIGlAmGEgD964KkK0Oeao/9rM=
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		02ZMmO/dZNx4ojGt7U4JgxfSPaI=
+		AcO0F2DLBky1MMhT64gqv9d/2Qs=
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		kmgHtO0owIg9gc/6v/FitIYLywg=
+		/G+ZmpD7KC8f2rI50OuTvPnnJnc=
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		02ZMmO/dZNx4ojGt7U4JgxfSPaI=
+		AcO0F2DLBky1MMhT64gqv9d/2Qs=
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iZ3m0XQEV8XHx+qce6ix7yg9+RQ=
+		UhU3YoI+InK0/WoEegJ/stsXa/8=
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		gH3KHfnPp8yryMhYmQ5h3TExV1I=
+		gG3p0Epc0FR8uv0KtVgb6Ef86/Y=
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		0nhFa19QYmZnEXph3xoqIF6eb6k=
+		cUdw8bMJvAvFCksn/3aLA4Cf8W8=
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		rw20nKO0F8aaz3SOGAK0jLYWeZM=
+		es1Y8kxrm3JSn7itXU6AZRT+hec=
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		0nhFa19QYmZnEXph3xoqIF6eb6k=
+		cUdw8bMJvAvFCksn/3aLA4Cf8W8=
 		</data>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		GuaBRCU8SiJRPDnIZx97JCj5rcw=
+		etA4kqZy+U5Ejnbp0lWop1MnKXQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		buxQSrXEnEnOkE089I0UDwm666E=
+		iE+cRVLUXr/6/yUyHOP4Z8AxipI=
 		</data>
 		<key>PrivateHeaders/ZipArchive.h</key>
 		<data>
@@ -213,7 +213,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t8e0mdiSoNdnKR4bXFkwpLOeJYm52GDqC9iwaHP3o9w=
+			Y8h59UnVgXDIRoXv2/6y1LopaTTzGQLUrfHhxYV5orw=
 			</data>
 		</dict>
 		<key>Headers/Zip.h</key>
@@ -227,70 +227,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1+RLYxQnntlYAQGu6jvGaIzt5m094JweVF9riyws0nM=
+			LlsiVeosKDbLEQHnuQiCDhAIY5QSxY31lyeHxCprPsc=
 			</data>
 		</dict>
 		<key>Modules/CynoptaKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m1lAPmrHkUq7ZwfRVUTkPseKCUFBF9ivaK4ic48SEcM=
+			8flNrv3+2f1miOBdthInICtcd84dtg0ni45xKoUNg7k=
 			</data>
 		</dict>
 		<key>Modules/CynoptaKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oQLUskpzQDvYaBhsYS8KZGMyYVqovR+LqCmicclZ/Ds=
+			x3ZwYNX7H5iuE5i0rkPvrzMzXyN+14RAKkpzLLz7f9M=
 			</data>
 		</dict>
 		<key>Modules/CynoptaKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m1lAPmrHkUq7ZwfRVUTkPseKCUFBF9ivaK4ic48SEcM=
+			8flNrv3+2f1miOBdthInICtcd84dtg0ni45xKoUNg7k=
 			</data>
 		</dict>
 		<key>Modules/CynoptaKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ysETR0C8tT9i3Wz79ZmXvhld12HxivbblroENDWht8E=
+			dXUfgPynmrTJ3ph/yqfL7TpVnwwtvXyYZ2kF/5oiRCA=
 			</data>
 		</dict>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1+RLYxQnntlYAQGu6jvGaIzt5m094JweVF9riyws0nM=
+			DXZ8l93vR0/ZAnXvdnTzsLuiRxB09C9fdYB4rQfFUYM=
 			</data>
 		</dict>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N5iIfGzYMy68jshF6TBpb7l8thcMkooEpWPdAvDYmIs=
+			aEjwNqh+Ps/qSGmb3CkvkbZzdW9NAjWfIrG58b8oroE=
 			</data>
 		</dict>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N4oLlcD/WsQMZ7hnB3KTdnOKR4MYK270WBqQhQoWkp0=
+			COX3Cl0p5PyI2Uo6xIEPFl+OBt6QjUa7o1+IHrXACuI=
 			</data>
 		</dict>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N5iIfGzYMy68jshF6TBpb7l8thcMkooEpWPdAvDYmIs=
+			aEjwNqh+Ps/qSGmb3CkvkbZzdW9NAjWfIrG58b8oroE=
 			</data>
 		</dict>
 		<key>Modules/CynoptaKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VnqGe5tzAJAVSKI8vDD+X94P+ZsXNA8wl3jxN4v8apI=
+			yZt+iv2Fe4VQ3n5g3xVxUSmD3xaL2jJXMQpNces8z7g=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -304,7 +304,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rRvisrXrMBsI2r2GglNE1A5ThyPibKDkCs6cDPnq8Vo=
+			bHEDDqYEZQaNg4KldfnesuIt7sB7MlqgMbVorCWgg54=
 			</data>
 		</dict>
 		<key>PrivateHeaders/ZipArchive.h</key>

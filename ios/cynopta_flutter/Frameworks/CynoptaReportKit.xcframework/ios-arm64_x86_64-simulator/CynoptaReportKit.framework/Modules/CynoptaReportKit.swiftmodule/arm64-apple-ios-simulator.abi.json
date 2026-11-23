@@ -3721,14 +3721,14 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaReport\/Sources\/Classes\/Reports\/MicrosegmentsReport.swift",
       "kind": "IntegerLiteral",
-      "offset": 7558,
+      "offset": 7764,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaReport\/Sources\/Classes\/Reports\/MicrosegmentsReport.swift",
       "kind": "IntegerLiteral",
-      "offset": 7563,
+      "offset": 7769,
       "length": 4,
       "value": "3600"
     },
@@ -3959,7 +3959,7 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaReport\/Sources\/Classes\/Model\/Log.swift",
       "kind": "StringLiteral",
-      "offset": 6905,
+      "offset": 7107,
       "length": 15,
       "value": "\"CynoptaReport\""
     },

@@ -13,6 +13,7 @@ import CoreTelephony
 @_exported import CynoptaKit
 import Darwin
 import Foundation
+import MachO
 import MapKit
 import MetricKit
 import NetworkExtension
@@ -319,30 +320,16 @@ extension CynoptaKit.Model {
         get
       }
     }
-    public enum ReleaseStage : Swift.String, Swift.Codable {
-      case production
-      case rc
-      case stage
-      case development
-      public init?(rawValue: Swift.String)
-      public typealias RawValue = Swift.String
-      public var rawValue: Swift.String {
-        get
-      }
-    }
     public var silent: Swift.Bool
     public var enabledPercentage: Swift.Int
     public var crashReports: Swift.Bool
     public var errorReports: Swift.Bool
-    public var errorReportsPercentage: Swift.Int
     public var reportsMicrosegmentsActive: Swift.Bool
     public var reportsMicrosegmentsSnapshotActive: Swift.Bool
     public var reportsEncodedEnrichmentActive: Swift.Bool
     public var remoteNotifications: Swift.Bool
     public var remoteNotificationsServiceEndpoint: Swift.String
     public var remoteNotificationsServiceXAPIKEY: Swift.String
-    public var crashReportUrl: Swift.String?
-    public var sessionReportUrl: Swift.String?
     public var geofenceStrategy: CynoptaKit.Model.Config.GeofenceStrategy
     public var geofenceIBeaconsIdentities: [Swift.String]
     public var visitsDetectionStrategy: CynoptaKit.Model.Config.VisitsDetectionStrategy
@@ -355,7 +342,6 @@ extension CynoptaKit.Model {
     public var dataLifetimeFullMonths: Swift.Int
     public var purgeOldData: Swift.Bool
     public var defaultSIMCountry: Swift.String
-    public var releaseStage: CynoptaKit.Model.Config.ReleaseStage
     public var locationAware: Swift.Bool
     public var enableWifiResolution: Swift.Bool
     public var bestMomentMinIntervalBetweenNotificationsInMinutes: Swift.Int
@@ -2215,6 +2201,40 @@ public struct GeoJSONFeature<Geometry, Properties> : Swift.Codable where Geometr
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
+@_hasMissingDesignatedInitializers public class CynoptaCrashReporter {
+  public static let shared: CynoptaKit.CynoptaCrashReporter
+  public static let defaultDSN: Swift.String
+  public enum Level : Swift.String {
+    case debug
+    case info
+    case warning
+    case error
+    case fatal
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public func configure(enabled: Swift.Bool, errorsEnabled: Swift.Bool, dsn: Swift.String?)
+  @discardableResult
+  @inline(never) public func captureHandledFailure(_ error: any Swift.Error, category: Swift.String, tags: [Swift.String : Swift.String] = [:]) -> Swift.String?
+  @inline(never) public func logged(_ log: Any, module: Swift.String, reportable: Swift.Bool)
+  public func addBreadcrumb(_ message: Swift.String, category: Swift.String, level: CynoptaKit.CynoptaCrashReporter.Level = .info)
+  public func flush(timeout: Foundation.TimeInterval)
+  public func deleteStoredData()
+  @objc deinit
+}
+public enum CynoptaHandledFailure : Swift.Error {
+  case encodingFailed
+  case compressionFailed
+  case hookUnavailable
+  public static func == (a: CynoptaKit.CynoptaHandledFailure, b: CynoptaKit.CynoptaHandledFailure) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 extension CynoptaKit.Platform.ReleaseStage : Swift.Equatable {}
 extension CynoptaKit.Platform.ReleaseStage : Swift.Hashable {}
 extension CynoptaKit.Platform.ReleaseStage : Swift.RawRepresentable {}
@@ -2241,9 +2261,6 @@ extension CynoptaKit.Model.Config.VisitsDetectionStrategy : Swift.RawRepresentab
 extension CynoptaKit.Model.Config.UsageReportMode : Swift.Equatable {}
 extension CynoptaKit.Model.Config.UsageReportMode : Swift.Hashable {}
 extension CynoptaKit.Model.Config.UsageReportMode : Swift.RawRepresentable {}
-extension CynoptaKit.Model.Config.ReleaseStage : Swift.Equatable {}
-extension CynoptaKit.Model.Config.ReleaseStage : Swift.Hashable {}
-extension CynoptaKit.Model.Config.ReleaseStage : Swift.RawRepresentable {}
 extension CynoptaKit.ProtobufBinaryDecoder.WireType : Swift.Equatable {}
 extension CynoptaKit.ProtobufBinaryDecoder.WireType : Swift.Hashable {}
 extension CynoptaKit.ProtobufBinaryDecoder.WireType : Swift.RawRepresentable {}
@@ -2295,3 +2312,8 @@ extension CynoptaKit.CountrySessionEvent.State : Swift.RawRepresentable {}
 extension CynoptaKit.AbroadSessionEvent.State : Swift.Equatable {}
 extension CynoptaKit.AbroadSessionEvent.State : Swift.Hashable {}
 extension CynoptaKit.AbroadSessionEvent.State : Swift.RawRepresentable {}
+extension CynoptaKit.CynoptaCrashReporter.Level : Swift.Equatable {}
+extension CynoptaKit.CynoptaCrashReporter.Level : Swift.Hashable {}
+extension CynoptaKit.CynoptaCrashReporter.Level : Swift.RawRepresentable {}
+extension CynoptaKit.CynoptaHandledFailure : Swift.Equatable {}
+extension CynoptaKit.CynoptaHandledFailure : Swift.Hashable {}

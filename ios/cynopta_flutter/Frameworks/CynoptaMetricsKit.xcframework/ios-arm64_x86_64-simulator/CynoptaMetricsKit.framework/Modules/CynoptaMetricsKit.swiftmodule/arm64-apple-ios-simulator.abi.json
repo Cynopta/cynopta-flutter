@@ -22654,6 +22654,13 @@
       },
       {
         "kind": "Import",
+        "name": "CynoptaKit",
+        "printedName": "CynoptaKit",
+        "declKind": "Import",
+        "moduleName": "CynoptaMetricsKit"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -24239,6 +24246,66 @@
             "declKind": "Func",
             "usr": "s:17CynoptaMetricsKit0aB0C22cynoptaShouldAutoStartSbyF",
             "mangledName": "$s17CynoptaMetricsKit0aB0C22cynoptaShouldAutoStartSbyF",
+            "moduleName": "CynoptaMetricsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cynoptaCrashReportsEnabled",
+            "printedName": "cynoptaCrashReportsEnabled()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CynoptaMetricsKit0aB0C26cynoptaCrashReportsEnabledSbSgyF",
+            "mangledName": "$s17CynoptaMetricsKit0aB0C26cynoptaCrashReportsEnabledSbSgyF",
+            "moduleName": "CynoptaMetricsKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cynoptaSentryDSN",
+            "printedName": "cynoptaSentryDSN()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17CynoptaMetricsKit0aB0C16cynoptaSentryDSNSSSgyF",
+            "mangledName": "$s17CynoptaMetricsKit0aB0C16cynoptaSentryDSNSSSgyF",
             "moduleName": "CynoptaMetricsKit",
             "declAttributes": [
               "AccessControl",
@@ -26850,21 +26917,28 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustHistory.swift",
       "kind": "StringLiteral",
-      "offset": 5614,
+      "offset": 5004,
+      "length": 28,
+      "value": "\"touch_summary_save_failure\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustHistory.swift",
+      "kind": "StringLiteral",
+      "offset": 5744,
       "length": 31,
       "value": "\"com.cynopta.sdk.trust.history\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustHistory.swift",
       "kind": "BooleanLiteral",
-      "offset": 5725,
+      "offset": 5855,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustHistory.swift",
       "kind": "IntegerLiteral",
-      "offset": 5881,
+      "offset": 6011,
       "length": 1,
       "value": "0"
     },
@@ -27389,336 +27463,336 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 1201,
+      "offset": 1269,
       "length": 9,
       "value": "\"cynopta\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 1242,
+      "offset": 1310,
       "length": 6,
       "value": "\"json\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 1349,
+      "offset": 1417,
       "length": 22,
       "value": "\"UNAUTHORIZED_LICENSE\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "Dictionary",
-      "offset": 1767,
+      "offset": 1835,
       "length": 495,
       "value": "[(\"vendor-1\", \"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnD6GNaK8odvWCJ7pgsWzDHIpwJPvDJzfG6gzkO4sq23i4KCnzvu854+cWK0ZJVotP\/EDTll0UuObPBHqXrDl78i+t6FpWcROqg5\/NGjpPztAjHStWzgXKiArzUTHCmGqCusG1qbCW8rJBnyrgXF3UAAd9t0fCAR\/iOwMq21qCF3RuMoO57vxRcdGuv33Wk8dDdUfm+mnHev4jFJNL4EQDL+WXOzOOCbya57soihuRVpslujhgStTUyaNrTFhb4PoNN+vmG5oy3hVf9D5dF5AaFKaAnNZKfFPPrKaaATuiJA\/0XYRt5fcLcsVV2F8mbsfZyW65Rsg\/KrNxj7k36XZewIDAQAB\")]"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 6279,
+      "offset": 6482,
       "length": 35,
       "value": "\"no cynopta.json in the app bundle\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 6344,
+      "offset": 6547,
       "length": 37,
       "value": "\"cynopta.json isn't the license file\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 6412,
+      "offset": 6615,
       "length": 33,
       "value": "\"the license token can't be read\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 6472,
+      "offset": 6675,
       "length": 56,
       "value": "\"the license is signed with a key this SDK doesn't have\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 6557,
+      "offset": 6760,
       "length": 39,
       "value": "\"the license's signature doesn't match\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 6623,
+      "offset": 6826,
       "length": 48,
       "value": "\"the license doesn't cover this app's bundle ID\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 6695,
+      "offset": 6898,
       "length": 25,
       "value": "\"the license has expired\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 6750,
+      "offset": 6953,
       "length": 68,
       "value": "\"cynopta.json has no apiKey, so the microsegments report isn't sent\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "BooleanLiteral",
-      "offset": 12771,
+      "offset": 13707,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "BooleanLiteral",
-      "offset": 12809,
+      "offset": 13745,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "BooleanLiteral",
-      "offset": 12978,
+      "offset": 13914,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "BooleanLiteral",
-      "offset": 13048,
+      "offset": 13984,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 23371,
+      "offset": 25043,
       "length": 14,
       "value": "\"package_name\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 23417,
+      "offset": 25089,
       "length": 14,
       "value": "\"version_name\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 23463,
+      "offset": 25135,
       "length": 14,
       "value": "\"version_code\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 23510,
+      "offset": 25182,
       "length": 16,
       "value": "\"is_debug_build\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 23557,
+      "offset": 25229,
       "length": 13,
       "value": "\"is_emulator\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 23735,
+      "offset": 25407,
       "length": 5,
       "value": "\"ios\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 24065,
+      "offset": 25737,
       "length": 14,
       "value": "\"version_name\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 24111,
+      "offset": 25783,
       "length": 14,
       "value": "\"version_code\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 24169,
+      "offset": 25841,
       "length": 27,
       "value": "\"dashboard_reports_enabled\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "BooleanLiteral",
-      "offset": 24514,
+      "offset": 26186,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 24946,
+      "offset": 26618,
       "length": 17,
       "value": "\"is_first_report\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 25005,
+      "offset": 26677,
       "length": 26,
       "value": "\"stage_1_license_verified\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 25068,
+      "offset": 26740,
       "length": 21,
       "value": "\"stage_2_lease_ready\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 25121,
+      "offset": 26793,
       "length": 14,
       "value": "\"lease_status\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 25169,
+      "offset": 26841,
       "length": 17,
       "value": "\"lease_issued_at\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 25221,
+      "offset": 26893,
       "length": 18,
       "value": "\"lease_expires_at\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 25794,
+      "offset": 27466,
       "length": 19,
       "value": "\"window_start_date\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 25847,
+      "offset": 27519,
       "length": 17,
       "value": "\"window_end_date\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 25901,
+      "offset": 27573,
       "length": 19,
       "value": "\"daily_assessments\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 25961,
+      "offset": 27633,
       "length": 24,
       "value": "\"daily_blocked_attempts\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "IntegerLiteral",
-      "offset": 26561,
+      "offset": 28233,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 26920,
+      "offset": 28592,
       "length": 16,
       "value": "\"schema_version\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 26961,
+      "offset": 28633,
       "length": 11,
       "value": "\"report_id\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "StringLiteral",
-      "offset": 27004,
+      "offset": 28676,
       "length": 18,
       "value": "\"report_timestamp\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "Dictionary",
-      "offset": 27630,
+      "offset": 29302,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "Dictionary",
-      "offset": 27681,
+      "offset": 29353,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "Dictionary",
-      "offset": 31111,
+      "offset": 32783,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "Dictionary",
-      "offset": 31164,
+      "offset": 32836,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "Dictionary",
-      "offset": 31201,
+      "offset": 32873,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "Dictionary",
-      "offset": 31250,
+      "offset": 32922,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "IntegerLiteral",
-      "offset": 31283,
+      "offset": 32955,
       "length": 2,
       "value": "31"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLicense.swift",
       "kind": "IntegerLiteral",
-      "offset": 31313,
+      "offset": 32985,
       "length": 10,
       "value": "10000000"
     },
@@ -28663,42 +28737,49 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 691,
+      "offset": 709,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLive.swift",
       "kind": "BooleanLiteral",
-      "offset": 4388,
+      "offset": 4406,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLive.swift",
+      "kind": "StringLiteral",
+      "offset": 5498,
+      "length": 28,
+      "value": "\"touch_interception_failure\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 8105,
+      "offset": 8207,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 8109,
+      "offset": 8211,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLive.swift",
       "kind": "IntegerLiteral",
-      "offset": 8292,
+      "offset": 8394,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Services\/TrustLive.swift",
       "kind": "Array",
-      "offset": 10715,
+      "offset": 10817,
       "length": 2,
       "value": "[]"
     },
@@ -29181,7 +29262,7 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaMetrics\/Sources\/Classes\/Public\/CynoptaMetrics.swift",
       "kind": "BooleanLiteral",
-      "offset": 11518,
+      "offset": 11977,
       "length": 5,
       "value": "false"
     },

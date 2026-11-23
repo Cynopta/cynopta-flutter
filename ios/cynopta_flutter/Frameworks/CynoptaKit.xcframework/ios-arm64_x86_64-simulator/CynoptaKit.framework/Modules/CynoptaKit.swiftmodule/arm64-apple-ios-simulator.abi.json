@@ -39892,307 +39892,6 @@
                 ]
               },
               {
-                "kind": "TypeDecl",
-                "name": "ReleaseStage",
-                "printedName": "ReleaseStage",
-                "children": [
-                  {
-                    "kind": "Var",
-                    "name": "production",
-                    "printedName": "production",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(CynoptaKit.Model.Config.ReleaseStage.Type) -> CynoptaKit.Model.Config.ReleaseStage",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ReleaseStage",
-                            "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                            "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metatype",
-                            "printedName": "CynoptaKit.Model.Config.ReleaseStage.Type",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "ReleaseStage",
-                                "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                                "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "declKind": "EnumElement",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO10productionyA2GmF",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV12ReleaseStageO10productionyA2GmF",
-                    "moduleName": "CynoptaKit"
-                  },
-                  {
-                    "kind": "Var",
-                    "name": "rc",
-                    "printedName": "rc",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(CynoptaKit.Model.Config.ReleaseStage.Type) -> CynoptaKit.Model.Config.ReleaseStage",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ReleaseStage",
-                            "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                            "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metatype",
-                            "printedName": "CynoptaKit.Model.Config.ReleaseStage.Type",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "ReleaseStage",
-                                "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                                "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "declKind": "EnumElement",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO2rcyA2GmF",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV12ReleaseStageO2rcyA2GmF",
-                    "moduleName": "CynoptaKit"
-                  },
-                  {
-                    "kind": "Var",
-                    "name": "stage",
-                    "printedName": "stage",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(CynoptaKit.Model.Config.ReleaseStage.Type) -> CynoptaKit.Model.Config.ReleaseStage",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ReleaseStage",
-                            "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                            "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metatype",
-                            "printedName": "CynoptaKit.Model.Config.ReleaseStage.Type",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "ReleaseStage",
-                                "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                                "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "declKind": "EnumElement",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO5stageyA2GmF",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV12ReleaseStageO5stageyA2GmF",
-                    "moduleName": "CynoptaKit"
-                  },
-                  {
-                    "kind": "Var",
-                    "name": "development",
-                    "printedName": "development",
-                    "children": [
-                      {
-                        "kind": "TypeFunc",
-                        "name": "Function",
-                        "printedName": "(CynoptaKit.Model.Config.ReleaseStage.Type) -> CynoptaKit.Model.Config.ReleaseStage",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ReleaseStage",
-                            "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                            "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                          },
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Metatype",
-                            "printedName": "CynoptaKit.Model.Config.ReleaseStage.Type",
-                            "children": [
-                              {
-                                "kind": "TypeNominal",
-                                "name": "ReleaseStage",
-                                "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                                "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "declKind": "EnumElement",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO11developmentyA2GmF",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV12ReleaseStageO11developmentyA2GmF",
-                    "moduleName": "CynoptaKit"
-                  },
-                  {
-                    "kind": "Constructor",
-                    "name": "init",
-                    "printedName": "init(rawValue:)",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "CynoptaKit.Model.Config.ReleaseStage?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "ReleaseStage",
-                            "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                            "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Constructor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO8rawValueAGSgSS_tcfc",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV12ReleaseStageO8rawValueAGSgSS_tcfc",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "init_kind": "Designated"
-                  },
-                  {
-                    "kind": "Var",
-                    "name": "rawValue",
-                    "printedName": "rawValue",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "declKind": "Var",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO8rawValueSSvp",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV12ReleaseStageO8rawValueSSvp",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessors": [
-                      {
-                        "kind": "Accessor",
-                        "name": "Get",
-                        "printedName": "Get()",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "declKind": "Accessor",
-                        "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO8rawValueSSvg",
-                        "mangledName": "$s10CynoptaKit5ModelV6ConfigV12ReleaseStageO8rawValueSSvg",
-                        "moduleName": "CynoptaKit",
-                        "implicit": true,
-                        "accessorKind": "get"
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "Enum",
-                "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO",
-                "mangledName": "$s10CynoptaKit5ModelV6ConfigV12ReleaseStageO",
-                "moduleName": "CynoptaKit",
-                "declAttributes": [
-                  "AccessControl"
-                ],
-                "enumRawTypeName": "String",
-                "conformances": [
-                  {
-                    "kind": "Conformance",
-                    "name": "Copyable",
-                    "printedName": "Copyable",
-                    "usr": "s:s8CopyableP",
-                    "mangledName": "$ss8CopyableP"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "Equatable",
-                    "printedName": "Equatable",
-                    "usr": "s:SQ",
-                    "mangledName": "$sSQ"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "Escapable",
-                    "printedName": "Escapable",
-                    "usr": "s:s9EscapableP",
-                    "mangledName": "$ss9EscapableP"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "Hashable",
-                    "printedName": "Hashable",
-                    "usr": "s:SH",
-                    "mangledName": "$sSH"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "RawRepresentable",
-                    "printedName": "RawRepresentable",
-                    "children": [
-                      {
-                        "kind": "TypeWitness",
-                        "name": "RawValue",
-                        "printedName": "RawValue",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ]
-                      }
-                    ],
-                    "usr": "s:SY",
-                    "mangledName": "$sSY"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "Decodable",
-                    "printedName": "Decodable",
-                    "usr": "s:Se",
-                    "mangledName": "$sSe"
-                  },
-                  {
-                    "kind": "Conformance",
-                    "name": "Encodable",
-                    "printedName": "Encodable",
-                    "usr": "s:SE",
-                    "mangledName": "$sSE"
-                  }
-                ]
-              },
-              {
                 "kind": "Var",
                 "name": "silent",
                 "printedName": "silent",
@@ -40530,92 +40229,6 @@
                     "declKind": "Accessor",
                     "usr": "s:10CynoptaKit5ModelV6ConfigV12errorReportsSbvM",
                     "mangledName": "$s10CynoptaKit5ModelV6ConfigV12errorReportsSbvM",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "_modify"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
-                "name": "errorReportsPercentage",
-                "printedName": "errorReportsPercentage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:10CynoptaKit5ModelV6ConfigV22errorReportsPercentageSivp",
-                "mangledName": "$s10CynoptaKit5ModelV6ConfigV22errorReportsPercentageSivp",
-                "moduleName": "CynoptaKit",
-                "declAttributes": [
-                  "HasInitialValue",
-                  "HasStorage",
-                  "AccessControl"
-                ],
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV22errorReportsPercentageSivg",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV22errorReportsPercentageSivg",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  },
-                  {
-                    "kind": "Accessor",
-                    "name": "Set",
-                    "printedName": "Set()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV22errorReportsPercentageSivs",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV22errorReportsPercentageSivs",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "set"
-                  },
-                  {
-                    "kind": "Accessor",
-                    "name": "Modify",
-                    "printedName": "Modify()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV22errorReportsPercentageSivM",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV22errorReportsPercentageSivM",
                     "moduleName": "CynoptaKit",
                     "implicit": true,
                     "accessorKind": "_modify"
@@ -41132,226 +40745,6 @@
                     "declKind": "Accessor",
                     "usr": "s:10CynoptaKit5ModelV6ConfigV33remoteNotificationsServiceXAPIKEYSSvM",
                     "mangledName": "$s10CynoptaKit5ModelV6ConfigV33remoteNotificationsServiceXAPIKEYSSvM",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "_modify"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
-                "name": "crashReportUrl",
-                "printedName": "crashReportUrl",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:10CynoptaKit5ModelV6ConfigV14crashReportUrlSSSgvp",
-                "mangledName": "$s10CynoptaKit5ModelV6ConfigV14crashReportUrlSSSgvp",
-                "moduleName": "CynoptaKit",
-                "declAttributes": [
-                  "HasInitialValue",
-                  "HasStorage",
-                  "AccessControl"
-                ],
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.String?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV14crashReportUrlSSSgvg",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV14crashReportUrlSSSgvg",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  },
-                  {
-                    "kind": "Accessor",
-                    "name": "Set",
-                    "printedName": "Set()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.String?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV14crashReportUrlSSSgvs",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV14crashReportUrlSSSgvs",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "set"
-                  },
-                  {
-                    "kind": "Accessor",
-                    "name": "Modify",
-                    "printedName": "Modify()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV14crashReportUrlSSSgvM",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV14crashReportUrlSSSgvM",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "_modify"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
-                "name": "sessionReportUrl",
-                "printedName": "sessionReportUrl",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:10CynoptaKit5ModelV6ConfigV16sessionReportUrlSSSgvp",
-                "mangledName": "$s10CynoptaKit5ModelV6ConfigV16sessionReportUrlSSSgvp",
-                "moduleName": "CynoptaKit",
-                "declAttributes": [
-                  "HasInitialValue",
-                  "HasStorage",
-                  "AccessControl"
-                ],
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.String?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV16sessionReportUrlSSSgvg",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV16sessionReportUrlSSSgvg",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  },
-                  {
-                    "kind": "Accessor",
-                    "name": "Set",
-                    "printedName": "Set()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "Swift.String?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "String",
-                            "printedName": "Swift.String",
-                            "usr": "s:SS"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV16sessionReportUrlSSSgvs",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV16sessionReportUrlSSSgvs",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "set"
-                  },
-                  {
-                    "kind": "Accessor",
-                    "name": "Modify",
-                    "printedName": "Modify()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV16sessionReportUrlSSSgvM",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV16sessionReportUrlSSSgvM",
                     "moduleName": "CynoptaKit",
                     "implicit": true,
                     "accessorKind": "_modify"
@@ -42408,92 +41801,6 @@
                     "declKind": "Accessor",
                     "usr": "s:10CynoptaKit5ModelV6ConfigV17defaultSIMCountrySSvM",
                     "mangledName": "$s10CynoptaKit5ModelV6ConfigV17defaultSIMCountrySSvM",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "_modify"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
-                "name": "releaseStage",
-                "printedName": "releaseStage",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "ReleaseStage",
-                    "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:10CynoptaKit5ModelV6ConfigV12releaseStageAE07ReleaseF0Ovp",
-                "mangledName": "$s10CynoptaKit5ModelV6ConfigV12releaseStageAE07ReleaseF0Ovp",
-                "moduleName": "CynoptaKit",
-                "declAttributes": [
-                  "HasInitialValue",
-                  "HasStorage",
-                  "AccessControl"
-                ],
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ReleaseStage",
-                        "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                        "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12releaseStageAE07ReleaseF0Ovg",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV12releaseStageAE07ReleaseF0Ovg",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "get"
-                  },
-                  {
-                    "kind": "Accessor",
-                    "name": "Set",
-                    "printedName": "Set()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "ReleaseStage",
-                        "printedName": "CynoptaKit.Model.Config.ReleaseStage",
-                        "usr": "s:10CynoptaKit5ModelV6ConfigV12ReleaseStageO"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12releaseStageAE07ReleaseF0Ovs",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV12releaseStageAE07ReleaseF0Ovs",
-                    "moduleName": "CynoptaKit",
-                    "implicit": true,
-                    "accessorKind": "set"
-                  },
-                  {
-                    "kind": "Accessor",
-                    "name": "Modify",
-                    "printedName": "Modify()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:10CynoptaKit5ModelV6ConfigV12releaseStageAE07ReleaseF0OvM",
-                    "mangledName": "$s10CynoptaKit5ModelV6ConfigV12releaseStageAE07ReleaseF0OvM",
                     "moduleName": "CynoptaKit",
                     "implicit": true,
                     "accessorKind": "_modify"
@@ -64995,6 +64302,1056 @@
         "moduleName": "CynoptaKit"
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CynoptaKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "CynoptaKit"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CynoptaCrashReporter",
+        "printedName": "CynoptaCrashReporter",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CynoptaCrashReporter",
+                "printedName": "CynoptaKit.CynoptaCrashReporter",
+                "usr": "s:10CynoptaKit0A13CrashReporterC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10CynoptaKit0A13CrashReporterC6sharedACvpZ",
+            "mangledName": "$s10CynoptaKit0A13CrashReporterC6sharedACvpZ",
+            "moduleName": "CynoptaKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CynoptaCrashReporter",
+                    "printedName": "CynoptaKit.CynoptaCrashReporter",
+                    "usr": "s:10CynoptaKit0A13CrashReporterC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10CynoptaKit0A13CrashReporterC6sharedACvgZ",
+                "mangledName": "$s10CynoptaKit0A13CrashReporterC6sharedACvgZ",
+                "moduleName": "CynoptaKit",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "defaultDSN",
+            "printedName": "defaultDSN",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10CynoptaKit0A13CrashReporterC10defaultDSNSSvpZ",
+            "mangledName": "$s10CynoptaKit0A13CrashReporterC10defaultDSNSSvpZ",
+            "moduleName": "CynoptaKit",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10CynoptaKit0A13CrashReporterC10defaultDSNSSvgZ",
+                "mangledName": "$s10CynoptaKit0A13CrashReporterC10defaultDSNSSvgZ",
+                "moduleName": "CynoptaKit",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Level",
+            "printedName": "Level",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "debug",
+                "printedName": "debug",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CynoptaKit.CynoptaCrashReporter.Level.Type) -> CynoptaKit.CynoptaCrashReporter.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                        "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                            "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO5debugyA2EmF",
+                "mangledName": "$s10CynoptaKit0A13CrashReporterC5LevelO5debugyA2EmF",
+                "moduleName": "CynoptaKit"
+              },
+              {
+                "kind": "Var",
+                "name": "info",
+                "printedName": "info",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CynoptaKit.CynoptaCrashReporter.Level.Type) -> CynoptaKit.CynoptaCrashReporter.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                        "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                            "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO4infoyA2EmF",
+                "mangledName": "$s10CynoptaKit0A13CrashReporterC5LevelO4infoyA2EmF",
+                "moduleName": "CynoptaKit"
+              },
+              {
+                "kind": "Var",
+                "name": "warning",
+                "printedName": "warning",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CynoptaKit.CynoptaCrashReporter.Level.Type) -> CynoptaKit.CynoptaCrashReporter.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                        "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                            "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO7warningyA2EmF",
+                "mangledName": "$s10CynoptaKit0A13CrashReporterC5LevelO7warningyA2EmF",
+                "moduleName": "CynoptaKit"
+              },
+              {
+                "kind": "Var",
+                "name": "error",
+                "printedName": "error",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CynoptaKit.CynoptaCrashReporter.Level.Type) -> CynoptaKit.CynoptaCrashReporter.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                        "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                            "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO5erroryA2EmF",
+                "mangledName": "$s10CynoptaKit0A13CrashReporterC5LevelO5erroryA2EmF",
+                "moduleName": "CynoptaKit"
+              },
+              {
+                "kind": "Var",
+                "name": "fatal",
+                "printedName": "fatal",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CynoptaKit.CynoptaCrashReporter.Level.Type) -> CynoptaKit.CynoptaCrashReporter.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                        "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                            "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO5fatalyA2EmF",
+                "mangledName": "$s10CynoptaKit0A13CrashReporterC5LevelO5fatalyA2EmF",
+                "moduleName": "CynoptaKit"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "CynoptaKit.CynoptaCrashReporter.Level?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                        "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO8rawValueAESgSS_tcfc",
+                "mangledName": "$s10CynoptaKit0A13CrashReporterC5LevelO8rawValueAESgSS_tcfc",
+                "moduleName": "CynoptaKit",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO8rawValueSSvp",
+                "mangledName": "$s10CynoptaKit0A13CrashReporterC5LevelO8rawValueSSvp",
+                "moduleName": "CynoptaKit",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO8rawValueSSvg",
+                    "mangledName": "$s10CynoptaKit0A13CrashReporterC5LevelO8rawValueSSvg",
+                    "moduleName": "CynoptaKit",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO",
+            "mangledName": "$s10CynoptaKit0A13CrashReporterC5LevelO",
+            "moduleName": "CynoptaKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "enumRawTypeName": "String",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "configure",
+            "printedName": "configure(enabled:errorsEnabled:dsn:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CynoptaKit0A13CrashReporterC9configure7enabled13errorsEnabled3dsnySb_SbSSSgtF",
+            "mangledName": "$s10CynoptaKit0A13CrashReporterC9configure7enabled13errorsEnabled3dsnySb_SbSSSgtF",
+            "moduleName": "CynoptaKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "captureHandledFailure",
+            "printedName": "captureHandledFailure(_:category:tags:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Error",
+                "printedName": "any Swift.Error",
+                "usr": "s:s5ErrorP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CynoptaKit0A13CrashReporterC21captureHandledFailure_8category4tagsSSSgs5Error_p_SSSDyS2SGtF",
+            "mangledName": "$s10CynoptaKit0A13CrashReporterC21captureHandledFailure_8category4tagsSSSgs5Error_p_SSSDyS2SGtF",
+            "moduleName": "CynoptaKit",
+            "declAttributes": [
+              "AccessControl",
+              "DiscardableResult",
+              "Inline",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logged",
+            "printedName": "logged(_:module:reportable:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProtocolComposition",
+                "printedName": "Any"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CynoptaKit0A13CrashReporterC6logged_6module10reportableyyp_SSSbtF",
+            "mangledName": "$s10CynoptaKit0A13CrashReporterC6logged_6module10reportableyyp_SSSbtF",
+            "moduleName": "CynoptaKit",
+            "declAttributes": [
+              "AccessControl",
+              "Inline",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "addBreadcrumb",
+            "printedName": "addBreadcrumb(_:category:level:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "CynoptaKit.CynoptaCrashReporter.Level",
+                "hasDefaultArg": true,
+                "usr": "s:10CynoptaKit0A13CrashReporterC5LevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CynoptaKit0A13CrashReporterC13addBreadcrumb_8category5levelySS_SSAC5LevelOtF",
+            "mangledName": "$s10CynoptaKit0A13CrashReporterC13addBreadcrumb_8category5levelySS_SSAC5LevelOtF",
+            "moduleName": "CynoptaKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "flush",
+            "printedName": "flush(timeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CynoptaKit0A13CrashReporterC5flush7timeoutySd_tF",
+            "mangledName": "$s10CynoptaKit0A13CrashReporterC5flush7timeoutySd_tF",
+            "moduleName": "CynoptaKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteStoredData",
+            "printedName": "deleteStoredData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CynoptaKit0A13CrashReporterC16deleteStoredDatayyF",
+            "mangledName": "$s10CynoptaKit0A13CrashReporterC16deleteStoredDatayyF",
+            "moduleName": "CynoptaKit",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10CynoptaKit0A13CrashReporterC",
+        "mangledName": "$s10CynoptaKit0A13CrashReporterC",
+        "moduleName": "CynoptaKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "CynoptaHandledFailure",
+        "printedName": "CynoptaHandledFailure",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "encodingFailed",
+            "printedName": "encodingFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CynoptaKit.CynoptaHandledFailure.Type) -> CynoptaKit.CynoptaHandledFailure",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CynoptaHandledFailure",
+                    "printedName": "CynoptaKit.CynoptaHandledFailure",
+                    "usr": "s:10CynoptaKit0A14HandledFailureO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CynoptaKit.CynoptaHandledFailure.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CynoptaHandledFailure",
+                        "printedName": "CynoptaKit.CynoptaHandledFailure",
+                        "usr": "s:10CynoptaKit0A14HandledFailureO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10CynoptaKit0A14HandledFailureO14encodingFailedyA2CmF",
+            "mangledName": "$s10CynoptaKit0A14HandledFailureO14encodingFailedyA2CmF",
+            "moduleName": "CynoptaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "compressionFailed",
+            "printedName": "compressionFailed",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CynoptaKit.CynoptaHandledFailure.Type) -> CynoptaKit.CynoptaHandledFailure",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CynoptaHandledFailure",
+                    "printedName": "CynoptaKit.CynoptaHandledFailure",
+                    "usr": "s:10CynoptaKit0A14HandledFailureO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CynoptaKit.CynoptaHandledFailure.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CynoptaHandledFailure",
+                        "printedName": "CynoptaKit.CynoptaHandledFailure",
+                        "usr": "s:10CynoptaKit0A14HandledFailureO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10CynoptaKit0A14HandledFailureO17compressionFailedyA2CmF",
+            "mangledName": "$s10CynoptaKit0A14HandledFailureO17compressionFailedyA2CmF",
+            "moduleName": "CynoptaKit"
+          },
+          {
+            "kind": "Var",
+            "name": "hookUnavailable",
+            "printedName": "hookUnavailable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(CynoptaKit.CynoptaHandledFailure.Type) -> CynoptaKit.CynoptaHandledFailure",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CynoptaHandledFailure",
+                    "printedName": "CynoptaKit.CynoptaHandledFailure",
+                    "usr": "s:10CynoptaKit0A14HandledFailureO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "CynoptaKit.CynoptaHandledFailure.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CynoptaHandledFailure",
+                        "printedName": "CynoptaKit.CynoptaHandledFailure",
+                        "usr": "s:10CynoptaKit0A14HandledFailureO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:10CynoptaKit0A14HandledFailureO15hookUnavailableyA2CmF",
+            "mangledName": "$s10CynoptaKit0A14HandledFailureO15hookUnavailableyA2CmF",
+            "moduleName": "CynoptaKit"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CynoptaHandledFailure",
+                "printedName": "CynoptaKit.CynoptaHandledFailure",
+                "usr": "s:10CynoptaKit0A14HandledFailureO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CynoptaHandledFailure",
+                "printedName": "CynoptaKit.CynoptaHandledFailure",
+                "usr": "s:10CynoptaKit0A14HandledFailureO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CynoptaKit0A14HandledFailureO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s10CynoptaKit0A14HandledFailureO2eeoiySbAC_ACtFZ",
+            "moduleName": "CynoptaKit",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10CynoptaKit0A14HandledFailureO9hashValueSivp",
+            "mangledName": "$s10CynoptaKit0A14HandledFailureO9hashValueSivp",
+            "moduleName": "CynoptaKit",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10CynoptaKit0A14HandledFailureO9hashValueSivg",
+                "mangledName": "$s10CynoptaKit0A14HandledFailureO9hashValueSivg",
+                "moduleName": "CynoptaKit",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10CynoptaKit0A14HandledFailureO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s10CynoptaKit0A14HandledFailureO4hash4intoys6HasherVz_tF",
+            "moduleName": "CynoptaKit",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:10CynoptaKit0A14HandledFailureO",
+        "mangledName": "$s10CynoptaKit0A14HandledFailureO",
+        "moduleName": "CynoptaKit",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Error",
+            "printedName": "Error",
+            "usr": "s:s5ErrorP",
+            "mangledName": "$ss5ErrorP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CynoptaKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CynoptaKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "CynoptaKit"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CynoptaKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "CynoptaKit",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "CynoptaKit"
+      },
+      {
+        "kind": "Import",
+        "name": "MetricKit",
+        "printedName": "MetricKit",
+        "declKind": "Import",
+        "moduleName": "CynoptaKit"
+      },
+      {
         "kind": "TypeDecl",
         "name": "Double",
         "printedName": "Double",
@@ -72242,77 +72599,77 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 6149,
+      "offset": 6616,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 6171,
+      "offset": 6638,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 10808,
+      "offset": 11330,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "StringLiteral",
-      "offset": 10974,
+      "offset": 11496,
       "length": 14,
       "value": "\"feedback.zip\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "StringLiteral",
-      "offset": 11469,
+      "offset": 11991,
       "length": 14,
       "value": "\"feedback.zip\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 15132,
+      "offset": 15654,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "StringLiteral",
-      "offset": 15915,
+      "offset": 16437,
       "length": 25,
       "value": "\"com.cynopta.sdk.refresh\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "BooleanLiteral",
-      "offset": 16487,
+      "offset": 17009,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 17423,
+      "offset": 17945,
       "length": 14,
       "value": "1"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 17447,
+      "offset": 17969,
       "length": 18,
       "value": "2"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore.swift",
       "kind": "IntegerLiteral",
-      "offset": 17475,
+      "offset": 17997,
       "length": 13,
       "value": "3"
     },
@@ -72697,140 +73054,105 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 1977,
+      "offset": 1835,
       "length": 21,
       "value": "\"AnagogDefaultConfig\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2232,
+      "offset": 2090,
       "length": 13,
       "value": "\"Operational\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2272,
+      "offset": 2130,
       "length": 8,
       "value": "\"Report\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2309,
+      "offset": 2167,
       "length": 10,
       "value": "\"Services\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2502,
+      "offset": 2360,
       "length": 19,
       "value": "\"EnabledPercentage\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2875,
-      "length": 13,
-      "value": "\"CrashReport\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
-      "kind": "StringLiteral",
-      "offset": 2920,
-      "length": 13,
-      "value": "\"ErrorReport\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
-      "kind": "StringLiteral",
-      "offset": 2967,
+      "offset": 2659,
       "length": 15,
       "value": "\"Microsegments\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 3024,
+      "offset": 2716,
       "length": 23,
       "value": "\"MicrosegmentsSnapshot\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 3085,
+      "offset": 2777,
       "length": 19,
       "value": "\"EncodedEnrichment\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 3266,
+      "offset": 2960,
       "length": 8,
       "value": "\"Active\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 3465,
+      "offset": 3140,
       "length": 8,
       "value": "\"Active\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 3504,
-      "length": 12,
-      "value": "\"Percentage\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
-      "kind": "StringLiteral",
-      "offset": 3680,
+      "offset": 3316,
       "length": 8,
       "value": "\"Active\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 3860,
-      "length": 8,
-      "value": "\"Active\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
-      "kind": "StringLiteral",
-      "offset": 4036,
-      "length": 8,
-      "value": "\"Active\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
-      "kind": "StringLiteral",
-      "offset": 4242,
+      "offset": 3522,
       "length": 23,
       "value": "\"NetProviderResolution\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 4490,
+      "offset": 3770,
       "length": 8,
       "value": "\"Active\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 4529,
+      "offset": 3809,
       "length": 12,
       "value": "\"Percentage\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Public\/CynoptaCore+Config.swift",
       "kind": "StringLiteral",
-      "offset": 4570,
+      "offset": 3850,
       "length": 10,
       "value": "\"GeoAware\""
     },
@@ -72900,408 +73222,373 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 1459,
+      "offset": 1311,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "IntegerLiteral",
-      "offset": 1509,
+      "offset": 1361,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 1551,
+      "offset": 1403,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 1597,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1652,
-      "length": 3,
-      "value": "100"
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1710,
+      "offset": 1449,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 1778,
+      "offset": 1509,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 1842,
+      "offset": 1577,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 1895,
+      "offset": 1641,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1694,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 1964,
+      "offset": 1763,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2029,
+      "offset": 1828,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "Array",
-      "offset": 2256,
+      "offset": 1955,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2586,
+      "offset": 2285,
       "length": 12,
       "value": "\"Anonymized\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2643,
+      "offset": 2342,
       "length": 12,
       "value": "\"Anonymized\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2704,
+      "offset": 2403,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "IntegerLiteral",
-      "offset": 2815,
+      "offset": 2514,
       "length": 2,
       "value": "18"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 2857,
+      "offset": 2556,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 2909,
+      "offset": 2608,
       "length": 4,
       "value": "\"il\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 3008,
+      "offset": 2648,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 3055,
+      "offset": 2695,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "IntegerLiteral",
-      "offset": 3137,
+      "offset": 2777,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "IntegerLiteral",
-      "offset": 3215,
+      "offset": 2855,
       "length": 4,
       "value": "1440"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "IntegerLiteral",
-      "offset": 3289,
+      "offset": 2929,
       "length": 5,
       "value": "10080"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "BooleanLiteral",
-      "offset": 3351,
+      "offset": 2991,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 8921,
+      "offset": 8082,
       "length": 22,
       "value": "\"enabledPercentage_v2\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 8976,
+      "offset": 8137,
       "length": 24,
       "value": "\"analytics.crashReports\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9033,
+      "offset": 8194,
       "length": 24,
       "value": "\"analytics.errorReports\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9100,
-      "length": 34,
-      "value": "\"analytics.errorReportsPercentage\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
-      "kind": "StringLiteral",
-      "offset": 9174,
+      "offset": 8258,
       "length": 21,
       "value": "\"remoteNotifications\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9250,
+      "offset": 8334,
       "length": 39,
       "value": "\"remoteNotificationsServiceEndpoint_v2\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9343,
+      "offset": 8427,
       "length": 35,
       "value": "\"remoteNotificationsServiceXAPIKEY\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9413,
-      "length": 16,
-      "value": "\"crashReportUrl\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
-      "kind": "StringLiteral",
-      "offset": 9466,
-      "length": 18,
-      "value": "\"sessionReportUrl\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
-      "kind": "StringLiteral",
-      "offset": 9521,
+      "offset": 8499,
       "length": 27,
       "value": "\"location.geofenceStrategy\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9595,
+      "offset": 8573,
       "length": 37,
       "value": "\"location.geofenceIBeaconsIdentities\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9676,
+      "offset": 8654,
       "length": 34,
       "value": "\"location.visitsDetectionStrategy\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9754,
+      "offset": 8732,
       "length": 25,
       "value": "\"location.updateStrategy\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9814,
+      "offset": 8792,
       "length": 16,
       "value": "\"wakeupStrategy\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9868,
+      "offset": 8846,
       "length": 24,
       "value": "\"privacy.mode.global_v2\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9928,
+      "offset": 8906,
       "length": 22,
       "value": "\"privacy.mode.gdpr_v2\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 9990,
+      "offset": 8968,
       "length": 23,
       "value": "\"usage.report.endpoint\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10049,
+      "offset": 9027,
       "length": 19,
       "value": "\"usage.report.mode\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10111,
+      "offset": 9089,
       "length": 25,
       "value": "\"data.lifetimeFullMonths\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10169,
+      "offset": 9147,
       "length": 22,
       "value": "\"data.purgeOldData_v2\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10229,
+      "offset": 9207,
       "length": 26,
       "value": "\"device.defaultSIMCountry\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10288,
-      "length": 15,
-      "value": "\"release.stage\""
-    },
-    {
-      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
-      "kind": "StringLiteral",
-      "offset": 10337,
+      "offset": 9267,
       "length": 24,
       "value": "\"detector.locationAware\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10402,
+      "offset": 9332,
       "length": 31,
       "value": "\"detector.enableWifiResolution\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10480,
+      "offset": 9410,
       "length": 30,
       "value": "\"reports.microsegments.active\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10565,
+      "offset": 9495,
       "length": 39,
       "value": "\"reports.microsegments-snapshot.active\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10655,
+      "offset": 9585,
       "length": 35,
       "value": "\"reports.encoded-enrichment.active\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10761,
+      "offset": 9691,
       "length": 53,
       "value": "\"bestMoment.minIntervalBetweenNotificationsInMinutes\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10883,
+      "offset": 9813,
       "length": 51,
       "value": "\"bestMoment.maxTimeForUsingOnlyBestMomentInMinutes\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 10997,
+      "offset": 9927,
       "length": 45,
       "value": "\"bestMoment.maxNotificationLifetimeInMinutes\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 11091,
+      "offset": 10021,
       "length": 30,
       "value": "\"sqlPargmaEnableWALJournaling\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 11162,
+      "offset": 10092,
       "length": 22,
       "value": "\"sqlPargmaBusyTimeout\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 11241,
+      "offset": 10171,
       "length": 13,
       "value": "\"core.module\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Model+Config.swift",
       "kind": "StringLiteral",
-      "offset": 11300,
-      "length": 1337,
-      "value": "\"{\n    \"silent\" : false,\n    \"enabledPercentage_v2\" : 0,\n    \"remoteNotifications\" : false,\n    \"remoteNotificationsServiceEndpoint_v2\" : \"\",\n    \"remoteNotificationsServiceXAPIKEY\" : \"CDNaJQrnM91DJFOxVKmBZ8iz8zhFrmdI6EtIcdFU\",\n    \"analytics.crashReports\" : false,\n    \"analytics.errorReports\" : false,\n    \"analytics.errorReportsPercentage\" : 100,\n    \"location.geofenceStrategy\" : \"adaptive\",\n    \"location.geofenceIBeaconsIdentities\" : [],\n    \"location.visitsDetectionStrategy\" : \"byVisitsAndLocations\",\n    \"location.updateStrategy\" : \"never\",\n    \"wakeupStrategy\" : 7,\n    \"privacy.mode.global_v2\" : \"Anonymized\",\n    \"privacy.mode.gdpr_v2\" : \"Anonymized\",\n    \"usage.report.mode\" : \"full\",\n    \"usage.report.endpoint\" : \"\",\n    \"data.lifetimeFullMonths\" : 18,\n    \"data.purgeOldData_v2\" : true,\n    \"release.stage\" : \"production\",\n    \"detector.locationAware\" : true,\n    \"detector.enableWifiResolution\" : true,\n    \"reports.microsegments.active\" : false,\n    \"reports.microsegments-snapshot.active\" : false,\n    \"reports.encoded-enrichment.active\" : false,\n    \"bestMoment.minIntervalBetweenNotificationsInMinutes\" : 60,\n    \"bestMoment.maxTimeForUsingOnlyBestMomentInMinutes\" : 1440,\n    \"bestMoment.maxNotificationLifetimeInMinutes\" : 10080,\n    \"sqlPargmaEnableWALJournaling\": false,\n    \"sqlPargmaBusyTimeout\": null\n}\""
+      "offset": 10230,
+      "length": 1291,
+      "value": "\"{\n    \"silent\" : false,\n    \"enabledPercentage_v2\" : 0,\n    \"remoteNotifications\" : false,\n    \"remoteNotificationsServiceEndpoint_v2\" : \"\",\n    \"remoteNotificationsServiceXAPIKEY\" : \"CDNaJQrnM91DJFOxVKmBZ8iz8zhFrmdI6EtIcdFU\",\n    \"analytics.crashReports\" : false,\n    \"analytics.errorReports\" : false,\n    \"location.geofenceStrategy\" : \"adaptive\",\n    \"location.geofenceIBeaconsIdentities\" : [],\n    \"location.visitsDetectionStrategy\" : \"byVisitsAndLocations\",\n    \"location.updateStrategy\" : \"never\",\n    \"wakeupStrategy\" : 7,\n    \"privacy.mode.global_v2\" : \"Anonymized\",\n    \"privacy.mode.gdpr_v2\" : \"Anonymized\",\n    \"usage.report.mode\" : \"full\",\n    \"usage.report.endpoint\" : \"\",\n    \"data.lifetimeFullMonths\" : 18,\n    \"data.purgeOldData_v2\" : true,\n    \"release.stage\" : \"production\",\n    \"detector.locationAware\" : true,\n    \"detector.enableWifiResolution\" : true,\n    \"reports.microsegments.active\" : false,\n    \"reports.microsegments-snapshot.active\" : false,\n    \"reports.encoded-enrichment.active\" : false,\n    \"bestMoment.minIntervalBetweenNotificationsInMinutes\" : 60,\n    \"bestMoment.maxTimeForUsingOnlyBestMomentInMinutes\" : 1440,\n    \"bestMoment.maxNotificationLifetimeInMinutes\" : 10080,\n    \"sqlPargmaEnableWALJournaling\": false,\n    \"sqlPargmaBusyTimeout\": null\n}\""
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Lang\/UserDefaultsKey.swift",
@@ -74272,7 +74559,7 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/BestMomentService.swift",
       "kind": "StringLiteral",
-      "offset": 8731,
+      "offset": 8555,
       "length": 36,
       "value": "\"intenthq-edge-services-best-moment\""
     },
@@ -74979,35 +75266,35 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Lang\/OSLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 4160,
+      "offset": 3761,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Lang\/OSLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 5879,
+      "offset": 5480,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Lang\/OSLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 9169,
+      "offset": 8770,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Lang\/OSLog.swift",
       "kind": "IntegerLiteral",
-      "offset": 9198,
+      "offset": 8799,
       "length": 7,
       "value": "5000000"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Lang\/OSLog.swift",
       "kind": "BooleanLiteral",
-      "offset": 9232,
+      "offset": 8833,
       "length": 5,
       "value": "false"
     },
@@ -75742,42 +76029,42 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/Sensors\/SensorsService+Location.swift",
       "kind": "BooleanLiteral",
-      "offset": 21297,
+      "offset": 21284,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/Sensors\/SensorsService+Location.swift",
       "kind": "BooleanLiteral",
-      "offset": 21325,
+      "offset": 21312,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/Sensors\/SensorsService+Location.swift",
       "kind": "IntegerLiteral",
-      "offset": 21373,
+      "offset": 21360,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/Sensors\/SensorsService+Location.swift",
       "kind": "IntegerLiteral",
-      "offset": 21413,
+      "offset": 21400,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/Sensors\/SensorsService+Location.swift",
       "kind": "IntegerLiteral",
-      "offset": 21889,
+      "offset": 21876,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/Sensors\/SensorsService+Location.swift",
       "kind": "IntegerLiteral",
-      "offset": 22038,
+      "offset": 22025,
       "length": 1,
       "value": "5"
     },
@@ -76498,7 +76785,7 @@
     {
       "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Model\/Log.swift",
       "kind": "StringLiteral",
-      "offset": 13212,
+      "offset": 13400,
       "length": 13,
       "value": "\"CynoptaCore\""
     },
@@ -76543,6 +76830,685 @@
       "offset": 476,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 1177,
+      "length": 97,
+      "value": "\"https:\/\/0064a79fec24e9c5dbf3c93aadbc4acf@o4512145804951552.ingest.de.sentry.io\/4512458285842512\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1620,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2238,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2275,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "Array",
+      "offset": 2350,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2578,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2811,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "Array",
+      "offset": 2862,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 3069,
+      "length": 17,
+      "value": "\".crash-reporter\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6689,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "Dictionary",
+      "offset": 8932,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10422,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 10471,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 10531,
+      "length": 8,
+      "value": "\"module\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18720,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18763,
+      "length": 6,
+      "value": "86400"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "IntegerLiteral",
+      "offset": 20761,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter.swift",
+      "kind": "StringLiteral",
+      "offset": 20808,
+      "length": 14,
+      "value": "\".crash.daily\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 2562,
+      "length": 3,
+      "value": "\".\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 2607,
+      "length": 18,
+      "value": "\"(unknown context\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 2679,
+      "length": 3,
+      "value": "\".\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2722,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 2762,
+      "length": 3,
+      "value": "\".\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 3646,
+      "length": 6,
+      "value": "\"type\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 3654,
+      "length": 9,
+      "value": "\"handled\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 3665,
+      "length": 9,
+      "value": "\"handled\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3676,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 4170,
+      "length": 19,
+      "value": "\"cynopta.ios.crash\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 4215,
+      "length": 18,
+      "value": "\"com.cynopta.sdk@\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 4375,
+      "length": 9,
+      "value": "\"release\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 4414,
+      "length": 12,
+      "value": "\"production\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 4686,
+      "length": 5,
+      "value": "\"UTC\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "Dictionary",
+      "offset": 7597,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7630,
+      "length": 10,
+      "value": "\"host_app\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7647,
+      "length": 14,
+      "value": "\"CFBundleName\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7677,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7700,
+      "length": 14,
+      "value": "\"package_name\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7748,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7771,
+      "length": 18,
+      "value": "\"host_app_version\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7796,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7840,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7863,
+      "length": 23,
+      "value": "\"host_app_version_code\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7893,
+      "length": 17,
+      "value": "\"CFBundleVersion\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7926,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7949,
+      "length": 13,
+      "value": "\"sdk_version\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 7988,
+      "length": 18,
+      "value": "\"sdk_version_code\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8045,
+      "length": 14,
+      "value": "\"release_mode\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8107,
+      "length": 12,
+      "value": "\"os_version\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8149,
+      "length": 14,
+      "value": "\"device_model\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "Dictionary",
+      "offset": 8383,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8420,
+      "length": 6,
+      "value": "\"name\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8428,
+      "length": 5,
+      "value": "\"iOS\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8435,
+      "length": 9,
+      "value": "\"version\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8503,
+      "length": 16,
+      "value": "\"kern.osversion\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8538,
+      "length": 7,
+      "value": "\"build\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8615,
+      "length": 8,
+      "value": "\"family\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8625,
+      "length": 5,
+      "value": "\"iOS\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8644,
+      "length": 7,
+      "value": "\"model\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8697,
+      "length": 14,
+      "value": "\"manufacturer\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8713,
+      "length": 7,
+      "value": "\"Apple\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8734,
+      "length": 6,
+      "value": "\"arch\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8772,
+      "length": 13,
+      "value": "\"memory_size\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 8893,
+      "length": 11,
+      "value": "\"simulator\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8908,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9025,
+      "length": 16,
+      "value": "\"app_identifier\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9075,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9098,
+      "length": 10,
+      "value": "\"app_name\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9115,
+      "length": 14,
+      "value": "\"CFBundleName\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9145,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9168,
+      "length": 13,
+      "value": "\"app_version\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9188,
+      "length": 28,
+      "value": "\"CFBundleShortVersionString\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9232,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9255,
+      "length": 11,
+      "value": "\"app_build\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9273,
+      "length": 17,
+      "value": "\"CFBundleVersion\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9306,
+      "length": 9,
+      "value": "\"unknown\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9343,
+      "length": 4,
+      "value": "\"os\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9353,
+      "length": 8,
+      "value": "\"device\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Event.swift",
+      "kind": "StringLiteral",
+      "offset": 9371,
+      "length": 5,
+      "value": "\"app\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Images.swift",
+      "kind": "Array",
+      "offset": 1097,
+      "length": 139,
+      "value": "[\"CynoptaKit\", \"CynoptaAppKit\", \"CynoptaConfigKit\", \"CynoptaReportKit\", \"CynoptaMetricsKit\"]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Images.swift",
+      "kind": "StringLiteral",
+      "offset": 1280,
+      "length": 7,
+      "value": "\"arm64\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Images.swift",
+      "kind": "Array",
+      "offset": 1425,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Images.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1473,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Transport.swift",
+      "kind": "IntegerLiteral",
+      "offset": 609,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Transport.swift",
+      "kind": "IntegerLiteral",
+      "offset": 772,
+      "length": 2,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Transport.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4654,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+Transport.swift",
+      "kind": "StringLiteral",
+      "offset": 4688,
+      "length": 10,
+      "value": "\"envelope\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "Dictionary",
+      "offset": 7450,
+      "length": 127,
+      "value": "[(4, \"SIGILL\"), (5, \"SIGTRAP\"), (6, \"SIGABRT\"), (8, \"SIGFPE\"), (9, \"SIGKILL\"), (10, \"SIGBUS\"), (11, \"SIGSEGV\"), (13, \"SIGPIPE\")]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "Dictionary",
+      "offset": 7620,
+      "length": 185,
+      "value": "[(1, \"EXC_BAD_ACCESS\"), (2, \"EXC_BAD_INSTRUCTION\"), (3, \"EXC_ARITHMETIC\"), (5, \"EXC_SOFTWARE\"), (6, \"EXC_BREAKPOINT\"), (10, \"EXC_CRASH\"), (11, \"EXC_RESOURCE\"), (12, \"EXC_GUARD\")]"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "StringLiteral",
+      "offset": 8130,
+      "length": 20,
+      "value": "\".crash.passthrough\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8178,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "StringLiteral",
+      "offset": 9186,
+      "length": 15,
+      "value": "\".crash.builds\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "StringLiteral",
+      "offset": 11656,
+      "length": 18,
+      "value": "\".crash.forwarded\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "StringLiteral",
+      "offset": 11715,
+      "length": 13,
+      "value": "\".crash.seen\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11765,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11805,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "StringLiteral",
+      "offset": 12462,
+      "length": 11,
+      "value": "\"framework\""
+    },
+    {
+      "filePath": "\/Users\/Shared\/Projects\/Work\/Cynopta\/ios_sdk\/CynoptaCore\/Sources\/Classes\/Services\/CrashReporting\/CynoptaCrashReporter+MetricKit.swift",
+      "kind": "BooleanLiteral",
+      "offset": 16529,
+      "length": 5,
+      "value": "false"
     }
   ]
 }

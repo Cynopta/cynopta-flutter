@@ -640,6 +640,8 @@ infix operator ?= : AssignmentPrecedence
   public func cynoptaReportingMode() -> CynoptaMetricsKit.Model.CynoptaReportingMode
   public func setCynoptaReportingEnabled(_ enabled: Swift.Bool)
   public func cynoptaShouldAutoStart() -> Swift.Bool
+  public func cynoptaCrashReportsEnabled() -> Swift.Bool?
+  public func cynoptaSentryDSN() -> Swift.String?
   public func setCynoptaAutoStart(_ start: Swift.Bool)
   @discardableResult
   public func checkCynoptaLicense() -> Swift.Bool

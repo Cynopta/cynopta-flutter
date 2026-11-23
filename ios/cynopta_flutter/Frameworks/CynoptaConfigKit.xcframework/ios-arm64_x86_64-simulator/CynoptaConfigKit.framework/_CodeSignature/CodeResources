@@ -18,7 +18,7 @@
 		</data>
 		<key>Modules/CynoptaConfigKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		s6j1L1vbmd7dx8xaJ9JW5sjiexU=
+		M5u3G/TcwMTiFMVBkcBH1DnJD8c=
 		</data>
 		<key>Modules/CynoptaConfigKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/CynoptaConfigKit.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		s6j1L1vbmd7dx8xaJ9JW5sjiexU=
+		M5u3G/TcwMTiFMVBkcBH1DnJD8c=
 		</data>
 		<key>Modules/CynoptaConfigKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LVRdNTjkQBp1jo69msDNDYX/M70rHsu91ttWAAGD8aE=
+			7BHklyGo2dSEEcTWcsDm9eCS7N2CEscGPMme/9W/Geg=
 			</data>
 		</dict>
 		<key>Modules/CynoptaConfigKit.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -120,7 +120,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LVRdNTjkQBp1jo69msDNDYX/M70rHsu91ttWAAGD8aE=
+			7BHklyGo2dSEEcTWcsDm9eCS7N2CEscGPMme/9W/Geg=
 			</data>
 		</dict>
 		<key>Modules/CynoptaConfigKit.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
