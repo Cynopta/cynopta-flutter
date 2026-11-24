@@ -197,7 +197,7 @@ class Cynopta {
     }
   }
 
-  /// Returns the native Cynopta SDK version string (e.g. `"1.0.25"`).
+  /// Returns the native Cynopta SDK version string (e.g. `"1.0.26"`).
   static Future<String> getVersionName() async {
     if (!_isSupportedMobile) return '';
     try {
