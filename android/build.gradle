@@ -1,5 +1,5 @@
 group = "com.cynopta.flutter"
-version = "1.0.26"
+version = "1.0.27"
 
 buildscript {
     repositories {
@@ -71,5 +71,5 @@ tasks.matching { it.name.contains("Assets") }.configureEach {
 }
 
 dependencies {
-    api("com.github.Cynopta:android-sdk-dist:1.0.26")
+    api("com.github.Cynopta:android-sdk-dist:1.0.27")
 }
