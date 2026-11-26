@@ -2,7 +2,7 @@
 
 Flutter plugin for the **Cynopta SDK**.
 
-Automatically bundles the native Cynopta SDKs — Android (`com.github.Cynopta:android-sdk-dist`) and iOS (binary xcframeworks inside the plugin) — and packages your `cynopta.json` license file. **No native Kotlin/Java, Swift, Gradle, Podfile or Xcode edits required.**
+Automatically pulls in the native Cynopta SDKs — Android (`com.github.Cynopta:android-sdk-dist`) and iOS (`github.com/Cynopta/ios-sdk-dist`, through Swift Package Manager) — and packages your `cynopta.json` license file. **No native Kotlin/Java, Swift, Gradle, Podfile or Xcode edits required.**
 
 ## Setup (2 Steps)
 
@@ -45,11 +45,11 @@ flutter:
 
 ## iOS Details
 
-- **Minimum iOS:** 13.0. Works with Swift Package Manager (Flutter's default) and CocoaPods.
-- **Bundled SDK:** Cynopta iOS SDK 1.0.24 (build 25), as binary xcframeworks; each carries its `NOTICE` and privacy manifest.
-- **Startup:** the SDK starts itself when the plugin registers, unless `cynopta.json` sets `"autoStart": false` or the app called `Cynopta.stop()` (then it waits for `Cynopta.start()`, across launches), as on Android.
+- **Minimum iOS:** 13.0.
+- **Swift Package Manager only:** the plugin supports iOS through Swift Package Manager, Flutter's default. Other plugins can keep using CocoaPods in the same app. If your app has Swift Package Manager turned off, the iOS build stops with "The following plugin(s) are only compatible with Swift Package Manager: cynopta_flutter"; turn it back on with `flutter config --enable-swift-package-manager`, or remove `enable-swift-package-manager: false` from your `pubspec.yaml` (see [Swift Package Manager for app developers](https://docs.flutter.dev/packages-and-plugins/swift-package-manager/for-app-developers)).
+- **SDK:** Cynopta iOS SDK 1.0.24, from [`Cynopta/ios-sdk-dist`](https://github.com/Cynopta/ios-sdk-dist); Xcode downloads it on the first build.
+- **Startup:** the SDK starts itself when the app finishes launching, unless `cynopta.json` sets `"autoStart": false` or the app called `Cynopta.stop()` (then it waits for `Cynopta.start()`, across launches), as on Android.
 - **Permissions:** none requested. Optional: to let the SDK refresh in the background, add `com.cynopta.sdk.refresh` to `BGTaskSchedulerPermittedIdentifiers` and `processing` to `UIBackgroundModes` in `ios/Runner/Info.plist`. Without them the SDK simply doesn't register the task.
-- **Sealed scores:** as on Android, scores cross the platform channel only as a sealed packet that the plugin opens natively, so a hooked channel can't fake them.
 
 ---
 

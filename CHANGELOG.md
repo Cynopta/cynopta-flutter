@@ -1,7 +1,7 @@
 ## Unreleased (ios branch)
 
-* Added iOS support: the plugin bundles the Cynopta iOS SDK 1.0.24 (build 25) as binary xcframeworks, for Swift Package Manager and CocoaPods hosts.
-* iOS uses the same `com.cynopta.sdk/trust` channel and sealed score packet as Android; the Dart client now opens it on both platforms (`cf0`, found in the process on iOS).
+* Added iOS support with the Cynopta iOS SDK `1.0.24` (`github.com/Cynopta/ios-sdk-dist`), through Swift Package Manager only.
+* The Dart API is the same on Android and iOS.
 * On iOS, declare `cynopta.json` as a Flutter asset.
 
 ## 1.0.23

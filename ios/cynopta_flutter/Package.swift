@@ -2,10 +2,9 @@
 
 import PackageDescription
 
-// The iOS side of cynopta_flutter for Swift Package Manager hosts (Flutter's default). CocoaPods hosts use
-// ../cynopta_flutter.podspec; both take the same vendored Cynopta iOS SDK frameworks.
-let sdkFrameworks = ["CynoptaKit", "CynoptaConfigKit", "CynoptaMetricsKit", "CynoptaReportKit", "CynoptaAppKit"]
-
+// The iOS side of cynopta_flutter. iOS is supported through Swift Package Manager only (Flutter's default). The Cynopta
+// iOS SDK comes from https://github.com/Cynopta/ios-sdk-dist at an exact version, as the Android side takes
+// com.github.Cynopta:android-sdk-dist.
 let package = Package(
     name: "cynopta_flutter",
     platforms: [
@@ -15,14 +14,16 @@ let package = Package(
         .library(name: "cynopta-flutter", targets: ["cynopta_flutter"])
     ],
     dependencies: [
-        .package(name: "FlutterFramework", path: "../FlutterFramework")
+        .package(name: "FlutterFramework", path: "../FlutterFramework"),
+        .package(url: "https://github.com/Cynopta/ios-sdk-dist", exact: "1.0.24")
     ],
     targets: [
         .target(
             name: "cynopta_flutter",
             dependencies: [
-                .product(name: "FlutterFramework", package: "FlutterFramework")
-            ] + sdkFrameworks.map { .target(name: $0) }
+                .product(name: "FlutterFramework", package: "FlutterFramework"),
+                .product(name: "Cynopta", package: "ios-sdk-dist")
+            ]
         )
-    ] + sdkFrameworks.map { .binaryTarget(name: $0, path: "Frameworks/\($0).xcframework") }
+    ]
 )

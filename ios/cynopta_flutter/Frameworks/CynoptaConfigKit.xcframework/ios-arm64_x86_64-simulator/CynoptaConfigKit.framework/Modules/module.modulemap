@@ -1,3 +1,0 @@
-framework module CynoptaConfigKit {
-  header "CynoptaConfigKit-Swift.h"
-}
