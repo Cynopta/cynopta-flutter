@@ -1,6 +1,9 @@
 ## Unreleased (ios branch)
 
-* Added iOS support with the Cynopta iOS SDK `1.0.24` (`github.com/Cynopta/ios-sdk-dist`), through Swift Package Manager only.
+* Added iOS support with the Cynopta iOS SDK `1.0.25` (`github.com/Cynopta/ios-sdk-dist`), through Swift Package Manager only.
+* iOS SDK `1.0.25` is the trust-only SDK made for App Review: no installed-app detection, remote configuration,
+  downloadable code or profiling collectors; its README's "Privacy and App Review" section has the App Privacy answers
+  and a Notes-for-Review paragraph.
 * The Dart API is the same on Android and iOS.
 * On iOS, declare `cynopta.json` as a Flutter asset.
 
