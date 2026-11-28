@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "FlutterFramework", path: "../FlutterFramework"),
-        .package(url: "https://github.com/Cynopta/ios-sdk-dist", exact: "1.0.25")
+        .package(url: "https://github.com/Cynopta/ios-sdk-dist", exact: "1.0.26")
     ],
     targets: [
         .target(

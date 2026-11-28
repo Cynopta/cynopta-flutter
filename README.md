@@ -47,10 +47,10 @@ flutter:
 
 - **Minimum iOS:** 13.0.
 - **Swift Package Manager only:** the plugin supports iOS through Swift Package Manager, Flutter's default. Other plugins can keep using CocoaPods in the same app. If your app has Swift Package Manager turned off, the iOS build stops with "The following plugin(s) are only compatible with Swift Package Manager: cynopta_flutter"; turn it back on with `flutter config --enable-swift-package-manager`, or remove `enable-swift-package-manager: false` from your `pubspec.yaml` (see [Swift Package Manager for app developers](https://docs.flutter.dev/packages-and-plugins/swift-package-manager/for-app-developers)).
-- **SDK:** Cynopta iOS SDK 1.0.25, from [`Cynopta/ios-sdk-dist`](https://github.com/Cynopta/ios-sdk-dist); Xcode downloads it on the first build.
+- **SDK:** Cynopta iOS SDK 1.0.26, from [`Cynopta/ios-sdk-dist`](https://github.com/Cynopta/ios-sdk-dist); Xcode downloads it on the first build.
 - **App Store:** what the SDK reads and sends, the App Privacy answers and a paragraph for App Review's notes are in the ["Privacy and App Review" section](https://github.com/Cynopta/ios-sdk-dist#3-privacy-and-app-review) of `ios-sdk-dist`'s README.
 - **Startup:** the SDK starts itself when the app finishes launching, unless `cynopta.json` sets `"autoStart": false` or the app called `Cynopta.stop()` (then it waits for `Cynopta.start()`, across launches), as on Android.
-- **Permissions:** none requested. Optional: to let the SDK refresh in the background, add `com.cynopta.sdk.refresh` to `BGTaskSchedulerPermittedIdentifiers` and `processing` to `UIBackgroundModes` in `ios/Runner/Info.plist`. Without them the SDK simply doesn't register the task.
+- **Permissions:** none requested, and the SDK doesn't use location. Optional: to let the SDK refresh in the background, add `com.cynopta.sdk.refresh` to `BGTaskSchedulerPermittedIdentifiers` and `processing` to `UIBackgroundModes` in `ios/Runner/Info.plist`. Without them the SDK simply doesn't register the task.
 
 ---
 
